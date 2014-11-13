@@ -19,8 +19,8 @@ public class GetAContractByInvalidContractID extends TestSuiteBase {
 	@BeforeTest
 	public void setup() {
 
-		testData = new TestHelper().readFileData("ContractRates",
-				"GetAContractByInvalidContractID.json");
+		testData = new TestHelper().readFileData("contractRates",
+				"getAContractByInvalidContractID.json");
 
 	}
 

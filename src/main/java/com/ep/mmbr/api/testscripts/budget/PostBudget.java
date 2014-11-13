@@ -26,8 +26,8 @@ public class PostBudget extends TestSuiteBase {
 	public void setup() {
 		RestAssured.useRelaxedHTTPSValidation();
 
-		testData = new TestHelper().readFileData("Budget",
-				"PostBudget.json");
+		testData = new TestHelper().readFileData("budget",
+				"postBudget.json");
 		System.out.println("testData " + testData);
 
 	}

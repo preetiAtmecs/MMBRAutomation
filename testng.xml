@@ -8,7 +8,7 @@
 		<classes>
 			<class name="com.ep.mmbr.api.testscripts.budget.GetBudgetByID" />
 			<class name="com.ep.mmbr.api.testscripts.budget.GetAllBudgets" />
-			<class name="com.ep.mmbr.api.testscripts.budget.postBudgetWithExistingFile" />	
+			<class name="com.ep.mmbr.api.testscripts.budget.PostBudget" />	
 		</classes>
 	</test>
 	
@@ -24,8 +24,8 @@
 	<!-- Test get contract details  -->
 	<test name="Contracts">
 		<classes>
-			<class name="com.ep.mmbr.api.testscripts.contractsRates.testGetAContractRateByContractID" />
-			<class name="com.ep.mmbr.api.testscripts.contractsRates.testGetAContractByInvalidContractID" />
+			<class name="com.ep.mmbr.api.testscripts.contractsrates.GetAContractRateByContractID" />
+			<class name="com.ep.mmbr.api.testscripts.contractsrates.GetAContractByInvalidContractID" />
 			
 					
 		</classes>

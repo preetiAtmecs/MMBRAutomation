@@ -21,8 +21,8 @@ public class GetUserInformationFromToken extends TestSuiteBase {
 	@BeforeTest
 	public void setup() {
 
-		testData = new TestHelper().readFileData("User",
-				"GetUserInformationFromToken.json");
+		testData = new TestHelper().readFileData("user",
+				"getUserInformationFromToken.json");
 
 	}
 

@@ -20,8 +20,8 @@ public class GetAllBudgets extends TestSuiteBase {
 	@BeforeTest
 	public void setup() {
 
-		testData = new TestHelper().readFileData("Budget",
-				"GetAllBudgets.json");
+		testData = new TestHelper().readFileData("budget",
+				"getAllBudgets.json");
 
 	}
 
@@ -49,7 +49,7 @@ public class GetAllBudgets extends TestSuiteBase {
 		
 		System.out.println("\nRespons code: "+responseBudgetNames);
 
-		new AssertionHandler().asserJsonEquals(testData.get("budgetNames").toString(),responseBudgetNames,false);
+		new  AssertionHandler().assertJsonEquals(testData.get("budgetNames").toString(),responseBudgetNames,false);
 		
 
 	}

@@ -18,7 +18,8 @@ public class TestHelper {
 
 		
 		String fileSeparator = System.getProperty("file.separator");
-		String path = "." + fileSeparator + "TestData" + fileSeparator+folderName+ fileSeparator + fileName;
+		//String path = System.getProperty("user.dir") + fileSeparator + "testData" + fileSeparator+folderName+ fileSeparator + fileName;
+		String path =  "testData" + fileSeparator+folderName+ fileSeparator + fileName;
 		
 		File file = dataprovider.getFile(path);
 		testCaseObject = dataprovider.getJSONObject(file);

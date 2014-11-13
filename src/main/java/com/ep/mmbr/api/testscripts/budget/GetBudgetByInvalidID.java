@@ -19,8 +19,8 @@ public class GetBudgetByInvalidID extends TestSuiteBase {
 	@BeforeTest
 	public void setup() {
 
-		testData = new TestHelper().readFileData("Budget",
-				"GetBudgetByInvalidID.json");
+		testData = new TestHelper().readFileData("budget",
+				"getBudgetByInvalidID.json");
 
 	}
 

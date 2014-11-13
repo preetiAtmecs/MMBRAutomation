@@ -20,8 +20,8 @@ public class GetBudgetByID extends TestSuiteBase {
 	@BeforeTest
 	public void setup() {
 
-		testData = new TestHelper().readFileData("Budget",
-				"GetBudgetByID.json");
+		testData = new TestHelper().readFileData("budget",
+				"getBudgetByID.json");
 
 	}
 

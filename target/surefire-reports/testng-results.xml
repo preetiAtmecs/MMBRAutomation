@@ -1,177 +1,237 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="7" passed="7">
+<testng-results skipped="0" failed="1" total="7" passed="6">
   <reporter-output>
     <line>
       <![CDATA[testGetBudgetByID]]>
     </line>
     <line>
-      <![CDATA[LXVMYXX9PC3YSV7P7F23C2N]]>
+      <![CDATA[F5FZ61CKBPG96KH002EPDJH]]>
     </line>
     <line>
       <![CDATA[testGetAllBudgets]]>
     </line>
     <line>
-      <![CDATA[3BOLCQMEJNLN1I1A2RJOFU3]]>
+      <![CDATA[00KC0ILIUOI0YYAFQEYAKTE]]>
+    </line>
+    <line>
+      <![CDATA[<b align='center'>Nothing to display in Reporter log</b>]]>
     </line>
     <line>
       <![CDATA[testPostBudgetWithExistingFile]]>
     </line>
     <line>
-      <![CDATA[5H49RAYUHJXWOVYRLVLRF3U]]>
+      <![CDATA[1QVNIS4EHTNTHKAOEEKJE5E]]>
     </line>
     <line>
       <![CDATA[testUserInformationFromToken]]>
     </line>
     <line>
-      <![CDATA[1QWPQ45E7O55QBNUO05AF0B]]>
+      <![CDATA[8EXTI9NBHJPFG9B18WP0C5Q]]>
     </line>
     <line>
       <![CDATA[testUserInfoWithInvalidToken]]>
     </line>
     <line>
-      <![CDATA[76JFA1L6WFZL16WVO16VGDL]]>
+      <![CDATA[TLBLVZ83R65COUG2ZYMLMM4]]>
     </line>
     <line>
       <![CDATA[testGetGetAContractRateByID]]>
     </line>
     <line>
-      <![CDATA[0RJ2UUX84ES8IM18EHYQNQ4]]>
+      <![CDATA[VZJOZWR6S5WKYATS77YYNHZ]]>
     </line>
     <line>
       <![CDATA[testGetAContractByInvalidContractID]]>
     </line>
     <line>
-      <![CDATA[S9XNJLB44SAV0N365WSOABZ]]>
+      <![CDATA[ZAG4B6SK9RXSF4GXBYD332Q]]>
     </line>
   </reporter-output>
-  <suite name="MMB Refresh API" duration-ms="19016" started-at="2014-11-13T07:43:41Z" finished-at="2014-11-13T07:44:00Z">
+  <suite name="MMB Refresh API" duration-ms="15640" started-at="2014-11-13T14:10:41Z" finished-at="2014-11-13T14:10:57Z">
     <groups>
     </groups>
-    <test name="Budget" duration-ms="11166" started-at="2014-11-13T07:43:41Z" finished-at="2014-11-13T07:43:52Z">
-      <class name="com.ep.mmbr.api.testscripts.Budget.TestGetAllBudgets">
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.ep.mmbr.api.testscripts.Budget.TestGetAllBudgets@5fa52ad1]" name="setup" is-config="true" duration-ms="42" started-at="2014-11-13T13:13:41Z" finished-at="2014-11-13T13:13:41Z">
+    <test name="Budget" duration-ms="14521" started-at="2014-11-13T14:10:41Z" finished-at="2014-11-13T14:10:56Z">
+      <class name="com.ep.mmbr.api.testscripts.budget.PostBudget">
+        <test-method status="FAIL" signature="testPostBudgetWithExistingFile()[pri:0, instance:com.ep.mmbr.api.testscripts.budget.PostBudget@358b3364]" name="testPostBudgetWithExistingFile" duration-ms="10032" started-at="2014-11-13T19:40:46Z" finished-at="2014-11-13T19:40:56Z">
+          <exception class="com.mongodb.MongoTimeoutException">
+            <message>
+              <![CDATA[Timed out after 10000 ms while waiting to connect. Client view of cluster state is {type=Unknown, servers=[{address=ec2-54-69-38-210.us-west-2.compute.amazonaws.com:27017, type=Unknown, state=Connecting, exception={com.mongodb.MongoException$Network: Exception opening the socket}, caused by {java.net.ConnectException: Connection refused: connect}}]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[com.mongodb.MongoTimeoutException: Timed out after 10000 ms while waiting to connect. Client view of cluster state is {type=Unknown, servers=[{address=ec2-54-69-38-210.us-west-2.compute.amazonaws.com:27017, type=Unknown, state=Connecting, exception={com.mongodb.MongoException$Network: Exception opening the socket}, caused by {java.net.ConnectException: Connection refused: connect}}]
+	at com.mongodb.BaseCluster.getDescription(BaseCluster.java:128)
+	at com.mongodb.DBTCPConnector.getClusterDescription(DBTCPConnector.java:396)
+	at com.mongodb.DBTCPConnector.getType(DBTCPConnector.java:569)
+	at com.mongodb.DBTCPConnector.getReplicaSetStatus(DBTCPConnector.java:364)
+	at com.mongodb.Mongo.getReplicaSetStatus(Mongo.java:465)
+	at com.mongodb.DB.getCommandReadPreference(DB.java:86)
+	at com.mongodb.DB.command(DB.java:314)
+	at com.mongodb.DB.command(DB.java:296)
+	at com.mongodb.DBCollection.getCount(DBCollection.java:1188)
+	at com.mongodb.DBCursor.count(DBCursor.java:668)
+	at com.ep.mmbr.api.mongodb.MangoDBConnection.getCount(MangoDBConnection.java:44)
+	at com.ep.mmbr.api.testscripts.budget.PostBudget.testPostBudgetWithExistingFile(PostBudget.java:47)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:177)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:92)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:105)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:103)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:74)
+]]>
+            </full-stacktrace>
+          </exception> <!-- com.mongodb.MongoTimeoutException -->
+          <reporter-output>
+            <line>
+              <![CDATA[<b align='center'>Nothing to display in Reporter log</b>]]>
+            </line>
+            <line>
+              <![CDATA[testPostBudgetWithExistingFile]]>
+            </line>
+            <line>
+              <![CDATA[1QVNIS4EHTNTHKAOEEKJE5E]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testPostBudgetWithExistingFile -->
+      </class> <!-- com.ep.mmbr.api.testscripts.budget.PostBudget -->
+      <class name="com.ep.mmbr.api.testscripts.budget.GetAllBudgets">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.ep.mmbr.api.testscripts.budget.GetAllBudgets@2c79a2e7]" name="setup" is-config="true" duration-ms="34" started-at="2014-11-13T19:40:41Z" finished-at="2014-11-13T19:40:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.ep.mmbr.api.testscripts.Budget.TestGetBudgetByID@4e9222f0]" name="setup" is-config="true" duration-ms="6" started-at="2014-11-13T13:13:41Z" finished-at="2014-11-13T13:13:41Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.ep.mmbr.api.testscripts.budget.GetBudgetByID@45db05b2]" name="setup" is-config="true" duration-ms="2" started-at="2014-11-13T19:40:41Z" finished-at="2014-11-13T19:40:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.ep.mmbr.api.testscripts.Budget.TestPostBudgetWithExistingFile@5c33e2dc]" name="setup" is-config="true" duration-ms="3" started-at="2014-11-13T13:13:41Z" finished-at="2014-11-13T13:13:41Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.ep.mmbr.api.testscripts.budget.PostBudget@358b3364]" name="setup" is-config="true" duration-ms="11" started-at="2014-11-13T19:40:41Z" finished-at="2014-11-13T19:40:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="testGetAllBudgets()[pri:0, instance:com.ep.mmbr.api.testscripts.Budget.TestGetAllBudgets@5fa52ad1]" name="testGetAllBudgets" duration-ms="2123" started-at="2014-11-13T13:13:47Z" finished-at="2014-11-13T13:13:49Z">
+        <test-method status="PASS" signature="testGetAllBudgets()[pri:0, instance:com.ep.mmbr.api.testscripts.budget.GetAllBudgets@2c79a2e7]" name="testGetAllBudgets" duration-ms="281" started-at="2014-11-13T19:40:46Z" finished-at="2014-11-13T19:40:46Z">
           <reporter-output>
             <line>
               <![CDATA[testGetAllBudgets]]>
             </line>
             <line>
-              <![CDATA[3BOLCQMEJNLN1I1A2RJOFU3]]>
+              <![CDATA[00KC0ILIUOI0YYAFQEYAKTE]]>
             </line>
           </reporter-output>
         </test-method> <!-- testGetAllBudgets -->
-      </class> <!-- com.ep.mmbr.api.testscripts.Budget.TestGetAllBudgets -->
-      <class name="com.ep.mmbr.api.testscripts.Budget.TestGetBudgetByID">
-        <test-method status="PASS" signature="testGetBudgetByID()[pri:0, instance:com.ep.mmbr.api.testscripts.Budget.TestGetBudgetByID@4e9222f0]" name="testGetBudgetByID" duration-ms="5708" started-at="2014-11-13T13:13:41Z" finished-at="2014-11-13T13:13:46Z">
+      </class> <!-- com.ep.mmbr.api.testscripts.budget.GetAllBudgets -->
+      <class name="com.ep.mmbr.api.testscripts.budget.GetBudgetByID">
+        <test-method status="PASS" signature="testGetBudgetByID()[pri:0, instance:com.ep.mmbr.api.testscripts.budget.GetBudgetByID@45db05b2]" name="testGetBudgetByID" duration-ms="4116" started-at="2014-11-13T19:40:41Z" finished-at="2014-11-13T19:40:46Z">
           <reporter-output>
             <line>
               <![CDATA[testGetBudgetByID]]>
             </line>
             <line>
-              <![CDATA[LXVMYXX9PC3YSV7P7F23C2N]]>
+              <![CDATA[F5FZ61CKBPG96KH002EPDJH]]>
             </line>
           </reporter-output>
         </test-method> <!-- testGetBudgetByID -->
-      </class> <!-- com.ep.mmbr.api.testscripts.Budget.TestGetBudgetByID -->
-      <class name="com.ep.mmbr.api.testscripts.Budget.TestPostBudgetWithExistingFile">
-        <test-method status="PASS" signature="testPostBudgetWithExistingFile()[pri:0, instance:com.ep.mmbr.api.testscripts.Budget.TestPostBudgetWithExistingFile@5c33e2dc]" name="testPostBudgetWithExistingFile" duration-ms="3249" started-at="2014-11-13T13:13:49Z" finished-at="2014-11-13T13:13:52Z">
-          <reporter-output>
-            <line>
-              <![CDATA[testPostBudgetWithExistingFile]]>
-            </line>
-            <line>
-              <![CDATA[5H49RAYUHJXWOVYRLVLRF3U]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- testPostBudgetWithExistingFile -->
-      </class> <!-- com.ep.mmbr.api.testscripts.Budget.TestPostBudgetWithExistingFile -->
+      </class> <!-- com.ep.mmbr.api.testscripts.budget.GetBudgetByID -->
     </test> <!-- Budget -->
-    <test name="User" duration-ms="3766" started-at="2014-11-13T07:43:52Z" finished-at="2014-11-13T07:43:56Z">
-      <class name="com.ep.mmbr.api.testscripts.User.TestUserInfoWithInvalidToken">
-        <test-method status="PASS" signature="testUserInfoWithInvalidToken()[pri:0, instance:com.ep.mmbr.api.testscripts.User.TestUserInfoWithInvalidToken@22c249c5]" name="testUserInfoWithInvalidToken" duration-ms="2011" started-at="2014-11-13T13:13:54Z" finished-at="2014-11-13T13:13:56Z">
+    <test name="User" duration-ms="371" started-at="2014-11-13T14:10:56Z" finished-at="2014-11-13T14:10:56Z">
+      <class name="com.ep.mmbr.api.testscripts.user.GetUserInfoWithInvalidToken">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.ep.mmbr.api.testscripts.user.GetUserInfoWithInvalidToken@62f47396]" name="setup" is-config="true" duration-ms="2" started-at="2014-11-13T19:40:56Z" finished-at="2014-11-13T19:40:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.ep.mmbr.api.testscripts.user.GetUserInformationFromToken@5f70bea5]" name="setup" is-config="true" duration-ms="1" started-at="2014-11-13T19:40:56Z" finished-at="2014-11-13T19:40:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="testUserInfoWithInvalidToken()[pri:0, instance:com.ep.mmbr.api.testscripts.user.GetUserInfoWithInvalidToken@62f47396]" name="testUserInfoWithInvalidToken" duration-ms="179" started-at="2014-11-13T19:40:56Z" finished-at="2014-11-13T19:40:56Z">
           <reporter-output>
             <line>
               <![CDATA[testUserInfoWithInvalidToken]]>
             </line>
             <line>
-              <![CDATA[76JFA1L6WFZL16WVO16VGDL]]>
+              <![CDATA[TLBLVZ83R65COUG2ZYMLMM4]]>
             </line>
           </reporter-output>
         </test-method> <!-- testUserInfoWithInvalidToken -->
-      </class> <!-- com.ep.mmbr.api.testscripts.User.TestUserInfoWithInvalidToken -->
-      <class name="com.ep.mmbr.api.testscripts.User.TestGetUserInformationFromToken">
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.ep.mmbr.api.testscripts.User.TestGetUserInformationFromToken@520a4ee7]" name="setup" is-config="true" duration-ms="1" started-at="2014-11-13T13:13:52Z" finished-at="2014-11-13T13:13:52Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.ep.mmbr.api.testscripts.User.TestUserInfoWithInvalidToken@22c249c5]" name="setup" is-config="true" duration-ms="1" started-at="2014-11-13T13:13:52Z" finished-at="2014-11-13T13:13:52Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="testUserInformationFromToken()[pri:0, instance:com.ep.mmbr.api.testscripts.User.TestGetUserInformationFromToken@520a4ee7]" name="testUserInformationFromToken" duration-ms="1751" started-at="2014-11-13T13:13:52Z" finished-at="2014-11-13T13:13:54Z">
+      </class> <!-- com.ep.mmbr.api.testscripts.user.GetUserInfoWithInvalidToken -->
+      <class name="com.ep.mmbr.api.testscripts.user.GetUserInformationFromToken">
+        <test-method status="PASS" signature="testUserInformationFromToken()[pri:0, instance:com.ep.mmbr.api.testscripts.user.GetUserInformationFromToken@5f70bea5]" name="testUserInformationFromToken" duration-ms="187" started-at="2014-11-13T19:40:56Z" finished-at="2014-11-13T19:40:56Z">
           <reporter-output>
             <line>
               <![CDATA[testUserInformationFromToken]]>
             </line>
             <line>
-              <![CDATA[1QWPQ45E7O55QBNUO05AF0B]]>
+              <![CDATA[8EXTI9NBHJPFG9B18WP0C5Q]]>
             </line>
           </reporter-output>
         </test-method> <!-- testUserInformationFromToken -->
-      </class> <!-- com.ep.mmbr.api.testscripts.User.TestGetUserInformationFromToken -->
+      </class> <!-- com.ep.mmbr.api.testscripts.user.GetUserInformationFromToken -->
     </test> <!-- User -->
-    <test name="Contracts" duration-ms="3972" started-at="2014-11-13T07:43:56Z" finished-at="2014-11-13T07:44:00Z">
-      <class name="com.ep.mmbr.api.testscripts.ContractsRates.TestGetAContractRateByContractID">
-        <test-method status="PASS" signature="dbConnect()[pri:0, instance:com.ep.mmbr.api.testscripts.ContractsRates.TestGetAContractRateByContractID@142eda55]" name="dbConnect" is-config="true" duration-ms="2177" started-at="2014-11-13T13:13:39Z" finished-at="2014-11-13T13:13:41Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- dbConnect -->
-        <test-method status="PASS" signature="testGetGetAContractRateByID()[pri:0, instance:com.ep.mmbr.api.testscripts.ContractsRates.TestGetAContractRateByContractID@142eda55]" name="testGetGetAContractRateByID" duration-ms="2253" started-at="2014-11-13T13:13:56Z" finished-at="2014-11-13T13:13:58Z">
-          <reporter-output>
-            <line>
-              <![CDATA[testGetGetAContractRateByID]]>
-            </line>
-            <line>
-              <![CDATA[0RJ2UUX84ES8IM18EHYQNQ4]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- testGetGetAContractRateByID -->
-        <test-method status="PASS" signature="dbDisconnect()[pri:0, instance:com.ep.mmbr.api.testscripts.ContractsRates.TestGetAContractRateByContractID@142eda55]" name="dbDisconnect" is-config="true" duration-ms="1" started-at="2014-11-13T13:14:00Z" finished-at="2014-11-13T13:14:00Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- dbDisconnect -->
-      </class> <!-- com.ep.mmbr.api.testscripts.ContractsRates.TestGetAContractRateByContractID -->
-      <class name="com.ep.mmbr.api.testscripts.ContractsRates.TestGetAContractByInvalidContractID">
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.ep.mmbr.api.testscripts.ContractsRates.TestGetAContractByInvalidContractID@10000ccd]" name="setup" is-config="true" duration-ms="52" started-at="2014-11-13T13:13:56Z" finished-at="2014-11-13T13:13:56Z">
+    <test name="Contracts" duration-ms="662" started-at="2014-11-13T14:10:56Z" finished-at="2014-11-13T14:10:57Z">
+      <class name="com.ep.mmbr.api.testscripts.contractsrates.GetAContractByInvalidContractID">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.ep.mmbr.api.testscripts.contractsrates.GetAContractByInvalidContractID@19632847]" name="setup" is-config="true" duration-ms="2" started-at="2014-11-13T19:40:56Z" finished-at="2014-11-13T19:40:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.ep.mmbr.api.testscripts.ContractsRates.TestGetAContractRateByContractID@142eda55]" name="setup" is-config="true" duration-ms="12" started-at="2014-11-13T13:13:56Z" finished-at="2014-11-13T13:13:56Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.ep.mmbr.api.testscripts.contractsrates.GetAContractRateByContractID@309cbd4b]" name="setup" is-config="true" duration-ms="2" started-at="2014-11-13T19:40:56Z" finished-at="2014-11-13T19:40:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="testGetAContractByInvalidContractID()[pri:0, instance:com.ep.mmbr.api.testscripts.ContractsRates.TestGetAContractByInvalidContractID@10000ccd]" name="testGetAContractByInvalidContractID" duration-ms="1653" started-at="2014-11-13T13:13:58Z" finished-at="2014-11-13T13:14:00Z">
+        <test-method status="PASS" signature="testGetAContractByInvalidContractID()[pri:0, instance:com.ep.mmbr.api.testscripts.contractsrates.GetAContractByInvalidContractID@19632847]" name="testGetAContractByInvalidContractID" duration-ms="183" started-at="2014-11-13T19:40:57Z" finished-at="2014-11-13T19:40:57Z">
           <reporter-output>
             <line>
               <![CDATA[testGetAContractByInvalidContractID]]>
             </line>
             <line>
-              <![CDATA[S9XNJLB44SAV0N365WSOABZ]]>
+              <![CDATA[ZAG4B6SK9RXSF4GXBYD332Q]]>
             </line>
           </reporter-output>
         </test-method> <!-- testGetAContractByInvalidContractID -->
-      </class> <!-- com.ep.mmbr.api.testscripts.ContractsRates.TestGetAContractByInvalidContractID -->
+      </class> <!-- com.ep.mmbr.api.testscripts.contractsrates.GetAContractByInvalidContractID -->
+      <class name="com.ep.mmbr.api.testscripts.contractsrates.GetAContractRateByContractID">
+        <test-method status="PASS" signature="dbConnect()[pri:0, instance:com.ep.mmbr.api.testscripts.contractsrates.GetAContractRateByContractID@309cbd4b]" name="dbConnect" is-config="true" duration-ms="1436" started-at="2014-11-13T19:40:40Z" finished-at="2014-11-13T19:40:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- dbConnect -->
+        <test-method status="PASS" signature="testGetGetAContractRateByID()[pri:0, instance:com.ep.mmbr.api.testscripts.contractsrates.GetAContractRateByContractID@309cbd4b]" name="testGetGetAContractRateByID" duration-ms="474" started-at="2014-11-13T19:40:56Z" finished-at="2014-11-13T19:40:57Z">
+          <reporter-output>
+            <line>
+              <![CDATA[testGetGetAContractRateByID]]>
+            </line>
+            <line>
+              <![CDATA[VZJOZWR6S5WKYATS77YYNHZ]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testGetGetAContractRateByID -->
+        <test-method status="PASS" signature="dbDisconnect()[pri:0, instance:com.ep.mmbr.api.testscripts.contractsrates.GetAContractRateByContractID@309cbd4b]" name="dbDisconnect" is-config="true" duration-ms="0" started-at="2014-11-13T19:40:57Z" finished-at="2014-11-13T19:40:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- dbDisconnect -->
+      </class> <!-- com.ep.mmbr.api.testscripts.contractsrates.GetAContractRateByContractID -->
     </test> <!-- Contracts -->
   </suite> <!-- MMB Refresh API -->
 </testng-results>

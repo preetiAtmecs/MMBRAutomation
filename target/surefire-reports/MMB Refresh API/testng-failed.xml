@@ -3,45 +3,44 @@
 <suite verbose="0" name="Failed suite [MMB Refresh API]">
   <test name="Budget(failed)">
     <classes>
-      <class name="com.ep.mmbr.api.testscripts.Budget.TestGetAllBudgets">
+      <class name="com.ep.mmbr.api.testscripts.budget.GetAllBudgets">
         <methods>
           <include name="setup"/>
-          <include name="testGetBudgetByID"/>
         </methods>
-      </class> <!-- com.ep.mmbr.api.testscripts.Budget.TestGetAllBudgets -->
-      <class name="com.ep.mmbr.api.testscripts.Contracts.TestGetAContractRateByContractID">
+      </class> <!-- com.ep.mmbr.api.testscripts.budget.GetAllBudgets -->
+      <class name="com.ep.mmbr.api.testscripts.user.GetUserInformationFromToken">
+        <methods>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.ep.mmbr.api.testscripts.user.GetUserInformationFromToken -->
+      <class name="com.ep.mmbr.api.testscripts.user.GetUserInfoWithInvalidToken">
+        <methods>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.ep.mmbr.api.testscripts.user.GetUserInfoWithInvalidToken -->
+      <class name="com.ep.mmbr.api.testscripts.contractsrates.GetAContractRateByContractID">
         <methods>
           <include name="dbConnect"/>
           <include name="setup"/>
           <include name="dbDisconnect"/>
         </methods>
-      </class> <!-- com.ep.mmbr.api.testscripts.Contracts.TestGetAContractRateByContractID -->
-      <class name="com.ep.mmbr.api.testscripts.User.TestGetUserInformationFromToken">
+      </class> <!-- com.ep.mmbr.api.testscripts.contractsrates.GetAContractRateByContractID -->
+      <class name="com.ep.mmbr.api.testscripts.contractsrates.GetAContractByInvalidContractID">
         <methods>
           <include name="setup"/>
         </methods>
-      </class> <!-- com.ep.mmbr.api.testscripts.User.TestGetUserInformationFromToken -->
-      <class name="com.ep.mmbr.api.testscripts.Contracts.TestGetAContractByInvalidContractID">
+      </class> <!-- com.ep.mmbr.api.testscripts.contractsrates.GetAContractByInvalidContractID -->
+      <class name="com.ep.mmbr.api.testscripts.budget.PostBudget">
+        <methods>
+          <include name="setup"/>
+          <include name="testPostBudgetWithExistingFile"/>
+        </methods>
+      </class> <!-- com.ep.mmbr.api.testscripts.budget.PostBudget -->
+      <class name="com.ep.mmbr.api.testscripts.budget.GetBudgetByID">
         <methods>
           <include name="setup"/>
         </methods>
-      </class> <!-- com.ep.mmbr.api.testscripts.Contracts.TestGetAContractByInvalidContractID -->
-      <class name="com.ep.mmbr.api.testscripts.Budget.TestPostBudgetWithExistingFile">
-        <methods>
-          <include name="setup"/>
-        </methods>
-      </class> <!-- com.ep.mmbr.api.testscripts.Budget.TestPostBudgetWithExistingFile -->
-      <class name="com.ep.mmbr.api.testscripts.User.TestUserInfoWithInvalidToken">
-        <methods>
-          <include name="setup"/>
-        </methods>
-      </class> <!-- com.ep.mmbr.api.testscripts.User.TestUserInfoWithInvalidToken -->
-      <class name="com.ep.mmbr.api.testscripts.Budget.TestGetBudgetByID">
-        <methods>
-          <include name="setup"/>
-          <include name="testGetBudgetByID"/>
-        </methods>
-      </class> <!-- com.ep.mmbr.api.testscripts.Budget.TestGetBudgetByID -->
+      </class> <!-- com.ep.mmbr.api.testscripts.budget.GetBudgetByID -->
     </classes>
   </test> <!-- Budget(failed) -->
 </suite> <!-- Failed suite [MMB Refresh API] -->

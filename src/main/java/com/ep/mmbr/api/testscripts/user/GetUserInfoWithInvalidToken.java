@@ -19,8 +19,8 @@ public class GetUserInfoWithInvalidToken extends TestSuiteBase {
 	@BeforeTest
 	public void setup() {
 
-		testData = new TestHelper().readFileData("User",
-				"GetUserInfoWithInvalidToken.json");
+		testData = new TestHelper().readFileData("user",
+				"getUserInfoWithInvalidToken.json");
 
 	}
 

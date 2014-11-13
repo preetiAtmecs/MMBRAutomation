@@ -30,7 +30,7 @@ public class TestSuiteBase {
 		
 		RestAssured.useRelaxedHTTPSValidation();
 		
-		dbConnection.getConnection(CONFIG.getProperty("MongoDB"));
+		//dbConnection.getConnection(CONFIG.getProperty("MongoDB"));
 		
 		RestAssured.baseURI = CONFIG.getProperty("BaseURI");
 

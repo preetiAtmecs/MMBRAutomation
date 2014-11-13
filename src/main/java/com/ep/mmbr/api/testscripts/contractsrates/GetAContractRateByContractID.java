@@ -25,8 +25,8 @@ public class GetAContractRateByContractID extends TestSuiteBase {
 	@BeforeTest
 	public void setup() {
 
-		testData = new TestHelper().readFileData("ContractRates",
-				"GetAContractRateByContractID.json");
+		testData = new TestHelper().readFileData("contractRates",
+				"getAContractRateByContractID.json");
 
 	}
 

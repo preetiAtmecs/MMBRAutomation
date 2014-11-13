@@ -1,70 +1,89 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TestSuite" time="18.759" tests="7" errors="0" skipped="0" failures="0">
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite failures="1" time="15.472" errors="0" skipped="0" tests="7" name="TestSuite">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
-    <property name="sun.boot.library.path" value="C:\Program Files\Java\jre7\bin"/>
-    <property name="java.vm.version" value="24.60-b09"/>
-    <property name="java.vm.vendor" value="Oracle Corporation"/>
-    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jre1.6.0_22\bin"/>
+    <property name="java.vm.version" value="17.1-b03"/>
+    <property name="java.vm.vendor" value="Sun Microsystems Inc."/>
+    <property name="java.vendor.url" value="http://java.sun.com/"/>
     <property name="path.separator" value=";"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
     <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
     <property name="file.encoding.pkg" value="sun.io"/>
-    <property name="user.script" value=""/>
     <property name="user.country" value="US"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.os.patch.level" value="Service Pack 1"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="C:\Users\preethi.gaddam\workspace\mmbr-webservices-automation"/>
-    <property name="java.runtime.version" value="1.7.0_60-b19"/>
+    <property name="user.dir" value="H:\git\MMBRAutomation"/>
+    <property name="java.runtime.version" value="1.6.0_22-b04"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
-    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jre7\lib\endorsed"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jre1.6.0_22\lib\endorsed"/>
     <property name="os.arch" value="amd64"/>
-    <property name="java.io.tmpdir" value="C:\Users\PREETH~1.GAD\AppData\Local\Temp\"/>
-    <property name="line.separator" value="&#10;"/>
-    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.io.tmpdir" value="C:\Users\pg092111\AppData\Local\Temp\"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Sun Microsystems Inc."/>
     <property name="user.variant" value=""/>
     <property name="os.name" value="Windows 7"/>
-    <property name="classworlds.conf" value="C:\Users\preethi.gaddam\workspace\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf8930578269501830676.tmp"/>
+    <property name="classworlds.conf" value="C:\Users\pg092111\workspace\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf1340231923006754536.tmp"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.library.path" value="C:\Program Files\Java\jre7\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\CollabNet\Subversion Client;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Java\jdk1.7.0_60\bin;C:\apache-maven-3.2.1\bin;C:\Program Files\TortoiseSVN\bin;C:\Program Files\ThinkPad\Bluetooth Software\;C:\Program Files\ThinkPad\Bluetooth Software\syswow64;C:\Program Files (x86)\Lenovo\Access Connections\;C:\Program Files (x86)\Lenovo\Password Manager\;C:\Users\preethi.gaddam\android-sdks\tools;C:\Users\preethi.gaddam\android-sdks\platform-tools;C:\Program Files\TortoiseSVN\bin;C:\Program Files (x86)\Common Files\lenovo\easyplussdk\bin;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Users\preethi.gaddam\android-sdks\tools;C:\Users\preethi.gaddam\android-sdks\platform-tools;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;."/>
+    <property name="java.library.path" value="C:\Program Files\Java\jre1.6.0_22\bin;.;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Citrix\System32\;C:\Program Files (x86)\IBM\RationalSDLC\ClearCase\bin;C:\Program Files (x86)\IBM\RationalSDLC\common;c:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE\;c:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;c:\Program Files (x86)\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files\apache-maven-3.2.3\bin;C:\Program Files\Citrix\ICAService\;C:\Program Files\apache-maven-3.2.3\bin;"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="java.class.version" value="51.0"/>
-    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.class.version" value="50.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Server Compiler"/>
     <property name="os.version" value="6.1"/>
-    <property name="user.home" value="C:\Users\preethi.gaddam"/>
+    <property name="user.home" value="C:\Users\pg092111"/>
     <property name="user.timezone" value="Asia/Calcutta"/>
     <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
-    <property name="java.specification.version" value="1.7"/>
     <property name="file.encoding" value="Cp1252"/>
-    <property name="user.name" value="Preethi.Gaddam"/>
-    <property name="java.class.path" value="/C:/eclipse/configuration/org.eclipse.osgi/bundles/270/1/.cp/jars/plexus-classworlds-2.4.jar"/>
-    <property name="java.vm.specification.version" value="1.7"/>
+    <property name="java.specification.version" value="1.6"/>
+    <property name="user.name" value="pg092111"/>
+    <property name="java.class.path" value="/C:/Users/pg092111/Documents/eclipse/configuration/org.eclipse.osgi/bundles/271/1/.cp/jars/plexus-classworlds-2.4.jar"/>
+    <property name="java.vm.specification.version" value="1.0"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="java.home" value="C:\Program Files\Java\jre7"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -B install"/>
-    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.home" value="C:\Program Files\Java\jre1.6.0_22"/>
+    <property name="java.specification.vendor" value="Sun Microsystems Inc."/>
     <property name="user.language" value="en"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
     <property name="java.vm.info" value="mixed mode"/>
-    <property name="java.version" value="1.7.0_60"/>
-    <property name="java.ext.dirs" value="C:\Program Files\Java\jre7\lib\ext;C:\Windows\Sun\Java\lib\ext"/>
-    <property name="sun.boot.class.path" value="C:\Program Files\Java\jre7\lib\resources.jar;C:\Program Files\Java\jre7\lib\rt.jar;C:\Program Files\Java\jre7\lib\sunrsasign.jar;C:\Program Files\Java\jre7\lib\jsse.jar;C:\Program Files\Java\jre7\lib\jce.jar;C:\Program Files\Java\jre7\lib\charsets.jar;C:\Program Files\Java\jre7\lib\jfr.jar;C:\Program Files\Java\jre7\classes"/>
-    <property name="java.vendor" value="Oracle Corporation"/>
-    <property name="maven.home" value="C:\Users\preethi.gaddam\workspace\mmbr-webservices-automation\EMBEDDED"/>
+    <property name="java.version" value="1.6.0_22"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jre1.6.0_22\lib\ext;C:\Windows\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jre1.6.0_22\lib\resources.jar;C:\Program Files\Java\jre1.6.0_22\lib\rt.jar;C:\Program Files\Java\jre1.6.0_22\lib\sunrsasign.jar;C:\Program Files\Java\jre1.6.0_22\lib\jsse.jar;C:\Program Files\Java\jre1.6.0_22\lib\jce.jar;C:\Program Files\Java\jre1.6.0_22\lib\charsets.jar;C:\Program Files\Java\jre1.6.0_22\classes"/>
+    <property name="java.vendor" value="Sun Microsystems Inc."/>
+    <property name="maven.home" value="H:\git\MMBRAutomation\EMBEDDED"/>
     <property name="file.separator" value="\"/>
-    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
-    <property name="maven.bootclasspath" value="/C:/eclipse/configuration/org.eclipse.osgi/bundles/270/1/.cp/jars/plexus-classworlds-2.4.jar"/>
+    <property name="java.vendor.url.bug" value="http://java.sun.com/cgi-bin/bugreport.cgi"/>
+    <property name="maven.bootclasspath" value="/C:/Users/pg092111/Documents/eclipse/configuration/org.eclipse.osgi/bundles/271/1/.cp/jars/plexus-classworlds-2.4.jar"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="testGetBudgetByID" classname="com.ep.mmbr.api.testscripts.Budget.TestGetBudgetByID" time="5.709"/>
-  <testcase name="testGetAllBudgets" classname="com.ep.mmbr.api.testscripts.Budget.TestGetAllBudgets" time="2.122"/>
-  <testcase name="testPostBudgetWithExistingFile" classname="com.ep.mmbr.api.testscripts.Budget.TestPostBudgetWithExistingFile" time="3.252"/>
-  <testcase name="testUserInformationFromToken" classname="com.ep.mmbr.api.testscripts.User.TestGetUserInformationFromToken" time="1.753"/>
-  <testcase name="testUserInfoWithInvalidToken" classname="com.ep.mmbr.api.testscripts.User.TestUserInfoWithInvalidToken" time="2.015"/>
-  <testcase name="testGetGetAContractRateByID" classname="com.ep.mmbr.api.testscripts.ContractsRates.TestGetAContractRateByContractID" time="2.26"/>
-  <testcase name="testGetAContractByInvalidContractID" classname="com.ep.mmbr.api.testscripts.ContractsRates.TestGetAContractByInvalidContractID" time="1.648"/>
+  <testcase time="4.115" classname="com.ep.mmbr.api.testscripts.budget.GetBudgetByID" name="testGetBudgetByID"/>
+  <testcase time="0.286" classname="com.ep.mmbr.api.testscripts.budget.GetAllBudgets" name="testGetAllBudgets"/>
+  <testcase time="10.047" classname="com.ep.mmbr.api.testscripts.budget.PostBudget" name="testPostBudgetWithExistingFile">
+    <failure message="Timed out after 10000 ms while waiting to connect. Client view of cluster state is {type=Unknown, servers=[{address=ec2-54-69-38-210.us-west-2.compute.amazonaws.com:27017, type=Unknown, state=Connecting, exception={com.mongodb.MongoException$Network: Exception opening the socket}, caused by {java.net.ConnectException: Connection refused: connect}}]" type="com.mongodb.MongoTimeoutException">com.mongodb.MongoTimeoutException: Timed out after 10000 ms while waiting to connect. Client view of cluster state is {type=Unknown, servers=[{address=ec2-54-69-38-210.us-west-2.compute.amazonaws.com:27017, type=Unknown, state=Connecting, exception={com.mongodb.MongoException$Network: Exception opening the socket}, caused by {java.net.ConnectException: Connection refused: connect}}]
+	at com.mongodb.BaseCluster.getDescription(BaseCluster.java:128)
+	at com.mongodb.DBTCPConnector.getClusterDescription(DBTCPConnector.java:396)
+	at com.mongodb.DBTCPConnector.getType(DBTCPConnector.java:569)
+	at com.mongodb.DBTCPConnector.getReplicaSetStatus(DBTCPConnector.java:364)
+	at com.mongodb.Mongo.getReplicaSetStatus(Mongo.java:465)
+	at com.mongodb.DB.getCommandReadPreference(DB.java:86)
+	at com.mongodb.DB.command(DB.java:314)
+	at com.mongodb.DB.command(DB.java:296)
+	at com.mongodb.DBCollection.getCount(DBCollection.java:1188)
+	at com.mongodb.DBCursor.count(DBCursor.java:668)
+	at com.ep.mmbr.api.mongodb.MangoDBConnection.getCount(MangoDBConnection.java:44)
+	at com.ep.mmbr.api.testscripts.budget.PostBudget.testPostBudgetWithExistingFile(PostBudget.java:47)
+</failure>
+    <system-out>
+Test testPostBudgetWithExistingFile execution started...............................
+
+Collection  selected successfully...........mmio-api-dev.user
+</system-out>
+  </testcase>
+  <testcase time="0.187" classname="com.ep.mmbr.api.testscripts.user.GetUserInformationFromToken" name="testUserInformationFromToken"/>
+  <testcase time="0.179" classname="com.ep.mmbr.api.testscripts.user.GetUserInfoWithInvalidToken" name="testUserInfoWithInvalidToken"/>
+  <testcase time="0.474" classname="com.ep.mmbr.api.testscripts.contractsrates.GetAContractRateByContractID" name="testGetGetAContractRateByID"/>
+  <testcase time="0.184" classname="com.ep.mmbr.api.testscripts.contractsrates.GetAContractByInvalidContractID" name="testGetAContractByInvalidContractID"/>
 </testsuite>
