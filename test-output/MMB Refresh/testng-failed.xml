@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [MMB Refresh]">
+  <test name="EP(failed)">
+    <classes>
+      <class name="com.ep.mmbr.api.testscripts.TestPostUploadBudgetHappyPath">
+        <methods>
+          <include name="test"/>
+          <include name="setup"/>
+          <include name="dbConnect"/>
+          <include name="dbDisconnect"/>
+        </methods>
+      </class> <!-- com.ep.mmbr.api.testscripts.TestPostUploadBudgetHappyPath -->
+      <class name="com.ep.mmbr.api.testscripts.TestGetUser">
+        <methods>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.ep.mmbr.api.testscripts.TestGetUser -->
+    </classes>
+  </test> <!-- EP(failed) -->
+</suite> <!-- Failed suite [MMB Refresh] -->

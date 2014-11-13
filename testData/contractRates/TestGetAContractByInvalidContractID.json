@@ -1,0 +1,12 @@
+{
+	"uri": "/ContractRate/{id}",
+	"method": "GET",
+	"request parameters": 
+	{
+		"id": "111111"
+	},
+
+	"response body": "Contract id not found 111111",
+
+	"status": "404"
+}

@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" />  
+    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>
+    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <br/>
+      <span class="top-banner-font-1">1 suite</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" class="collapse-all-link" title="Collapse/expand all the suites">
+          <img class="collapse-all-icon" src="collapseall.gif">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" class="navigator-link" panel-name="suite-MMB_Refresh_API">
+              <span class="suite-name border-passed">MMB Refresh API</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="test-xml-MMB_Refresh_API">
+                    <span>C:\Users\preethi.gaddam\workspace\mmbr-webservices-automation\testng.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="testlist-MMB_Refresh_API">
+                    <span class="test-stats">3 tests</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="group-MMB_Refresh_API">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="times-MMB_Refresh_API">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="reporter-MMB_Refresh_API">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="ignored-methods-MMB_Refresh_API">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="chronological-MMB_Refresh_API">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">7 methods,   7 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-MMB_Refresh_API" class="hide-methods passed suite-MMB_Refresh_API"> (hide)</a> <!-- hide-methods passed suite-MMB_Refresh_API -->
+                      <a href="#" panel-name="suite-MMB_Refresh_API" class="show-methods passed suite-MMB_Refresh_API"> (show)</a> <!-- show-methods passed suite-MMB_Refresh_API -->
+                    </span>
+                    <div class="method-list-content passed suite-MMB_Refresh_API">
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-MMB_Refresh_API" title="com.ep.mmbr.api.testscripts.ContractsRates.TestGetAContractByInvalidContractID" hash-for-method="testGetAContractByInvalidContractID">testGetAContractByInvalidContractID</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-MMB_Refresh_API" title="com.ep.mmbr.api.testscripts.Budget.TestGetAllBudgets" hash-for-method="testGetAllBudgets">testGetAllBudgets</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-MMB_Refresh_API" title="com.ep.mmbr.api.testscripts.Budget.TestGetBudgetByID" hash-for-method="testGetBudgetByID">testGetBudgetByID</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-MMB_Refresh_API" title="com.ep.mmbr.api.testscripts.ContractsRates.TestGetAContractRateByContractID" hash-for-method="testGetGetAContractRateByID">testGetGetAContractRateByID</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-MMB_Refresh_API" title="com.ep.mmbr.api.testscripts.Budget.TestPostBudgetWithExistingFile" hash-for-method="testPostBudgetWithExistingFile">testPostBudgetWithExistingFile</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-MMB_Refresh_API" title="com.ep.mmbr.api.testscripts.User.TestUserInfoWithInvalidToken" hash-for-method="testUserInfoWithInvalidToken">testUserInfoWithInvalidToken</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-MMB_Refresh_API" title="com.ep.mmbr.api.testscripts.User.TestGetUserInformationFromToken" hash-for-method="testUserInformationFromToken">testUserInformationFromToken</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-MMB_Refresh_API -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-MMB_Refresh_API" class="panel MMB_Refresh_API">
+          <div class="suite-MMB_Refresh_API-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.ep.mmbr.api.testscripts.Budget.TestGetAllBudgets</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testGetAllBudgets">
+                  </a> <!-- testGetAllBudgets -->
+                  <span class="method-name">testGetAllBudgets</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-MMB_Refresh_API-class-passed -->
+          <div class="suite-MMB_Refresh_API-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.ep.mmbr.api.testscripts.User.TestGetUserInformationFromToken</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testUserInformationFromToken">
+                  </a> <!-- testUserInformationFromToken -->
+                  <span class="method-name">testUserInformationFromToken</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-MMB_Refresh_API-class-passed -->
+          <div class="suite-MMB_Refresh_API-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.ep.mmbr.api.testscripts.User.TestUserInfoWithInvalidToken</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testUserInfoWithInvalidToken">
+                  </a> <!-- testUserInfoWithInvalidToken -->
+                  <span class="method-name">testUserInfoWithInvalidToken</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-MMB_Refresh_API-class-passed -->
+          <div class="suite-MMB_Refresh_API-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.ep.mmbr.api.testscripts.ContractsRates.TestGetAContractRateByContractID</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testGetGetAContractRateByID">
+                  </a> <!-- testGetGetAContractRateByID -->
+                  <span class="method-name">testGetGetAContractRateByID</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-MMB_Refresh_API-class-passed -->
+          <div class="suite-MMB_Refresh_API-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.ep.mmbr.api.testscripts.Budget.TestGetBudgetByID</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testGetBudgetByID">
+                  </a> <!-- testGetBudgetByID -->
+                  <span class="method-name">testGetBudgetByID</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-MMB_Refresh_API-class-passed -->
+          <div class="suite-MMB_Refresh_API-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.ep.mmbr.api.testscripts.ContractsRates.TestGetAContractByInvalidContractID</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testGetAContractByInvalidContractID">
+                  </a> <!-- testGetAContractByInvalidContractID -->
+                  <span class="method-name">testGetAContractByInvalidContractID</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-MMB_Refresh_API-class-passed -->
+          <div class="suite-MMB_Refresh_API-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.ep.mmbr.api.testscripts.Budget.TestPostBudgetWithExistingFile</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testPostBudgetWithExistingFile">
+                  </a> <!-- testPostBudgetWithExistingFile -->
+                  <span class="method-name">testPostBudgetWithExistingFile</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-MMB_Refresh_API-class-passed -->
+        </div> <!-- panel MMB_Refresh_API -->
+        <div panel-name="test-xml-MMB_Refresh_API" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">C:\Users\preethi.gaddam\workspace\mmbr-webservices-automation\testng.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite verbose=&quot;0&quot; name=&quot;MMB Refresh API&quot;&gt;
+  &lt;test name=&quot;Budget&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.ep.mmbr.api.testscripts.Budget.TestGetBudgetByID&quot;/&gt;
+      &lt;class name=&quot;com.ep.mmbr.api.testscripts.Budget.TestGetAllBudgets&quot;/&gt;
+      &lt;class name=&quot;com.ep.mmbr.api.testscripts.Budget.TestPostBudgetWithExistingFile&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Budget --&gt;
+  &lt;test name=&quot;User&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.ep.mmbr.api.testscripts.User.TestGetUserInformationFromToken&quot;/&gt;
+      &lt;class name=&quot;com.ep.mmbr.api.testscripts.User.TestUserInfoWithInvalidToken&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- User --&gt;
+  &lt;test name=&quot;Contracts&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.ep.mmbr.api.testscripts.ContractsRates.TestGetAContractRateByContractID&quot;/&gt;
+      &lt;class name=&quot;com.ep.mmbr.api.testscripts.ContractsRates.TestGetAContractByInvalidContractID&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Contracts --&gt;
+&lt;/suite&gt; &lt;!-- MMB Refresh API --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-MMB_Refresh_API" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for MMB Refresh API</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">Budget (3 classes)</span>
+              </li>
+              <li>
+                <span class="test-name">User (2 classes)</span>
+              </li>
+              <li>
+                <span class="test-name">Contracts (2 classes)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-MMB_Refresh_API" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for MMB Refresh API</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-MMB_Refresh_API" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for MMB Refresh API</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_MMB_Refresh_API');
+function tableData_MMB_Refresh_API() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(7);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'testGetBudgetByID')
+data.setCell(0, 2, 'com.ep.mmbr.api.testscripts.Budget.TestGetBudgetByID')
+data.setCell(0, 3, 5708);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'testPostBudgetWithExistingFile')
+data.setCell(1, 2, 'com.ep.mmbr.api.testscripts.Budget.TestPostBudgetWithExistingFile')
+data.setCell(1, 3, 3249);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'testGetGetAContractRateByID')
+data.setCell(2, 2, 'com.ep.mmbr.api.testscripts.ContractsRates.TestGetAContractRateByContractID')
+data.setCell(2, 3, 2253);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'testGetAllBudgets')
+data.setCell(3, 2, 'com.ep.mmbr.api.testscripts.Budget.TestGetAllBudgets')
+data.setCell(3, 3, 2123);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'testUserInfoWithInvalidToken')
+data.setCell(4, 2, 'com.ep.mmbr.api.testscripts.User.TestUserInfoWithInvalidToken')
+data.setCell(4, 3, 2011);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'testUserInformationFromToken')
+data.setCell(5, 2, 'com.ep.mmbr.api.testscripts.User.TestGetUserInformationFromToken')
+data.setCell(5, 3, 1751);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'testGetAContractByInvalidContractID')
+data.setCell(6, 2, 'com.ep.mmbr.api.testscripts.ContractsRates.TestGetAContractByInvalidContractID')
+data.setCell(6, 3, 1653);
+window.suiteTableData['MMB_Refresh_API']= { tableData: data, tableDiv: 'times-div-MMB_Refresh_API'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 18 seconds</span>
+              <div id="times-div-MMB_Refresh_API">
+              </div> <!-- times-div-MMB_Refresh_API -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-MMB_Refresh_API" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for MMB Refresh API</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">testGetBudgetByID</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">testGetBudgetByID</span>
+                <span class="reporter-method-output">LXVMYXX9PC3YSV7P7F23C2N</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">testPostBudgetWithExistingFile</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">testPostBudgetWithExistingFile</span>
+                <span class="reporter-method-output">5H49RAYUHJXWOVYRLVLRF3U</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">testGetAllBudgets</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">testGetAllBudgets</span>
+                <span class="reporter-method-output">3BOLCQMEJNLN1I1A2RJOFU3</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">testUserInfoWithInvalidToken</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">testUserInfoWithInvalidToken</span>
+                <span class="reporter-method-output">76JFA1L6WFZL16WVO16VGDL</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">testUserInformationFromToken</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">testUserInformationFromToken</span>
+                <span class="reporter-method-output">1QWPQ45E7O55QBNUO05AF0B</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">testGetGetAContractRateByID</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">testGetGetAContractRateByID</span>
+                <span class="reporter-method-output">0RJ2UUX84ES8IM18EHYQNQ4</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">testGetAContractByInvalidContractID</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">testGetAContractByInvalidContractID</span>
+                <span class="reporter-method-output">S9XNJLB44SAV0N365WSOABZ</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-MMB_Refresh_API" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">8 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.ep.mmbr.api.testscripts.User.TestUserInfoWithInvalidToken</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">dbConnect</span>
+                <br/>
+                <span class="ignored-method-name">dbDisconnect</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.ep.mmbr.api.testscripts.Budget.TestGetBudgetByID</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">dbConnect</span>
+                <br/>
+                <span class="ignored-method-name">dbDisconnect</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.ep.mmbr.api.testscripts.ContractsRates.TestGetAContractByInvalidContractID</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">dbConnect</span>
+                <br/>
+                <span class="ignored-method-name">dbDisconnect</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.ep.mmbr.api.testscripts.Budget.TestPostBudgetWithExistingFile</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">dbConnect</span>
+                <br/>
+                <span class="ignored-method-name">dbDisconnect</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-MMB_Refresh_API" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.ep.mmbr.api.testscripts.ContractsRates.TestGetAContractRateByContractID</div> <!-- chronological-class-name -->
+              <div class="configuration-suite before">
+                <span class="method-name">dbConnect</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-suite before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.ep.mmbr.api.testscripts.Budget.TestGetAllBudgets</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">setup</span>
+                <span class="method-start">2178 ms</span>
+              </div> <!-- configuration-test before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.ep.mmbr.api.testscripts.Budget.TestGetBudgetByID</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">setup</span>
+                <span class="method-start">2220 ms</span>
+              </div> <!-- configuration-test before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.ep.mmbr.api.testscripts.Budget.TestPostBudgetWithExistingFile</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">setup</span>
+                <span class="method-start">2226 ms</span>
+              </div> <!-- configuration-test before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.ep.mmbr.api.testscripts.Budget.TestGetBudgetByID</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">testGetBudgetByID</span>
+                <span class="method-start">2260 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.ep.mmbr.api.testscripts.Budget.TestGetAllBudgets</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">testGetAllBudgets</span>
+                <span class="method-start">7971 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.ep.mmbr.api.testscripts.Budget.TestPostBudgetWithExistingFile</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">testPostBudgetWithExistingFile</span>
+                <span class="method-start">10094 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.ep.mmbr.api.testscripts.User.TestGetUserInformationFromToken</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">setup</span>
+                <span class="method-start">13451 ms</span>
+              </div> <!-- configuration-test before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.ep.mmbr.api.testscripts.User.TestUserInfoWithInvalidToken</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">setup</span>
+                <span class="method-start">13452 ms</span>
+              </div> <!-- configuration-test before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.ep.mmbr.api.testscripts.User.TestGetUserInformationFromToken</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">testUserInformationFromToken</span>
+                <span class="method-start">13453 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.ep.mmbr.api.testscripts.User.TestUserInfoWithInvalidToken</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">testUserInfoWithInvalidToken</span>
+                <span class="method-start">15205 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.ep.mmbr.api.testscripts.ContractsRates.TestGetAContractByInvalidContractID</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">setup</span>
+                <span class="method-start">17222 ms</span>
+              </div> <!-- configuration-test before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.ep.mmbr.api.testscripts.ContractsRates.TestGetAContractRateByContractID</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">setup</span>
+                <span class="method-start">17274 ms</span>
+              </div> <!-- configuration-test before -->
+              <div class="test-method">
+                <span class="method-name">testGetGetAContractRateByID</span>
+                <span class="method-start">17287 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.ep.mmbr.api.testscripts.ContractsRates.TestGetAContractByInvalidContractID</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">testGetAContractByInvalidContractID</span>
+                <span class="method-start">19541 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.ep.mmbr.api.testscripts.ContractsRates.TestGetAContractRateByContractID</div> <!-- chronological-class-name -->
+              <div class="configuration-suite after">
+                <span class="method-name">dbDisconnect</span>
+                <span class="method-start">21241 ms</span>
+              </div> <!-- configuration-suite after -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+</html>

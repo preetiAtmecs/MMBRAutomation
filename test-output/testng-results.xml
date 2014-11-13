@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="5857" started-at="2014-11-13T09:30:08Z" finished-at="2014-11-13T09:30:14Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="5857" started-at="2014-11-13T09:30:08Z" finished-at="2014-11-13T09:30:14Z">
+      <class name="com.ep.mmbr.api.testscripts.Budget.TestPostBudgetWithExistingFile">
+        <test-method status="PASS" signature="dbConnect()[pri:0, instance:com.ep.mmbr.api.testscripts.Budget.TestPostBudgetWithExistingFile@1dcd8d1f]" name="dbConnect" is-config="true" duration-ms="831" started-at="2014-11-13T15:00:07Z" finished-at="2014-11-13T15:00:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- dbConnect -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.ep.mmbr.api.testscripts.Budget.TestPostBudgetWithExistingFile@1dcd8d1f]" name="setup" is-config="true" duration-ms="16" started-at="2014-11-13T15:00:08Z" finished-at="2014-11-13T15:00:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="testPostBudgetWithExistingFile()[pri:0, instance:com.ep.mmbr.api.testscripts.Budget.TestPostBudgetWithExistingFile@1dcd8d1f]" name="testPostBudgetWithExistingFile" duration-ms="5831" started-at="2014-11-13T15:00:08Z" finished-at="2014-11-13T15:00:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPostBudgetWithExistingFile -->
+        <test-method status="PASS" signature="dbDisconnect()[pri:0, instance:com.ep.mmbr.api.testscripts.Budget.TestPostBudgetWithExistingFile@1dcd8d1f]" name="dbDisconnect" is-config="true" duration-ms="1" started-at="2014-11-13T15:00:14Z" finished-at="2014-11-13T15:00:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- dbDisconnect -->
+      </class> <!-- com.ep.mmbr.api.testscripts.Budget.TestPostBudgetWithExistingFile -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

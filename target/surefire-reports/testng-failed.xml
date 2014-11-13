@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="0" name="Failed suite [MMB Refresh API]">
+  <test name="Budget(failed)">
+    <classes>
+      <class name="com.ep.mmbr.api.testscripts.Budget.TestGetAllBudgets">
+        <methods>
+          <include name="setup"/>
+          <include name="testGetBudgetByID"/>
+        </methods>
+      </class> <!-- com.ep.mmbr.api.testscripts.Budget.TestGetAllBudgets -->
+      <class name="com.ep.mmbr.api.testscripts.Contracts.TestGetAContractRateByContractID">
+        <methods>
+          <include name="dbConnect"/>
+          <include name="setup"/>
+          <include name="dbDisconnect"/>
+        </methods>
+      </class> <!-- com.ep.mmbr.api.testscripts.Contracts.TestGetAContractRateByContractID -->
+      <class name="com.ep.mmbr.api.testscripts.User.TestGetUserInformationFromToken">
+        <methods>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.ep.mmbr.api.testscripts.User.TestGetUserInformationFromToken -->
+      <class name="com.ep.mmbr.api.testscripts.Contracts.TestGetAContractByInvalidContractID">
+        <methods>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.ep.mmbr.api.testscripts.Contracts.TestGetAContractByInvalidContractID -->
+      <class name="com.ep.mmbr.api.testscripts.Budget.TestPostBudgetWithExistingFile">
+        <methods>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.ep.mmbr.api.testscripts.Budget.TestPostBudgetWithExistingFile -->
+      <class name="com.ep.mmbr.api.testscripts.User.TestUserInfoWithInvalidToken">
+        <methods>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.ep.mmbr.api.testscripts.User.TestUserInfoWithInvalidToken -->
+      <class name="com.ep.mmbr.api.testscripts.Budget.TestGetBudgetByID">
+        <methods>
+          <include name="setup"/>
+          <include name="testGetBudgetByID"/>
+        </methods>
+      </class> <!-- com.ep.mmbr.api.testscripts.Budget.TestGetBudgetByID -->
+    </classes>
+  </test> <!-- Budget(failed) -->
+</suite> <!-- Failed suite [MMB Refresh API] -->

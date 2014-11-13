@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="MMB Refresh API" >
+  
+
+   <!-- test all budget related testcases -->
+	<test name="Budget">
+		<classes>
+			<class name="com.ep.mmbr.api.testscripts.budget.GetBudgetByID" />
+			<class name="com.ep.mmbr.api.testscripts.budget.GetAllBudgets" />
+			<class name="com.ep.mmbr.api.testscripts.budget.postBudgetWithExistingFile" />	
+		</classes>
+	</test>
+	
+	<!-- Test Get information with valid token invalid token -->
+	<test name="User">
+		<classes>
+			<class name="com.ep.mmbr.api.testscripts.user.GetUserInformationFromToken" />
+			<class name="com.ep.mmbr.api.testscripts.user.GetUserInfoWithInvalidToken" />
+					
+		</classes>
+	</test>
+
+	<!-- Test get contract details  -->
+	<test name="Contracts">
+		<classes>
+			<class name="com.ep.mmbr.api.testscripts.contractsRates.testGetAContractRateByContractID" />
+			<class name="com.ep.mmbr.api.testscripts.contractsRates.testGetAContractByInvalidContractID" />
+			
+					
+		</classes>
+	</test>
+	
+</suite> 

@@ -1,0 +1,15 @@
+{
+	"uri": "/Budget",
+	"method": "POST",
+	"request parameters": 
+	{
+		"file": "./TestData/Budget/MovieMagicBudget.mbd"
+	},
+	
+	"status": "200",
+	"userName":"QA User",
+	"budgetDB":"mmio-api-dev",
+	"collectionName":"user"
+}
+
+	
