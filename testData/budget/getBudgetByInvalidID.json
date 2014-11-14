@@ -1,12 +1,12 @@
 {
 	"uri": "/Budget/{budget_id}",
 	"method": "GET",
-	"request parameters": 
+	"requestParameters": 
 	{
 		"budget_id": "00123"
 	},
 
-	"response body": "Budget not found 00123",
+	"responseBody": "Budget not found 00123",
 
 	"status": "404"
 }

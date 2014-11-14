@@ -1,7 +1,7 @@
 {
 	"uri": "/User",
 	"method": "GET",
-	"response body": 
+	"responseBody": 
 	{
 		"id": "54625ef50dcf34b41f7387ee",
 		"salesForceId": "005o0000001ZSKtAAO",

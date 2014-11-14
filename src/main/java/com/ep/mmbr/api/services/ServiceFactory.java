@@ -2,7 +2,7 @@ package com.ep.mmbr.api.services;
 
 public class ServiceFactory {
 
-	public  Service getService(String service) {
+	public Service getService(String service) {
 
 		if (service.equals("GET")) {
 

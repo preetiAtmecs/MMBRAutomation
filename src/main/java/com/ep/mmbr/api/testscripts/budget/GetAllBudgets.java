@@ -3,56 +3,41 @@ package com.ep.mmbr.api.testscripts.budget;
 import org.json.JSONException;
 import org.json.simple.JSONObject;
 import org.testng.Assert;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import com.ep.mmbr.api.services.Service;
-import com.ep.mmbr.api.services.ServiceFactory;
 import com.ep.mmbr.api.testscripts.TestSuiteBase;
-import com.ep.mmbr.api.utilities.MMBRConstants;
-import com.ep.mmbr.api.utilities.TestHelper;
-import com.ep.qa.automation.assertion.AssertionHandler;
+import com.ep.mmbr.api.utilities.TestHandler;
 import com.jayway.restassured.response.Response;
 
 public class GetAllBudgets extends TestSuiteBase {
 	JSONObject testData;
 
-	@BeforeTest
-	public void setup() {
-
-		testData = new TestHelper().readFileData("budget",
-				"getAllBudgets.json");
-
-	}
-
 	@Test
 	public void testGetAllBudgets() throws JSONException {
-		System.out.println("\nTestGetAllBudgets execution started..................................");
-		
-		Service service = new ServiceFactory().getService((String) testData
-				.get(MMBRConstants.METHOD));
+		TestHandler testHandler = new TestHandler();
 
-		Assert.assertNotNull(service, MMBRConstants.METHOD
-				+ MMBRConstants.NOT_METHOD);
+		JSONObject getAllBudgetsRequestData = testHandler.readFileData(
+				"budget", "getAllBudgets.json");
 
-		Response response = service.getResponse(testData,
-				CONFIG.getProperty("Token"));
-		
-		System.out.println("\nRespons code: "+response.getStatusCode());
-		
-		Assert.assertEquals(response.getStatusCode(),
-				Integer.parseInt(testData.get("status").toString()));
-		
-		
-		
-		String responseBudgetNames = response.jsonPath().getString("name");
-		
-		System.out.println("\nRespons code: "+responseBudgetNames);
+		Response getAllBudgetsResponse = testHandler
+				.sendRequestAndGetResponse(getAllBudgetsRequestData,
+						CONFIG.getProperty("SalesforceToken"));
 
-		new  AssertionHandler().assertJsonEquals(testData.get("budgetNames").toString(),responseBudgetNames,false);
-		
+		if (getAllBudgetsResponse.getStatusCode() == 500) {
+			JSONObject postBudgetRequestData = testHandler.readFileData(
+					"budget", "postBudget.json");
+
+			Response postBudgetResponse = testHandler
+					.sendRequestAndGetResponse(postBudgetRequestData,
+							CONFIG.getProperty("SalesforceToken"));
+
+			Assert.assertEquals(postBudgetResponse.getStatusCode(), Integer
+					.parseInt(postBudgetRequestData.get("status").toString()));
+		}
+
+		Assert.assertEquals(getAllBudgetsResponse.getStatusCode(), Integer
+				.parseInt(getAllBudgetsRequestData.get("status").toString()));
 
 	}
 
 }
-

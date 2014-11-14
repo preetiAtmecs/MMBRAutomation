@@ -1,7 +1,7 @@
 {
 	"uri": "/User",
 	"method": "GET",
-	"response body": "Authorization Failure",
+	"responseBody": "Authorization Failure",
 
 	"status": "401"
 }

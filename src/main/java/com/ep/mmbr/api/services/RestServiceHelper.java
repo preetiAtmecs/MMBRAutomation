@@ -12,7 +12,8 @@ import com.jayway.restassured.specification.RequestSpecification;
 
 public class RestServiceHelper {
 
-	public RequestSpecification getRequestSpecification(String paramType,Object requestBody) {
+	public RequestSpecification getRequestSpecification(String paramType,
+			Object requestBody) {
 
 		JSONObject body = (JSONObject) requestBody;
 		List<Map.Entry<String, String>> optionList = new ArrayList<Map.Entry<String, String>>(
@@ -25,18 +26,13 @@ public class RestServiceHelper {
 			String param_key = option.getKey();
 
 			String optionValue = option.getValue();
-			
-			
-			System.out.println("\n"+paramType+" :" + param_key + optionValue);	
-			if(paramType.equals("PathParameter"))
-			{
-			
-			builder.addPathParameter(param_key, optionValue).build();
-			}
-			else if (paramType.equals("Multipart")) 
-			{
-				
-				builder.addMultiPart(param_key,  new File(optionValue)).build();
+
+			if (paramType.equals("PathParameter")) {
+
+				builder.addPathParameter(param_key, optionValue).build();
+			} else if (paramType.equals("Multipart")) {
+
+				builder.addMultiPart(param_key, new File(optionValue)).build();
 			}
 
 		}
@@ -44,5 +40,4 @@ public class RestServiceHelper {
 		return requestSpec;
 	}
 
-	
 }

@@ -3,50 +3,46 @@ package com.ep.mmbr.api.testscripts.budget;
 import org.json.JSONException;
 import org.json.simple.JSONObject;
 import org.testng.Assert;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import com.ep.mmbr.api.services.Service;
-import com.ep.mmbr.api.services.ServiceFactory;
 import com.ep.mmbr.api.testscripts.TestSuiteBase;
-import com.ep.mmbr.api.utilities.MMBRConstants;
-import com.ep.mmbr.api.utilities.TestHelper;
-import com.ep.qa.automation.assertion.AssertionHandler;
+import com.ep.mmbr.api.utilities.TestHandler;
 import com.jayway.restassured.response.Response;
 
 public class GetBudgetByID extends TestSuiteBase {
 	JSONObject testData;
 
-	@BeforeTest
-	public void setup() {
-
-		testData = new TestHelper().readFileData("budget",
-				"getBudgetByID.json");
-
-	}
-
 	@Test
 	public void testGetBudgetByID() throws JSONException {
-		System.out.println("\nTestGetBudgetByID execution started...................................");
-		
-		Service service = new ServiceFactory().getService((String) testData
-				.get(MMBRConstants.METHOD));
 
-		System.out.println("");
-		Assert.assertNotNull(service, MMBRConstants.METHOD
-				+ MMBRConstants.NOT_METHOD);
+		TestHandler testHandler = new TestHandler();
 
-		Response response = service.getResponse(testData,
-				CONFIG.getProperty("Token"));
+		JSONObject postBudgetRequestData = testHandler.readFileData("budget",
+				"postBudget.json");
 
-		System.out.println("\nRespons code: "+response.getStatusCode());
-		
-		Assert.assertEquals(response.getStatusCode(),
-				Integer.parseInt(testData.get("status").toString()));
-		
-		String responseBudgetName = response.jsonPath().getString("name");
-		System.out.println(responseBudgetName);
-		Assert.assertEquals(testData.get("budgetName").toString(),responseBudgetName);
+		Response postBudgetResponse = testHandler.sendRequestAndGetResponse(
+				postBudgetRequestData, CONFIG.getProperty("SalesforceToken"));
+
+		Assert.assertEquals(postBudgetResponse.getStatusCode(), Integer
+				.parseInt(postBudgetRequestData.get("status").toString()));
+
+		String budgetId = postBudgetResponse.jsonPath().getString("budgetId");
+
+		JSONObject getBudgetByIDRequestData = testHandler.readFileData(
+				"budget", "getBudgetByID.json");
+		testHandler.replaceBudgetId(getBudgetByIDRequestData, budgetId);
+
+		Response getBudgetByIDResponse = testHandler
+				.sendRequestAndGetResponse(getBudgetByIDRequestData,
+						CONFIG.getProperty("SalesforceToken"));
+
+		Assert.assertEquals(getBudgetByIDResponse.getStatusCode(), Integer
+				.parseInt(getBudgetByIDRequestData.get("status").toString()));
+
+		String actualbudgetName = getBudgetByIDResponse.jsonPath().getString(
+				"name");
+		Assert.assertEquals(actualbudgetName,
+				getBudgetByIDRequestData.get("budgetName").toString());
 
 	}
 

@@ -1,46 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite verbose="0" name="Failed suite [MMB Refresh API]">
-  <test name="Budget(failed)">
+  <test name="User(failed)">
     <classes>
-      <class name="com.ep.mmbr.api.testscripts.budget.GetAllBudgets">
-        <methods>
-          <include name="setup"/>
-        </methods>
-      </class> <!-- com.ep.mmbr.api.testscripts.budget.GetAllBudgets -->
-      <class name="com.ep.mmbr.api.testscripts.user.GetUserInformationFromToken">
-        <methods>
-          <include name="setup"/>
-        </methods>
-      </class> <!-- com.ep.mmbr.api.testscripts.user.GetUserInformationFromToken -->
-      <class name="com.ep.mmbr.api.testscripts.user.GetUserInfoWithInvalidToken">
-        <methods>
-          <include name="setup"/>
-        </methods>
-      </class> <!-- com.ep.mmbr.api.testscripts.user.GetUserInfoWithInvalidToken -->
       <class name="com.ep.mmbr.api.testscripts.contractsrates.GetAContractRateByContractID">
         <methods>
           <include name="dbConnect"/>
-          <include name="setup"/>
           <include name="dbDisconnect"/>
         </methods>
       </class> <!-- com.ep.mmbr.api.testscripts.contractsrates.GetAContractRateByContractID -->
-      <class name="com.ep.mmbr.api.testscripts.contractsrates.GetAContractByInvalidContractID">
+      <class name="com.ep.mmbr.api.testscripts.user.GetUserInfoWithInvalidToken">
         <methods>
-          <include name="setup"/>
+          <include name="testUserInfoWithInvalidToken"/>
         </methods>
-      </class> <!-- com.ep.mmbr.api.testscripts.contractsrates.GetAContractByInvalidContractID -->
-      <class name="com.ep.mmbr.api.testscripts.budget.PostBudget">
-        <methods>
-          <include name="setup"/>
-          <include name="testPostBudgetWithExistingFile"/>
-        </methods>
-      </class> <!-- com.ep.mmbr.api.testscripts.budget.PostBudget -->
-      <class name="com.ep.mmbr.api.testscripts.budget.GetBudgetByID">
-        <methods>
-          <include name="setup"/>
-        </methods>
-      </class> <!-- com.ep.mmbr.api.testscripts.budget.GetBudgetByID -->
+      </class> <!-- com.ep.mmbr.api.testscripts.user.GetUserInfoWithInvalidToken -->
     </classes>
-  </test> <!-- Budget(failed) -->
+  </test> <!-- User(failed) -->
 </suite> <!-- Failed suite [MMB Refresh API] -->

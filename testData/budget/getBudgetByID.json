@@ -1,13 +1,13 @@
 {
 	"uri": "/Budget/{budget_id}",
 	"method": "GET",
-	"request parameters": 
+	"requestParameters": 
 	{
-		"budget_id": "546413bee4b089cc7647460f"
+		"budget_id": null
 	},
 
 	"budgetName": 
-	"Budget2-2014-07-22-16-10-19-670-0700.mbd",
+	"MovieMagicBudget.mbd",
 		
 	
 

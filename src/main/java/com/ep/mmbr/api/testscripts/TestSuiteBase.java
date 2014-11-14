@@ -1,9 +1,9 @@
 /****
- * This is the TestSuite Base for Company Setup configuration.
+ * This is the TestSuite Base for mm.io build configuration.
  * This Class extends the Test Base Class
  * Class has Before & After Suite method to connect/Disconnect Database
- * Class has Before Suite method to get Company setup jersey Client.
- * This is a must file for Company setup testNg script to execute & should not be deleted.
+ * Class has Before Suite method to set restassured base uri.
+ * This is a must file for mmmb testNg script to execute & should not be deleted.
  */
 package com.ep.mmbr.api.testscripts;
 
@@ -48,7 +48,7 @@ public class TestSuiteBase {
 			FileInputStream ip = new FileInputStream("."
 					+ MMBRConstants.fileSeparator
 
-					+ MMBRConstants.CONFIGURATIONPROPERTIES);
+					+ MMBRConstants.CONFIGPROPERTIES);
 			System.out.println(ip);
 			CONFIG.load(ip);
 

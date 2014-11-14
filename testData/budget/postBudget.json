@@ -1,7 +1,7 @@
 {
 	"uri": "/Budget",
 	"method": "POST",
-	"request parameters": 
+	"requestParameters": 
 	{
 		"file": "TestData/Budget/MovieMagicBudget.mbd"
 	},

@@ -3,52 +3,35 @@ package com.ep.mmbr.api.testscripts.user;
 import org.json.JSONException;
 import org.json.simple.JSONObject;
 import org.testng.Assert;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import com.ep.mmbr.api.assertions.AssertTest;
-import com.ep.mmbr.api.services.Service;
-import com.ep.mmbr.api.services.ServiceFactory;
 import com.ep.mmbr.api.testscripts.TestSuiteBase;
-import com.ep.mmbr.api.utilities.MMBRConstants;
-import com.ep.mmbr.api.utilities.TestHelper;
+import com.ep.mmbr.api.utilities.TestHandler;
+import com.ep.qa.automation.assertion.AssertionHandler;
 import com.jayway.restassured.response.Response;
 
 public class GetUserInformationFromToken extends TestSuiteBase {
 
-	JSONObject testData;
-
-	@BeforeTest
-	public void setup() {
-
-		testData = new TestHelper().readFileData("user",
-				"getUserInformationFromToken.json");
-
-	}
+	
 
 	@Test
 	public void testUserInformationFromToken() throws JSONException {
-		AssertTest assertTest = new AssertTest();
+		TestHandler testHandler = new TestHandler();
+		JSONObject getUserRequestData = testHandler.readFileData("user",
+				"getUserInformationFromToken.json");
 
-		System.out
-				.println("\n GetUserInformationFromToken execution started..................................");
+		Response getUserResponse = testHandler.sendRequestAndGetResponse(
+				getUserRequestData, CONFIG.getProperty("SalesforceToken"));
 
-		Service service = new ServiceFactory().getService((String) testData
-				.get(MMBRConstants.METHOD));
+		Assert.assertEquals(getUserResponse.getStatusCode(), Integer
+				.parseInt(getUserRequestData.get("status").toString()));
 
-		Assert.assertNotNull(service, MMBRConstants.METHOD
-				+ MMBRConstants.NOT_METHOD);
 
-		Response response = service.getResponse(testData,
-				CONFIG.getProperty("Token"));
+		Assert.assertEquals(getUserResponse.getStatusCode(),
+				Integer.parseInt(getUserRequestData.get("status").toString()));
 
-		System.out.println("\nRespons code: " + response.getStatusCode());
-
-		Assert.assertEquals(response.getStatusCode(),
-				Integer.parseInt(testData.get("status").toString()));
-
-		assertTest.assertJsonString(response.asString(),
-				testData.get("response body").toString());
+		new AssertionHandler().assertJsonEquals(getUserResponse.asString(),
+				getUserRequestData.get("responseBody").toString(),true);
 
 	}
 

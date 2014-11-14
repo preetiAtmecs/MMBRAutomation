@@ -13,18 +13,15 @@ public class Get implements Service {
 	@Override
 	public Response getResponse(JSONObject obj, String token) {
 
-		System.out.println("\nSending GET Request........");
-
-		if (obj.containsKey("request parameters")) {
+		if (obj.containsKey("requestParameters")) {
 
 			sendRequestWithParameters(token, (String) obj.get("uri"),
-					obj.get("request parameters"));
+					obj.get("requestParameters"));
 		} else {
 
 			sendRequest(token, (String) obj.get("uri"));
 		}
 
-		System.out.println("\nReceived Response .......... ");
 		return response;
 	}
 
@@ -32,7 +29,7 @@ public class Get implements Service {
 			Object parameters) {
 
 		RequestSpecification requestSpec = new RestServiceHelper()
-				.getRequestSpecification("PathParameter",parameters);
+				.getRequestSpecification("PathParameter", parameters);
 
 		response = given().header("authorization", token).with()
 				.spec(requestSpec).when().get(uri);

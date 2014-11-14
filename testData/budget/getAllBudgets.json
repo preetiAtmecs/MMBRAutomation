@@ -1,14 +1,5 @@
 {
 	"uri": "/Budget",
 	"method": "GET",
-	"budgetNames": 
-	
-	[
-		"AAAPIXELS_TORONTO_BUDGET_72_DAYS_03-12-14-2014-09-08-13-43-32-346-07001.mbd",
-		"Budget2-2014-07-22-16-10-19-670-0700.mbd",
-		"MovieMagicBudget.mbd",
-		"StarWars.mbd"
-	],
-
 	"status": "200"
 }

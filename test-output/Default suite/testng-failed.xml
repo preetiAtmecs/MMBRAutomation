@@ -3,14 +3,13 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.ep.mmbr.api.testscripts.Budget.TestPostBudgetWithExistingFile">
+      <class name="com.ep.mmbr.api.testscripts.budget.GetBudgetByID">
         <methods>
-          <include name="testPostBudgetWithExistingFile"/>
-          <include name="setup"/>
           <include name="dbConnect"/>
+          <include name="testGetBudgetByID"/>
           <include name="dbDisconnect"/>
         </methods>
-      </class> <!-- com.ep.mmbr.api.testscripts.Budget.TestPostBudgetWithExistingFile -->
+      </class> <!-- com.ep.mmbr.api.testscripts.budget.GetBudgetByID -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

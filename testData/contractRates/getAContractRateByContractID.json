@@ -1,19 +1,12 @@
 {
 	"uri": "/ContractRate/{id}",
 	"method": "GET",
-	"request parameters": 
+	"requestParameters": 
 	{
 		"id": "40"
 	},
 
-	"response body": 
-	{
-  
-  "negotiatingUnitId": "2364",
-  "contractId": "40",
-  "negotiatingUnitName": "399 LOCATION MGRS",
-  "contractName": "399 MUSIC VIDEO LOC MGR/SCOUT TIER II"
-  },
+	
 
 	"status": "200"
 }
