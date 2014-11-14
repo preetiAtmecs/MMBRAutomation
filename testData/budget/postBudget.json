@@ -3,7 +3,7 @@
 	"method": "POST",
 	"request parameters": 
 	{
-		"file": "./TestData/Budget/MovieMagicBudget.mbd"
+		"file": "TestData/Budget/MovieMagicBudget.mbd"
 	},
 	
 	"status": "200",

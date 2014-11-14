@@ -38,15 +38,15 @@ public class PostBudget extends TestSuiteBase {
 		System.out
 				.println("\nTest testPostBudgetWithExistingFile execution started...............................");
 
-		collection = dbConnection.getDataBaseCollection(testData
+		/*collection = dbConnection.getDataBaseCollection(testData
 				.get("budgetDB").toString(), testData.get("collectionName")
 				.toString());
 
-		query.put("name", testData.get("userName"));
+		query.put("name", testData.get("userName"));*/
 
-		int beforePostCount = dbConnection.getCount(collection, query);
+		/*int beforePostCount = dbConnection.getCount(collection, query);
 		System.out.println("\nBefore post budget count: " + beforePostCount);
-
+*/
 		Service service = new ServiceFactory().getService((String) testData
 				.get(MMBRConstants.METHOD));
 
@@ -61,10 +61,10 @@ public class PostBudget extends TestSuiteBase {
 		Assert.assertEquals(response.getStatusCode(),
 				Integer.parseInt(testData.get("status").toString()));
 
-		int afterPostCount = dbConnection.getCount(collection, query);
+		/*int afterPostCount = dbConnection.getCount(collection, query);
 		System.out.println("\nAfter post budget count: " + afterPostCount);
-
-		Assert.assertEquals(afterPostCount, beforePostCount);
+*/
+		//Assert.assertEquals(afterPostCount, beforePostCount);
 
 	}
 
