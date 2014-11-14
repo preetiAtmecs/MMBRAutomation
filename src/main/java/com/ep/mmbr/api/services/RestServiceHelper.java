@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.json.simple.JSONObject;
+import org.testng.Reporter;
 
 import com.jayway.restassured.builder.RequestSpecBuilder;
 import com.jayway.restassured.specification.RequestSpecification;
@@ -28,10 +29,13 @@ public class RestServiceHelper {
 			String optionValue = option.getValue();
 
 			if (paramType.equals("PathParameter")) {
-
+				
+				Reporter.log("<br>Path parameters: </b>"+param_key +" : "+optionValue);
 				builder.addPathParameter(param_key, optionValue).build();
+				
 			} else if (paramType.equals("Multipart")) {
-
+				
+				Reporter.log("<br>Multipart parameter : "+param_key+" : "+optionValue);
 				builder.addMultiPart(param_key, new File(optionValue)).build();
 			}
 

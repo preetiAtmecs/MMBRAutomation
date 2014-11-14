@@ -10,6 +10,7 @@ package com.ep.mmbr.api.testscripts;
 import java.io.FileInputStream;
 import java.util.Properties;
 
+import org.testng.Reporter;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
@@ -31,7 +32,7 @@ public class TestSuiteBase {
 		RestAssured.useRelaxedHTTPSValidation();
 		
 		//dbConnection.getConnection(CONFIG.getProperty("MongoDB"));
-		
+		Reporter.log("\nBase uri: "+CONFIG.getProperty("BaseURI"));
 		RestAssured.baseURI = CONFIG.getProperty("BaseURI");
 
 	}

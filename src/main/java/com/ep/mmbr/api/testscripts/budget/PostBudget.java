@@ -2,7 +2,7 @@ package com.ep.mmbr.api.testscripts.budget;
 
 import org.json.JSONException;
 import org.json.simple.JSONObject;
-import org.testng.Assert;
+import org.testng.Reporter;
 import org.testng.annotations.Test;
 
 import com.ep.mmbr.api.testscripts.TestSuiteBase;
@@ -14,15 +14,17 @@ public class PostBudget extends TestSuiteBase {
 	@Test
 	public void testPostBudget() throws JSONException {
 		TestHandler testHandler = new TestHandler();
+		
 		JSONObject postBudgetRequestData = testHandler.readFileData("budget",
 				"postBudget.json");
 
+		Reporter.log("Sending post budget reqest uri : "+postBudgetRequestData.get("uri"));
+		
 		Response postBudgetResponse = testHandler.sendRequestAndGetResponse(
 				postBudgetRequestData, CONFIG.getProperty("SalesforceToken"));
 
-		Assert.assertEquals(postBudgetResponse.getStatusCode(), Integer
-				.parseInt(postBudgetRequestData.get("status").toString()));
-
+		testHandler.verifyResponseCode(postBudgetResponse,postBudgetRequestData.get("status").toString());
+		
 	}
 
 }

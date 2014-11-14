@@ -3,6 +3,7 @@ package com.ep.mmbr.api.testscripts.contractsrates;
 import org.json.JSONException;
 import org.json.simple.JSONObject;
 import org.testng.Assert;
+import org.testng.Reporter;
 import org.testng.annotations.Test;
 
 import com.ep.mmbr.api.testscripts.TestSuiteBase;
@@ -18,7 +19,9 @@ public class GetAContractRateByContractID extends TestSuiteBase {
 
 		JSONObject getAContractRateByIDRequestData = testHandler.readFileData(
 				"contractRates", "getAContractRateByContractID.json");
-
+		
+		Reporter.log("Sending get reqest for get contract by id uri : "+getAContractRateByIDRequestData.get("uri"));
+		
 		Response getAContractRateByIDResponse = testHandler
 				.sendRequestAndGetResponse(getAContractRateByIDRequestData,
 						CONFIG.getProperty("SalesforceToken"));
@@ -26,6 +29,8 @@ public class GetAContractRateByContractID extends TestSuiteBase {
 		Assert.assertEquals(getAContractRateByIDResponse.getStatusCode(),
 				Integer.parseInt(getAContractRateByIDRequestData.get("status")
 						.toString()));
+		
+		testHandler.verifyResponseCode(getAContractRateByIDResponse,getAContractRateByIDRequestData.get("status").toString());
 	}
 
 }

@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>3/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Nov 14 06:10:16 PST 2014</td>
+<td>Started on:</td><td>Fri Nov 14 10:13:15 PST 2014</td>
 </tr>
-<tr><td>Total time:</td><td>5 seconds (5222 ms)</td>
+<tr><td>Total time:</td><td>8 seconds (8034 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,43 +76,61 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='com.ep.mmbr.api.testscripts.budget.GetAllBudgets.testGetAllBudgets()'><b>testGetAllBudgets</b><br>Test class: com.ep.mmbr.api.testscripts.budget.GetAllBudgets<br/>
-<a href="#Output-67158058" onClick='toggleBox("Output-67158058", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-280807668" onClick='toggleBox("Output-280807668", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-67158058" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-67158058">
+<a href="#Output-280807668" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-280807668">
+<br>Verify if budgets are available for user<br/>
+<br>Found budgets for user<br/>
+<br>Sending get reqest for get all budgets uri : /Budget<br/>
+<br><br>Received Response body:</b>[{"budgetId":"546411dfe4b089cc7647460d","name":"MovieMagicBudget.mbd","dateCreated":1415844319737,"dateUpdated":1415988800083,"dateLastUploaded":1415844319737},{"budgetId":"546413aae4b089cc7647460e","name":"AAAPIXELS_TORONTO_BUDGET_72_DAYS_03-12-14-2014-09-08-13-43-32-346-07001.mbd","dateCreated":1415844777251,"dateUpdated":1415964347024,"dateLastUploaded":1415844777251},{"budgetId":"546413bee4b089cc7647460f","name":"Budget2-2014-07-22-16-10-19-670-0700.mbd","dateCreated":1415844798992,"dateUpdated":1415844798992,"dateLastUploaded":1415844798992},{"budgetId":"546413dbe4b089cc76474610","name":"StarWars.mbd","dateCreated":1415844826961,"dateUpdated":1415972566314,"dateLastUploaded":1415844826961}]<br/>
+<br><br>Verifying Response code : <br>Actual response code : 200<br>Expected response code : 200<br/>
 testGetAllBudgets<br/>
-EDVIVMOT1VSELRR8WX3EMB8<br/>
+B0DK6E2VKK47L8PWSR0F572<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>com.ep.mmbr.api.testscripts.budget.GetAllBudgets@6baa9f99</td></tr>
+<td>com.ep.mmbr.api.testscripts.budget.GetAllBudgets@49ff0dde</td></tr>
 <tr>
 <td title='com.ep.mmbr.api.testscripts.budget.GetBudgetByID.testGetBudgetByID()'><b>testGetBudgetByID</b><br>Test class: com.ep.mmbr.api.testscripts.budget.GetBudgetByID<br/>
-<a href="#Output-1064309151" onClick='toggleBox("Output-1064309151", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-820201254" onClick='toggleBox("Output-820201254", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1064309151" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1064309151">
+<a href="#Output-820201254" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-820201254">
+<br>Uploading budget: MovieMagicBudget.mbd<br/>
+<br>Multipart parameter : file : TestData/Budget/MovieMagicBudget.mbd<br/>
+<br>Budget uploaded successfully<br/>
+<br>Extracted budget id for the budget: 546411dfe4b089cc7647460d<br/>
+<br>Sending get reqest for get budget by id uri : /Budget/{budget_id}<br/>
+<br>Path parameters: </b>budget_id : 546411dfe4b089cc7647460d<br/>
+<br><br>Received Response body:</b>{"budgetId":"546411dfe4b089cc7647460d","name":"MovieMagicBudget.mbd","dateCreated":1415844319737,"dateUpdated":1415988800083,"dateLastUploaded":1415844319737}<br/>
+<br><br>Verifying Response code : <br>Actual response code : 200<br>Expected response code : 200<br/>
+<br>Verifying budget name :<br>Actual budget name : MovieMagicBudget.mbd Expected budget name : MovieMagicBudget.mbd<br/>
 testGetBudgetByID<br/>
-DPM4FU5MUCBKEV8HO0YXXKO<br/>
+5S4G62ACHR9I2IXP8QXNQC2<br/>
 </div>
 </td>
 <td></td>
-<td>4</td>
-<td>com.ep.mmbr.api.testscripts.budget.GetBudgetByID@27b15692</td></tr>
+<td>7</td>
+<td>com.ep.mmbr.api.testscripts.budget.GetBudgetByID@ed42d08</td></tr>
 <tr>
 <td title='com.ep.mmbr.api.testscripts.budget.PostBudget.testPostBudget()'><b>testPostBudget</b><br>Test class: com.ep.mmbr.api.testscripts.budget.PostBudget<br/>
-<a href="#Output-1541425249" onClick='toggleBox("Output-1541425249", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-907025665" onClick='toggleBox("Output-907025665", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1541425249" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1541425249">
+<a href="#Output-907025665" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-907025665">
+Sending post budget reqest uri : /Budget<br/>
+<br>Multipart parameter : file : TestData/Budget/MovieMagicBudget.mbd<br/>
+<br><br>Received Response body:</b>{"status":"OK","budgetId":"546411dfe4b089cc7647460d"}<br/>
+<br><br>Verifying Response code : <br>Actual response code : 200<br>Expected response code : 200<br/>
 testPostBudget<br/>
-84QAWGLFOO18BT0A1M2GOXU<br/>
+JJHHMZQS4O330KMM1RKR3O2<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>com.ep.mmbr.api.testscripts.budget.PostBudget@7f56b6b9</td></tr>
+<td>com.ep.mmbr.api.testscripts.budget.PostBudget@6baa9f99</td></tr>
 </table><p>
 </body>
 </html>
