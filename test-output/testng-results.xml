@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="4956" started-at="2014-11-14T13:29:05Z" finished-at="2014-11-14T13:29:10Z">
+  <suite name="Default suite" duration-ms="3674" started-at="2014-11-14T14:06:27Z" finished-at="2014-11-14T14:06:31Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="4956" started-at="2014-11-14T13:29:05Z" finished-at="2014-11-14T13:29:10Z">
-      <class name="com.ep.mmbr.api.testscripts.budget.GetBudgetByID">
-        <test-method status="PASS" signature="dbConnect()[pri:0, instance:com.ep.mmbr.api.testscripts.budget.GetBudgetByID@7745c859]" name="dbConnect" is-config="true" duration-ms="922" started-at="2014-11-14T05:29:04Z" finished-at="2014-11-14T05:29:05Z">
+    <test name="Default test" duration-ms="3674" started-at="2014-11-14T14:06:27Z" finished-at="2014-11-14T14:06:31Z">
+      <class name="com.ep.mmbr.api.testscripts.user.GetUserInfoWithInvalidToken">
+        <test-method status="PASS" signature="dbConnect()[pri:0, instance:com.ep.mmbr.api.testscripts.user.GetUserInfoWithInvalidToken@7745c859]" name="dbConnect" is-config="true" duration-ms="875" started-at="2014-11-14T06:06:26Z" finished-at="2014-11-14T06:06:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- dbConnect -->
-        <test-method status="PASS" signature="testGetBudgetByID()[pri:0, instance:com.ep.mmbr.api.testscripts.budget.GetBudgetByID@7745c859]" name="testGetBudgetByID" duration-ms="4940" started-at="2014-11-14T05:29:05Z" finished-at="2014-11-14T05:29:10Z">
+        <test-method status="PASS" signature="testUserInfoWithInvalidToken()[pri:0, instance:com.ep.mmbr.api.testscripts.user.GetUserInfoWithInvalidToken@7745c859]" name="testUserInfoWithInvalidToken" duration-ms="3658" started-at="2014-11-14T06:06:27Z" finished-at="2014-11-14T06:06:31Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testGetBudgetByID -->
-        <test-method status="PASS" signature="dbDisconnect()[pri:0, instance:com.ep.mmbr.api.testscripts.budget.GetBudgetByID@7745c859]" name="dbDisconnect" is-config="true" duration-ms="0" started-at="2014-11-14T05:29:10Z" finished-at="2014-11-14T05:29:10Z">
+        </test-method> <!-- testUserInfoWithInvalidToken -->
+        <test-method status="PASS" signature="dbDisconnect()[pri:0, instance:com.ep.mmbr.api.testscripts.user.GetUserInfoWithInvalidToken@7745c859]" name="dbDisconnect" is-config="true" duration-ms="0" started-at="2014-11-14T06:06:31Z" finished-at="2014-11-14T06:06:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- dbDisconnect -->
-      </class> <!-- com.ep.mmbr.api.testscripts.budget.GetBudgetByID -->
+      </class> <!-- com.ep.mmbr.api.testscripts.user.GetUserInfoWithInvalidToken -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

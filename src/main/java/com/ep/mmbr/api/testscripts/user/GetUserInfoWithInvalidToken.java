@@ -1,6 +1,5 @@
 package com.ep.mmbr.api.testscripts.user;
 
-import org.json.JSONException;
 import org.json.simple.JSONObject;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -12,7 +11,7 @@ import com.jayway.restassured.response.Response;
 public class GetUserInfoWithInvalidToken extends TestSuiteBase {
 
 	@Test
-	public void testUserInfoWithInvalidToken() throws JSONException {
+	public void testUserInfoWithInvalidToken()  {
 
 		TestHandler testHandler = new TestHandler();
 		JSONObject getUserRequestData = testHandler.readFileData("user",
