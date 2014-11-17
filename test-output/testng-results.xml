@@ -1,25 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
+    <line>
+      <![CDATA[
+Base uri: https://mmio-api-dev-env.elasticbeanstalk.com:443/v1]]>
+    </line>
+    <line>
+      <![CDATA[<br>Uploading budget: MovieMagicBudget.mbd]]>
+    </line>
+    <line>
+      <![CDATA[<br>Multipart parameter : file : TestData/Budget/MovieMagicBudget.mbd]]>
+    </line>
+    <line>
+      <![CDATA[<br>Budget uploaded successfully]]>
+    </line>
+    <line>
+      <![CDATA[<br>Extracted budget id for the budget : 546411dfe4b089cc7647460d]]>
+    </line>
+    <line>
+      <![CDATA[<br>Sending get reqest for get budget by id uri : /Budget/{budget_id}/GlobalGroup]]>
+    </line>
+    <line>
+      <![CDATA[<br>Path parameters: </b>budget_id : 546411dfe4b089cc7647460d]]>
+    </line>
+    <line>
+      <![CDATA[<br>Path parameters: </b>global_group_id : 71]]>
+    </line>
+    <line>
+      <![CDATA[<br>Path parameters: </b>budget_id : 546411dfe4b089cc7647460d]]>
+    </line>
+    <line>
+      <![CDATA[<br><br>Received Response body:</b>{"id":71,"name":"Default Group","description":"This group was created as a Default Group."}]]>
+    </line>
+    <line>
+      <![CDATA[<br><br>Verifying Response code : <br>Actual response code : 200<br>Expected response code : 200]]>
+    </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="3674" started-at="2014-11-14T14:06:27Z" finished-at="2014-11-14T14:06:31Z">
+  <suite name="Default suite" duration-ms="5331" started-at="2014-11-17T09:43:35Z" finished-at="2014-11-17T09:43:40Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="3674" started-at="2014-11-14T14:06:27Z" finished-at="2014-11-14T14:06:31Z">
-      <class name="com.ep.mmbr.api.testscripts.user.GetUserInfoWithInvalidToken">
-        <test-method status="PASS" signature="dbConnect()[pri:0, instance:com.ep.mmbr.api.testscripts.user.GetUserInfoWithInvalidToken@7745c859]" name="dbConnect" is-config="true" duration-ms="875" started-at="2014-11-14T06:06:26Z" finished-at="2014-11-14T06:06:27Z">
+    <test name="Default test" duration-ms="5331" started-at="2014-11-17T09:43:35Z" finished-at="2014-11-17T09:43:40Z">
+      <class name="com.ep.mmbr.api.testscripts.budget.GetGlobalGroupByID">
+        <test-method status="PASS" signature="dbConnect()[pri:0, instance:com.ep.mmbr.api.testscripts.budget.GetGlobalGroupByID@7745c859]" name="dbConnect" is-config="true" duration-ms="953" started-at="2014-11-17T01:43:34Z" finished-at="2014-11-17T01:43:35Z">
           <reporter-output>
+            <line>
+              <![CDATA[
+Base uri: https://mmio-api-dev-env.elasticbeanstalk.com:443/v1]]>
+            </line>
           </reporter-output>
         </test-method> <!-- dbConnect -->
-        <test-method status="PASS" signature="testUserInfoWithInvalidToken()[pri:0, instance:com.ep.mmbr.api.testscripts.user.GetUserInfoWithInvalidToken@7745c859]" name="testUserInfoWithInvalidToken" duration-ms="3658" started-at="2014-11-14T06:06:27Z" finished-at="2014-11-14T06:06:31Z">
+        <test-method status="PASS" signature="testGetGlobalGroupByID()[pri:0, instance:com.ep.mmbr.api.testscripts.budget.GetGlobalGroupByID@7745c859]" name="testGetGlobalGroupByID" duration-ms="5331" started-at="2014-11-17T01:43:35Z" finished-at="2014-11-17T01:43:40Z">
           <reporter-output>
+            <line>
+              <![CDATA[<br>Uploading budget: MovieMagicBudget.mbd]]>
+            </line>
+            <line>
+              <![CDATA[<br>Multipart parameter : file : TestData/Budget/MovieMagicBudget.mbd]]>
+            </line>
+            <line>
+              <![CDATA[<br>Budget uploaded successfully]]>
+            </line>
+            <line>
+              <![CDATA[<br>Extracted budget id for the budget : 546411dfe4b089cc7647460d]]>
+            </line>
+            <line>
+              <![CDATA[<br>Sending get reqest for get budget by id uri : /Budget/{budget_id}/GlobalGroup]]>
+            </line>
+            <line>
+              <![CDATA[<br>Path parameters: </b>budget_id : 546411dfe4b089cc7647460d]]>
+            </line>
+            <line>
+              <![CDATA[<br>Path parameters: </b>global_group_id : 71]]>
+            </line>
+            <line>
+              <![CDATA[<br>Path parameters: </b>budget_id : 546411dfe4b089cc7647460d]]>
+            </line>
+            <line>
+              <![CDATA[<br><br>Received Response body:</b>{"id":71,"name":"Default Group","description":"This group was created as a Default Group."}]]>
+            </line>
+            <line>
+              <![CDATA[<br><br>Verifying Response code : <br>Actual response code : 200<br>Expected response code : 200]]>
+            </line>
           </reporter-output>
-        </test-method> <!-- testUserInfoWithInvalidToken -->
-        <test-method status="PASS" signature="dbDisconnect()[pri:0, instance:com.ep.mmbr.api.testscripts.user.GetUserInfoWithInvalidToken@7745c859]" name="dbDisconnect" is-config="true" duration-ms="0" started-at="2014-11-14T06:06:31Z" finished-at="2014-11-14T06:06:31Z">
+        </test-method> <!-- testGetGlobalGroupByID -->
+        <test-method status="PASS" signature="dbDisconnect()[pri:0, instance:com.ep.mmbr.api.testscripts.budget.GetGlobalGroupByID@7745c859]" name="dbDisconnect" is-config="true" duration-ms="0" started-at="2014-11-17T01:43:40Z" finished-at="2014-11-17T01:43:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- dbDisconnect -->
-      </class> <!-- com.ep.mmbr.api.testscripts.user.GetUserInfoWithInvalidToken -->
+      </class> <!-- com.ep.mmbr.api.testscripts.budget.GetGlobalGroupByID -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

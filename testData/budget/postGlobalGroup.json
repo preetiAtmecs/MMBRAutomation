@@ -1,0 +1,15 @@
+{
+	"uri": "/Budget/{budget_id}/GlobalGroup",
+	"method": "POST",
+	"contentType":"PathParameter",
+	"requestParameters": 
+	{
+		"budget_id": null,
+		
+	},
+	"body":{
+  "description": "This is a test group",
+  "name": "Auto Test Group"
+},
+	"status": "201"
+}

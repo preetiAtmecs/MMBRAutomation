@@ -1,6 +1,7 @@
 {
 	"uri": "/User",
 	"method": "GET",
+	"contentType":"PathParameter",
 	"responseBody": "Authorization Failure",
 
 	"status": "401"

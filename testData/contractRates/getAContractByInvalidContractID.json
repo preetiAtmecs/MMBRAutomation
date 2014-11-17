@@ -1,6 +1,7 @@
 {
 	"uri": "/ContractRate/{id}",
 	"method": "GET",
+	"contentType":"PathParameter",
 	"requestParameters": 
 	{
 		"id": "111111"

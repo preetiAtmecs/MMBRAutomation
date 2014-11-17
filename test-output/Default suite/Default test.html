@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Nov 14 06:06:27 PST 2014</td>
+<td>Started on:</td><td>Mon Nov 17 01:43:35 PST 2014</td>
 </tr>
-<tr><td>Total time:</td><td>3 seconds (3674 ms)</td>
+<tr><td>Total time:</td><td>5 seconds (5331 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,10 +75,26 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.ep.mmbr.api.testscripts.user.GetUserInfoWithInvalidToken.testUserInfoWithInvalidToken()'><b>testUserInfoWithInvalidToken</b><br>Test class: com.ep.mmbr.api.testscripts.user.GetUserInfoWithInvalidToken</td>
+<td title='com.ep.mmbr.api.testscripts.budget.GetGlobalGroupByID.testGetGlobalGroupByID()'><b>testGetGlobalGroupByID</b><br>Test class: com.ep.mmbr.api.testscripts.budget.GetGlobalGroupByID<br/>
+<a href="#Output-1868012080" onClick='toggleBox("Output-1868012080", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1868012080" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1868012080">
+<br>Uploading budget: MovieMagicBudget.mbd<br/>
+<br>Multipart parameter : file : TestData/Budget/MovieMagicBudget.mbd<br/>
+<br>Budget uploaded successfully<br/>
+<br>Extracted budget id for the budget : 546411dfe4b089cc7647460d<br/>
+<br>Sending get reqest for get budget by id uri : /Budget/{budget_id}/GlobalGroup<br/>
+<br>Path parameters: </b>budget_id : 546411dfe4b089cc7647460d<br/>
+<br>Path parameters: </b>global_group_id : 71<br/>
+<br>Path parameters: </b>budget_id : 546411dfe4b089cc7647460d<br/>
+<br><br>Received Response body:</b>{"id":71,"name":"Default Group","description":"This group was created as a Default Group."}<br/>
+<br><br>Verifying Response code : <br>Actual response code : 200<br>Expected response code : 200<br/>
+</div>
+</td>
 <td></td>
-<td>3</td>
-<td>com.ep.mmbr.api.testscripts.user.GetUserInfoWithInvalidToken@7745c859</td></tr>
+<td>5</td>
+<td>com.ep.mmbr.api.testscripts.budget.GetGlobalGroupByID@7745c859</td></tr>
 </table><p>
 </body>
 </html>

@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite verbose="0" name="Failed suite [MMB Refresh API]">
-  <test name="User(failed)">
+  <test name="Contracts(failed)">
     <classes>
-      <class name="com.ep.mmbr.api.testscripts.contractsrates.GetAContractRateByContractID">
+      <class name="com.ep.mmbr.api.testscripts.contractsrates.GetAContractByInvalidContractID">
         <methods>
           <include name="dbConnect"/>
           <include name="dbDisconnect"/>
         </methods>
-      </class> <!-- com.ep.mmbr.api.testscripts.contractsrates.GetAContractRateByContractID -->
-      <class name="com.ep.mmbr.api.testscripts.user.GetUserInfoWithInvalidToken">
+      </class> <!-- com.ep.mmbr.api.testscripts.contractsrates.GetAContractByInvalidContractID -->
+      <class name="com.ep.mmbr.api.testscripts.contractsrates.GetAContractRateByContractID">
         <methods>
-          <include name="testUserInfoWithInvalidToken"/>
+          <include name="testGetAContractRateByID"/>
         </methods>
-      </class> <!-- com.ep.mmbr.api.testscripts.user.GetUserInfoWithInvalidToken -->
+      </class> <!-- com.ep.mmbr.api.testscripts.contractsrates.GetAContractRateByContractID -->
     </classes>
-  </test> <!-- User(failed) -->
+  </test> <!-- Contracts(failed) -->
 </suite> <!-- Failed suite [MMB Refresh API] -->

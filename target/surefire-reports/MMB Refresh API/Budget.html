@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Budget</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>3/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>6/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Nov 14 10:13:15 PST 2014</td>
+<td>Started on:</td><td>Mon Nov 17 06:22:00 PST 2014</td>
 </tr>
-<tr><td>Total time:</td><td>8 seconds (8034 ms)</td>
+<tr><td>Total time:</td><td>7 seconds (7697 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,61 +76,153 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='com.ep.mmbr.api.testscripts.budget.GetAllBudgets.testGetAllBudgets()'><b>testGetAllBudgets</b><br>Test class: com.ep.mmbr.api.testscripts.budget.GetAllBudgets<br/>
-<a href="#Output-280807668" onClick='toggleBox("Output-280807668", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-506941517" onClick='toggleBox("Output-506941517", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-280807668" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-280807668">
-<br>Verify if budgets are available for user<br/>
+<a href="#Output-506941517" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-506941517">
+<br>Verifying if budgets are available for user<br/>
+<br>Sending GET request <br/>
+<br>Endpoint : /Budget<br/>
 <br>Found budgets for user<br/>
-<br>Sending get reqest for get all budgets uri : /Budget<br/>
-<br><br>Received Response body:</b>[{"budgetId":"546411dfe4b089cc7647460d","name":"MovieMagicBudget.mbd","dateCreated":1415844319737,"dateUpdated":1415988800083,"dateLastUploaded":1415844319737},{"budgetId":"546413aae4b089cc7647460e","name":"AAAPIXELS_TORONTO_BUDGET_72_DAYS_03-12-14-2014-09-08-13-43-32-346-07001.mbd","dateCreated":1415844777251,"dateUpdated":1415964347024,"dateLastUploaded":1415844777251},{"budgetId":"546413bee4b089cc7647460f","name":"Budget2-2014-07-22-16-10-19-670-0700.mbd","dateCreated":1415844798992,"dateUpdated":1415844798992,"dateLastUploaded":1415844798992},{"budgetId":"546413dbe4b089cc76474610","name":"StarWars.mbd","dateCreated":1415844826961,"dateUpdated":1415972566314,"dateLastUploaded":1415844826961}]<br/>
+<br><br>Received Response body:</b>[{"budgetId":"546411dfe4b089cc7647460d","name":"MovieMagicBudget.mbd","dateCreated":1415844319737,"dateUpdated":1416234124172,"dateLastUploaded":1415844319737},{"budgetId":"546413aae4b089cc7647460e","name":"AAAPIXELS_TORONTO_BUDGET_72_DAYS_03-12-14-2014-09-08-13-43-32-346-07001.mbd","dateCreated":1415844777251,"dateUpdated":1415964347024,"dateLastUploaded":1415844777251},{"budgetId":"546413bee4b089cc7647460f","name":"Budget2-2014-07-22-16-10-19-670-0700.mbd","dateCreated":1415844798992,"dateUpdated":1415844798992,"dateLastUploaded":1415844798992},{"budgetId":"546413dbe4b089cc76474610","name":"StarWars.mbd","dateCreated":1415844826961,"dateUpdated":1415972566314,"dateLastUploaded":1415844826961}]<br/>
 <br><br>Verifying Response code : <br>Actual response code : 200<br>Expected response code : 200<br/>
 testGetAllBudgets<br/>
-B0DK6E2VKK47L8PWSR0F572<br/>
+H5JN42TTG1YNBCLDLONCIM9<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>com.ep.mmbr.api.testscripts.budget.GetAllBudgets@49ff0dde</td></tr>
+<td>com.ep.mmbr.api.testscripts.budget.GetAllBudgets@45db05b2</td></tr>
 <tr>
-<td title='com.ep.mmbr.api.testscripts.budget.GetBudgetByID.testGetBudgetByID()'><b>testGetBudgetByID</b><br>Test class: com.ep.mmbr.api.testscripts.budget.GetBudgetByID<br/>
-<a href="#Output-820201254" onClick='toggleBox("Output-820201254", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.ep.mmbr.api.testscripts.budget.getAllGlobalGroups.testGetAllGlobalGroups()'><b>testGetAllGlobalGroups</b><br>Test class: com.ep.mmbr.api.testscripts.budget.getAllGlobalGroups<br/>
+<a href="#Output-467859120" onClick='toggleBox("Output-467859120", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-820201254" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-820201254">
+<a href="#Output-467859120" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-467859120">
 <br>Uploading budget: MovieMagicBudget.mbd<br/>
+<br>Sending POST request <br/>
+<br>Endpoint : /Budget<br/>
 <br>Multipart parameter : file : TestData/Budget/MovieMagicBudget.mbd<br/>
 <br>Budget uploaded successfully<br/>
-<br>Extracted budget id for the budget: 546411dfe4b089cc7647460d<br/>
-<br>Sending get reqest for get budget by id uri : /Budget/{budget_id}<br/>
+<br>Received budget id  : 546411dfe4b089cc7647460d<br/>
+<br><br>Sending request to get all global group by valid budget id<br/>
+<br>Sending GET request <br/>
+<br>Endpoint : /Budget/{budget_id}/GlobalGroup<br/>
 <br>Path parameters: </b>budget_id : 546411dfe4b089cc7647460d<br/>
-<br><br>Received Response body:</b>{"budgetId":"546411dfe4b089cc7647460d","name":"MovieMagicBudget.mbd","dateCreated":1415844319737,"dateUpdated":1415988800083,"dateLastUploaded":1415844319737}<br/>
+<br><br>Received Response body:</b>[{"id":71,"name":"Default Group","description":"This group was created as a Default Group."}]<br/>
 <br><br>Verifying Response code : <br>Actual response code : 200<br>Expected response code : 200<br/>
-<br>Verifying budget name :<br>Actual budget name : MovieMagicBudget.mbd Expected budget name : MovieMagicBudget.mbd<br/>
-testGetBudgetByID<br/>
-5S4G62ACHR9I2IXP8QXNQC2<br/>
+testGetAllGlobalGroups<br/>
+J2KL1OB3EOD3VMD256WVBYI<br/>
 </div>
 </td>
 <td></td>
-<td>7</td>
-<td>com.ep.mmbr.api.testscripts.budget.GetBudgetByID@ed42d08</td></tr>
+<td>0</td>
+<td>com.ep.mmbr.api.testscripts.budget.getAllGlobalGroups@2e530cf2</td></tr>
+<tr>
+<td title='com.ep.mmbr.api.testscripts.budget.GetBudgetByID.testGetBudgetByID()'><b>testGetBudgetByID</b><br>Test class: com.ep.mmbr.api.testscripts.budget.GetBudgetByID<br/>
+<a href="#Output-1301864188" onClick='toggleBox("Output-1301864188", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1301864188" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1301864188">
+<br>Uploading budget: MovieMagicBudget.mbd<br/>
+<br>Sending POST request <br/>
+<br>Endpoint : /Budget<br/>
+<br>Multipart parameter : file : TestData/Budget/MovieMagicBudget.mbd<br/>
+<br>Budget uploaded successfully<br/>
+<br>Received budget id  : 546411dfe4b089cc7647460d<br/>
+<br><br>Sending reqest to get budget by id <br/>
+<br>Sending GET request <br/>
+<br>Endpoint : /Budget/{budget_id}<br/>
+<br>Path parameters: </b>budget_id : 546411dfe4b089cc7647460d<br/>
+<br><br>Received Response body:</b>{"budgetId":"546411dfe4b089cc7647460d","name":"MovieMagicBudget.mbd","dateCreated":1415844319737,"dateUpdated":1416234124172,"dateLastUploaded":1415844319737}<br/>
+<br><br>Verifying Response code : <br>Actual response code : 200<br>Expected response code : 200<br/>
+<br>Verifying budget name :<br>Actual budget name : MovieMagicBudget.mbd<br> Expected budget name : MovieMagicBudget.mbd<br/>
+testGetBudgetByID<br/>
+5FG3RC13SCIXM059PMI1UKS<br/>
+</div>
+</td>
+<td></td>
+<td>5</td>
+<td>com.ep.mmbr.api.testscripts.budget.GetBudgetByID@538f1d7e</td></tr>
+<tr>
+<td title='com.ep.mmbr.api.testscripts.budget.GetGlobalGroupByID.testGetGlobalGroupByID()'><b>testGetGlobalGroupByID</b><br>Test class: com.ep.mmbr.api.testscripts.budget.GetGlobalGroupByID<br/>
+<a href="#Output-1452012524" onClick='toggleBox("Output-1452012524", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1452012524" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1452012524">
+<br>Uploading budget: MovieMagicBudget.mbd<br/>
+<br>Sending POST request <br/>
+<br>Endpoint : /Budget<br/>
+<br>Multipart parameter : file : TestData/Budget/MovieMagicBudget.mbd<br/>
+<br>Budget uploaded successfully<br/>
+<br>Received budget id  : 546411dfe4b089cc7647460d<br/>
+<br><br>Verifying  available global groups to get global group id<br/>
+<br>Sending GET request <br/>
+<br>Endpoint : /Budget/{budget_id}/GlobalGroup<br/>
+<br>Path parameters: </b>budget_id : 546411dfe4b089cc7647460d<br/>
+<br>Received global group id : 71<br/>
+<br><br>Set budget id and global id parametrs to request data : <br>Budgte ID:546411dfe4b089cc7647460d<br>Global group id71<br/>
+<br><br>Sending reqest to get global group by valid budget id and valid global group id<br/>
+<br>Sending GET request <br/>
+<br>Endpoint : /Budget/{budget_id}/GlobalGroup/{global_group_id}<br/>
+<br>Path parameters: </b>global_group_id : 71<br/>
+<br>Path parameters: </b>budget_id : 546411dfe4b089cc7647460d<br/>
+<br><br>Received Response body:</b>{"id":71,"name":"Default Group","description":"This group was created as a Default Group."}<br/>
+<br><br>Verifying Response code : <br>Actual response code : 200<br>Expected response code : 200<br/>
+testGetGlobalGroupByID<br/>
+0K7NS3RBS1PXAJOMAJVG0S8<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.ep.mmbr.api.testscripts.budget.GetGlobalGroupByID@e60e128</td></tr>
 <tr>
 <td title='com.ep.mmbr.api.testscripts.budget.PostBudget.testPostBudget()'><b>testPostBudget</b><br>Test class: com.ep.mmbr.api.testscripts.budget.PostBudget<br/>
-<a href="#Output-907025665" onClick='toggleBox("Output-907025665", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1282834355" onClick='toggleBox("Output-1282834355", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-907025665" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-907025665">
-Sending post budget reqest uri : /Budget<br/>
+<a href="#Output-1282834355" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1282834355">
+Sending request to post budget <br/>
+<br>Uploading budget: MovieMagicBudget.mbd<br/>
+<br>Sending POST request <br/>
+<br>Endpoint : /Budget<br/>
 <br>Multipart parameter : file : TestData/Budget/MovieMagicBudget.mbd<br/>
+<br>Budget uploaded successfully<br/>
 <br><br>Received Response body:</b>{"status":"OK","budgetId":"546411dfe4b089cc7647460d"}<br/>
 <br><br>Verifying Response code : <br>Actual response code : 200<br>Expected response code : 200<br/>
 testPostBudget<br/>
-JJHHMZQS4O330KMM1RKR3O2<br/>
+4FHY1CDZRHNCUYELSVKEB9M<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>com.ep.mmbr.api.testscripts.budget.PostBudget@6baa9f99</td></tr>
+<td>com.ep.mmbr.api.testscripts.budget.PostBudget@358b3364</td></tr>
+<tr>
+<td title='com.ep.mmbr.api.testscripts.budget.PostGlobalGroup.testPostGlobalGroups()'><b>testPostGlobalGroups</b><br>Test class: com.ep.mmbr.api.testscripts.budget.PostGlobalGroup<br/>
+<a href="#Output-178369767" onClick='toggleBox("Output-178369767", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-178369767" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-178369767">
+<br>Uploading budget: MovieMagicBudget.mbd<br/>
+<br>Sending POST request <br/>
+<br>Endpoint : /Budget<br/>
+<br>Multipart parameter : file : TestData/Budget/MovieMagicBudget.mbd<br/>
+<br>Budget uploaded successfully<br/>
+<br>Received budget id  : 546411dfe4b089cc7647460d<br/>
+<br><br>Sending post reqest with new global group <br/>
+<br>Sending POST request <br/>
+<br>Endpoint : /Budget/{budget_id}/GlobalGroup<br/>
+<br>Path parameters: </b>budget_id : 546411dfe4b089cc7647460d<br/>
+<br>Json body : {"description":"This is a test group","name":"Auto Test Group"}<br/>
+<br><br>Received Response body:</b><br/>
+<br><br>Verifying Response code : <br>Actual response code : 201<br>Expected response code : 201<br/>
+testPostGlobalGroups<br/>
+VFLF2J84BH7EJTII40DJ8ST<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.ep.mmbr.api.testscripts.budget.PostGlobalGroup@7a5e1077</td></tr>
 </table><p>
 </body>
 </html>

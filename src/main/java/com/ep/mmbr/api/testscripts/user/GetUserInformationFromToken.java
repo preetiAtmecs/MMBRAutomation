@@ -1,37 +1,53 @@
 package com.ep.mmbr.api.testscripts.user;
 
-import org.json.JSONException;
 import org.json.simple.JSONObject;
 import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
 
 import com.ep.mmbr.api.testscripts.TestSuiteBase;
-import com.ep.mmbr.api.utilities.TestHandler;
+import com.ep.mmbr.api.utilities.TestDataProvider;
+import com.ep.mmbr.api.utilities.RequestHandler;
 import com.ep.qa.automation.assertion.AssertionHandler;
 import com.jayway.restassured.response.Response;
 
+/**
+ * This script validate response code and user information from the given valid
+ * token
+ * 
+ * @author pg092111
+ * 
+ */
 public class GetUserInformationFromToken extends TestSuiteBase {
 
-	
-
+	/**
+	 * Send request with valid salesforce token and verify the response code
+	 * matches with 200 and the user information matches with the expected
+	 * results
+	 * 
+	 * @author pg092111
+	 * 
+	 */
 	@Test
-	public void testUserInformationFromToken() throws JSONException {
-		TestHandler testHandler = new TestHandler();
-		
-		JSONObject getUserRequestData = testHandler.readFileData("user",
-				"getUserInformationFromToken.json");
+	public void testUserInformationFromToken() throws Exception {
+		RequestHandler requestHandler = new RequestHandler();
 
-		Reporter.log("Sending get user information from token uri : "+getUserRequestData.get("uri"));
-		Response getUserResponse = testHandler.sendRequestAndGetResponse(
+		JSONObject getUserRequestData = new TestDataProvider().readFileData(
+				"user", "getUserInformationFromToken.json");
+
+		Reporter.log("Sending request to get user information from token");
+		Response getUserResponse = requestHandler.sendRequestAndGetResponse(
 				getUserRequestData, CONFIG.getProperty("SalesforceToken"));
 
-		testHandler.verifyResponseCode(getUserResponse,getUserRequestData.get("status").toString());
+		Assert.assertTrue(requestHandler.verifyResponseCode(getUserResponse,
+				getUserRequestData.get("status").toString()));
+
+		Reporter.log("<br>Verifying user information from response body json object:<br>Expected response body"
+				+ getUserRequestData.get("responseBody").toString());
 		
 		
-		Reporter.log("Verifying user information from response body:");
-		new AssertionHandler().assertJsonEquals(getUserResponse.asString(),
-				getUserRequestData.get("responseBody").toString(),true);
+		AssertionHandler.assertJsonEquals(getUserResponse.asString(),
+				getUserRequestData.get("responseBody").toString(), true);
 
 	}
 

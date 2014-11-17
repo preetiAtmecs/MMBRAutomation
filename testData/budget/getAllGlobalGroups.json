@@ -1,7 +1,12 @@
 {
-	"uri": "/Budget",
+	"uri": "/Budget/{budget_id}/GlobalGroup",
 	
-	"filepath":"C:/Users/pg092111/Desktop/AutoTest.mbd",
+	"method": "GET",
+	
+	"requestParameters": 
+	{
+		"budget_id": null
+	},
 	
 
 	"status": "200"

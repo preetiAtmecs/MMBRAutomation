@@ -11,8 +11,20 @@ import org.testng.Reporter;
 import com.jayway.restassured.builder.RequestSpecBuilder;
 import com.jayway.restassured.specification.RequestSpecification;
 
-public class RestServiceHelper {
+/**
+ * This class is responsible for building request builder based  * on the content provided
+ * @author preethi
+ *
+ */
+public class RequestSpecificationBuilder {
 
+	/**
+	 * Method builds request specification that will sent with request
+	 * @param paramType
+	 * @param requestBody
+	 * @return
+	 */
+	@SuppressWarnings("unchecked")
 	public RequestSpecification getRequestSpecification(String paramType,
 			Object requestBody) {
 
