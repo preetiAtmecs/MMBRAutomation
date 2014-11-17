@@ -11,7 +11,7 @@ import com.ep.mmbr.api.utilities.TestDataProvider;
 import com.jayway.restassured.response.Response;
 
 /**
- * This script validate response code for get global group by valid budget id request.
+ * This script validate response code for get global group by valid budget id and valid global group idrequest .
  * 
  * @author pg092111
  * 
@@ -19,7 +19,7 @@ import com.jayway.restassured.response.Response;
 public class GetGlobalGroupByID extends TestSuiteBase {
 	
 	/**
-	 * Upload budget and get budget id,set budget id to get global group request data
+	 * Upload budget and get budget id,set budget id and global group id  to get global group request data
 	 * Send request and verifies response code receives 200
 	 */
 	@Test

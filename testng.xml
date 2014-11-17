@@ -7,11 +7,14 @@
 	<test name="Budget">
 		<classes>
 			<class name="com.ep.mmbr.api.testscripts.budget.GetBudgetByID" />
+			<class name="com.ep.mmbr.api.testscripts.budget.GetBudgetByInvalidID" />
+			
 			<class name="com.ep.mmbr.api.testscripts.budget.GetAllBudgets" />
 			<class name="com.ep.mmbr.api.testscripts.budget.PostBudget" />	
 			<class name="com.ep.mmbr.api.testscripts.budget.getAllGlobalGroups" />
 			<class name="com.ep.mmbr.api.testscripts.budget.PostGlobalGroup" />
-			<class name="com.ep.mmbr.api.testscripts.budget.GetGlobalGroupByID" />	
+			<class name="com.ep.mmbr.api.testscripts.budget.GetGlobalGroupByID" />
+			<class name="com.ep.mmbr.api.testscripts.budget.GetAllGlobals" />	
 		</classes>
 	</test>
 	
@@ -28,7 +31,7 @@
 	<test name="Contracts">
 		<classes>
 			<class name="com.ep.mmbr.api.testscripts.contractsrates.GetAContractRateByContractID" />
-			<class name="com.ep.mmbr.api.testscripts.contractsrates.GetAContractByInvalidContractID" />
+			<class name="com.ep.mmbr.api.testscripts.contractsrates.GetAContractByInvalidValues" />
 			
 					
 		</classes>

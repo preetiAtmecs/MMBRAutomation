@@ -1,14 +1,13 @@
 package com.ep.mmbr.api.testscripts.contractsrates;
 
-import org.json.JSONException;
 import org.json.simple.JSONObject;
 import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
 
 import com.ep.mmbr.api.testscripts.TestSuiteBase;
-import com.ep.mmbr.api.utilities.TestDataProvider;
 import com.ep.mmbr.api.utilities.RequestHandler;
+import com.ep.mmbr.api.utilities.TestDataProvider;
 import com.jayway.restassured.response.Response;
 
 /**
@@ -18,7 +17,7 @@ import com.jayway.restassured.response.Response;
  * @author pg092111
  * 
  */
-public class GetAContractByInvalidContractID extends TestSuiteBase {
+public class GetAContractByInvalidValues extends TestSuiteBase {
 
 	/**
 	 * Send get contract request with invalid contract id and Verifies the
@@ -26,7 +25,7 @@ public class GetAContractByInvalidContractID extends TestSuiteBase {
 	 * 
 	 */
 	@Test
-	public void testGetAContractByInvalidContractID() throws JSONException {
+	public void testGetAContractByInvalidContractID()  {
 
 		RequestHandler requestHandler = new RequestHandler();
 
@@ -44,4 +43,6 @@ public class GetAContractByInvalidContractID extends TestSuiteBase {
 				getAContractRateByIDResponse, getAContractRateByIDRequestData
 						.get("status").toString()));
 	}
+	
+	
 }

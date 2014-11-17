@@ -1,14 +1,13 @@
 package com.ep.mmbr.api.testscripts.budget;
 
-import org.json.JSONException;
 import org.json.simple.JSONObject;
 import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
 
 import com.ep.mmbr.api.testscripts.TestSuiteBase;
-import com.ep.mmbr.api.utilities.TestDataProvider;
 import com.ep.mmbr.api.utilities.RequestHandler;
+import com.ep.mmbr.api.utilities.TestDataProvider;
 import com.jayway.restassured.response.Response;
 /**
  * This script validate response code for get budget by invalid budget id request.
@@ -23,7 +22,7 @@ public class GetBudgetByInvalidID extends TestSuiteBase {
 	 * response code match with 404 
 	 */
 	@Test
-	public void testGetBudgetByInvalidID() throws JSONException {
+	public void testGetBudgetByInvalidID()  {
 		RequestHandler requestHandler = new RequestHandler();
 
 		JSONObject getBudgetByInvalidIDRequestData = new TestDataProvider().readFileData(
