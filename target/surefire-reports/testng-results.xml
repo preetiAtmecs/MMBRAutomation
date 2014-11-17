@@ -2,8 +2,7 @@
 <testng-results skipped="0" failed="0" total="10" passed="10">
   <reporter-output>
     <line>
-      <![CDATA[
-Base uri: https://mmio-api-dev-env.elasticbeanstalk.com:443/v1]]>
+      <![CDATA[Base uri: https://mmio-api-dev-env.elasticbeanstalk.com:443/v1]]>
     </line>
     <line>
       <![CDATA[<br>Uploading budget: MovieMagicBudget.mbd]]>
@@ -36,7 +35,7 @@ Base uri: https://mmio-api-dev-env.elasticbeanstalk.com:443/v1]]>
       <![CDATA[<br>Path parameters: </b>budget_id : 546411dfe4b089cc7647460d]]>
     </line>
     <line>
-      <![CDATA[<br><br>Received Response body:</b>{"budgetId":"546411dfe4b089cc7647460d","name":"MovieMagicBudget.mbd","dateCreated":1415844319737,"dateUpdated":1416234124172,"dateLastUploaded":1415844319737}]]>
+      <![CDATA[<br><br>Received Response body:</b>{"budgetId":"546411dfe4b089cc7647460d","name":"MovieMagicBudget.mbd","dateCreated":1415844319737,"dateUpdated":1416235075009,"dateLastUploaded":1415844319737}]]>
     </line>
     <line>
       <![CDATA[<br><br>Verifying Response code : <br>Actual response code : 200<br>Expected response code : 200]]>
@@ -48,7 +47,7 @@ Base uri: https://mmio-api-dev-env.elasticbeanstalk.com:443/v1]]>
       <![CDATA[testGetBudgetByID]]>
     </line>
     <line>
-      <![CDATA[5FG3RC13SCIXM059PMI1UKS]]>
+      <![CDATA[DX44Z2087L3F2MWWUVLKWRB]]>
     </line>
     <line>
       <![CDATA[<br>Verifying if budgets are available for user]]>
@@ -63,7 +62,7 @@ Base uri: https://mmio-api-dev-env.elasticbeanstalk.com:443/v1]]>
       <![CDATA[<br>Found budgets for user]]>
     </line>
     <line>
-      <![CDATA[<br><br>Received Response body:</b>[{"budgetId":"546411dfe4b089cc7647460d","name":"MovieMagicBudget.mbd","dateCreated":1415844319737,"dateUpdated":1416234124172,"dateLastUploaded":1415844319737},{"budgetId":"546413aae4b089cc7647460e","name":"AAAPIXELS_TORONTO_BUDGET_72_DAYS_03-12-14-2014-09-08-13-43-32-346-07001.mbd","dateCreated":1415844777251,"dateUpdated":1415964347024,"dateLastUploaded":1415844777251},{"budgetId":"546413bee4b089cc7647460f","name":"Budget2-2014-07-22-16-10-19-670-0700.mbd","dateCreated":1415844798992,"dateUpdated":1415844798992,"dateLastUploaded":1415844798992},{"budgetId":"546413dbe4b089cc76474610","name":"StarWars.mbd","dateCreated":1415844826961,"dateUpdated":1415972566314,"dateLastUploaded":1415844826961}]]]>
+      <![CDATA[<br><br>Received Response body:</b>[{"budgetId":"546411dfe4b089cc7647460d","name":"MovieMagicBudget.mbd","dateCreated":1415844319737,"dateUpdated":1416235075009,"dateLastUploaded":1415844319737},{"budgetId":"546413aae4b089cc7647460e","name":"AAAPIXELS_TORONTO_BUDGET_72_DAYS_03-12-14-2014-09-08-13-43-32-346-07001.mbd","dateCreated":1415844777251,"dateUpdated":1415964347024,"dateLastUploaded":1415844777251},{"budgetId":"546413bee4b089cc7647460f","name":"Budget2-2014-07-22-16-10-19-670-0700.mbd","dateCreated":1415844798992,"dateUpdated":1415844798992,"dateLastUploaded":1415844798992},{"budgetId":"546413dbe4b089cc76474610","name":"StarWars.mbd","dateCreated":1415844826961,"dateUpdated":1415972566314,"dateLastUploaded":1415844826961}]]]>
     </line>
     <line>
       <![CDATA[<br><br>Verifying Response code : <br>Actual response code : 200<br>Expected response code : 200]]>
@@ -72,7 +71,7 @@ Base uri: https://mmio-api-dev-env.elasticbeanstalk.com:443/v1]]>
       <![CDATA[testGetAllBudgets]]>
     </line>
     <line>
-      <![CDATA[H5JN42TTG1YNBCLDLONCIM9]]>
+      <![CDATA[24Y24W29X6A8HB2IY17388T]]>
     </line>
     <line>
       <![CDATA[Sending request to post budget ]]>
@@ -102,7 +101,7 @@ Base uri: https://mmio-api-dev-env.elasticbeanstalk.com:443/v1]]>
       <![CDATA[testPostBudget]]>
     </line>
     <line>
-      <![CDATA[4FHY1CDZRHNCUYELSVKEB9M]]>
+      <![CDATA[VJINRIGL12GSEY82H3UQI3Y]]>
     </line>
     <line>
       <![CDATA[<br>Uploading budget: MovieMagicBudget.mbd]]>
@@ -144,7 +143,7 @@ Base uri: https://mmio-api-dev-env.elasticbeanstalk.com:443/v1]]>
       <![CDATA[testGetAllGlobalGroups]]>
     </line>
     <line>
-      <![CDATA[J2KL1OB3EOD3VMD256WVBYI]]>
+      <![CDATA[XPDSD0FNX6FHVFL6MVPFGZU]]>
     </line>
     <line>
       <![CDATA[<br>Uploading budget: MovieMagicBudget.mbd]]>
@@ -189,7 +188,7 @@ Base uri: https://mmio-api-dev-env.elasticbeanstalk.com:443/v1]]>
       <![CDATA[testPostGlobalGroups]]>
     </line>
     <line>
-      <![CDATA[VFLF2J84BH7EJTII40DJ8ST]]>
+      <![CDATA[ZKB5HNKLQ9CKNS7K4HOQ00V]]>
     </line>
     <line>
       <![CDATA[<br>Uploading budget: MovieMagicBudget.mbd]]>
@@ -252,7 +251,7 @@ Base uri: https://mmio-api-dev-env.elasticbeanstalk.com:443/v1]]>
       <![CDATA[testGetGlobalGroupByID]]>
     </line>
     <line>
-      <![CDATA[0K7NS3RBS1PXAJOMAJVG0S8]]>
+      <![CDATA[3LYV8KJMAUS1S8C2XO333IM]]>
     </line>
     <line>
       <![CDATA[Sending request to get user information from token]]>
@@ -276,7 +275,7 @@ Base uri: https://mmio-api-dev-env.elasticbeanstalk.com:443/v1]]>
       <![CDATA[testUserInformationFromToken]]>
     </line>
     <line>
-      <![CDATA[RKZG9BZ00BYLGPXM3PB15G4]]>
+      <![CDATA[D5PB56458YGTHK5CDWYXDAN]]>
     </line>
     <line>
       <![CDATA[Sending get user information with invalid token : /User]]>
@@ -297,10 +296,10 @@ Base uri: https://mmio-api-dev-env.elasticbeanstalk.com:443/v1]]>
       <![CDATA[testUserInfoWithInvalidToken]]>
     </line>
     <line>
-      <![CDATA[8MP32X9BDU41EHX3EZM7SJF]]>
+      <![CDATA[WCOP8GE69ABUXC0JSDE99KO]]>
     </line>
     <line>
-      <![CDATA[Sending get reqest for get contract by id ]]>
+      <![CDATA[Sending get reqest to get contract by id ]]>
     </line>
     <line>
       <![CDATA[<br>Sending GET request ]]>
@@ -321,10 +320,10 @@ Base uri: https://mmio-api-dev-env.elasticbeanstalk.com:443/v1]]>
       <![CDATA[testGetAContractRateByID]]>
     </line>
     <line>
-      <![CDATA[7N4EE0XZK1JDYAESV8J9KJ9]]>
+      <![CDATA[MJ96E3MH331D865S1YJ1NXJ]]>
     </line>
     <line>
-      <![CDATA[Sending reqest for get contract by invalid id ]]>
+      <![CDATA[Sending reqest to get contract by invalid id ]]>
     </line>
     <line>
       <![CDATA[<br>Sending GET request ]]>
@@ -345,15 +344,15 @@ Base uri: https://mmio-api-dev-env.elasticbeanstalk.com:443/v1]]>
       <![CDATA[testGetAContractByInvalidContractID]]>
     </line>
     <line>
-      <![CDATA[97168HKT93AQEO7STBRBKSF]]>
+      <![CDATA[UFLNLDMM5TASQO4DIEGX1OT]]>
     </line>
   </reporter-output>
-  <suite name="MMB Refresh API" duration-ms="9152" started-at="2014-11-17T14:22:00Z" finished-at="2014-11-17T14:22:09Z">
+  <suite name="MMB Refresh API" duration-ms="8684" started-at="2014-11-17T14:37:51Z" finished-at="2014-11-17T14:38:00Z">
     <groups>
     </groups>
-    <test name="Budget" duration-ms="7697" started-at="2014-11-17T14:22:00Z" finished-at="2014-11-17T14:22:08Z">
+    <test name="Budget" duration-ms="7310" started-at="2014-11-17T14:37:51Z" finished-at="2014-11-17T14:37:58Z">
       <class name="com.ep.mmbr.api.testscripts.budget.GetGlobalGroupByID">
-        <test-method status="PASS" signature="testGetGlobalGroupByID()[pri:0, instance:com.ep.mmbr.api.testscripts.budget.GetGlobalGroupByID@e60e128]" name="testGetGlobalGroupByID" duration-ms="767" started-at="2014-11-17T06:22:07Z" finished-at="2014-11-17T06:22:08Z">
+        <test-method status="PASS" signature="testGetGlobalGroupByID()[pri:0, instance:com.ep.mmbr.api.testscripts.budget.GetGlobalGroupByID@7a5e1077]" name="testGetGlobalGroupByID" duration-ms="877" started-at="2014-11-17T06:37:58Z" finished-at="2014-11-17T06:37:58Z">
           <reporter-output>
             <line>
               <![CDATA[<br>Uploading budget: MovieMagicBudget.mbd]]>
@@ -416,13 +415,13 @@ Base uri: https://mmio-api-dev-env.elasticbeanstalk.com:443/v1]]>
               <![CDATA[testGetGlobalGroupByID]]>
             </line>
             <line>
-              <![CDATA[0K7NS3RBS1PXAJOMAJVG0S8]]>
+              <![CDATA[3LYV8KJMAUS1S8C2XO333IM]]>
             </line>
           </reporter-output>
         </test-method> <!-- testGetGlobalGroupByID -->
       </class> <!-- com.ep.mmbr.api.testscripts.budget.GetGlobalGroupByID -->
       <class name="com.ep.mmbr.api.testscripts.budget.getAllGlobalGroups">
-        <test-method status="PASS" signature="testGetAllGlobalGroups()[pri:0, instance:com.ep.mmbr.api.testscripts.budget.getAllGlobalGroups@2e530cf2]" name="testGetAllGlobalGroups" duration-ms="516" started-at="2014-11-17T06:22:06Z" finished-at="2014-11-17T06:22:06Z">
+        <test-method status="PASS" signature="testGetAllGlobalGroups()[pri:0, instance:com.ep.mmbr.api.testscripts.budget.getAllGlobalGroups@358b3364]" name="testGetAllGlobalGroups" duration-ms="515" started-at="2014-11-17T06:37:56Z" finished-at="2014-11-17T06:37:57Z">
           <reporter-output>
             <line>
               <![CDATA[<br>Uploading budget: MovieMagicBudget.mbd]]>
@@ -464,13 +463,13 @@ Base uri: https://mmio-api-dev-env.elasticbeanstalk.com:443/v1]]>
               <![CDATA[testGetAllGlobalGroups]]>
             </line>
             <line>
-              <![CDATA[J2KL1OB3EOD3VMD256WVBYI]]>
+              <![CDATA[XPDSD0FNX6FHVFL6MVPFGZU]]>
             </line>
           </reporter-output>
         </test-method> <!-- testGetAllGlobalGroups -->
       </class> <!-- com.ep.mmbr.api.testscripts.budget.getAllGlobalGroups -->
       <class name="com.ep.mmbr.api.testscripts.budget.PostBudget">
-        <test-method status="PASS" signature="testPostBudget()[pri:0, instance:com.ep.mmbr.api.testscripts.budget.PostBudget@358b3364]" name="testPostBudget" duration-ms="297" started-at="2014-11-17T06:22:06Z" finished-at="2014-11-17T06:22:06Z">
+        <test-method status="PASS" signature="testPostBudget()[pri:0, instance:com.ep.mmbr.api.testscripts.budget.PostBudget@4e76fba0]" name="testPostBudget" duration-ms="284" started-at="2014-11-17T06:37:56Z" finished-at="2014-11-17T06:37:56Z">
           <reporter-output>
             <line>
               <![CDATA[Sending request to post budget ]]>
@@ -500,13 +499,13 @@ Base uri: https://mmio-api-dev-env.elasticbeanstalk.com:443/v1]]>
               <![CDATA[testPostBudget]]>
             </line>
             <line>
-              <![CDATA[4FHY1CDZRHNCUYELSVKEB9M]]>
+              <![CDATA[VJINRIGL12GSEY82H3UQI3Y]]>
             </line>
           </reporter-output>
         </test-method> <!-- testPostBudget -->
       </class> <!-- com.ep.mmbr.api.testscripts.budget.PostBudget -->
       <class name="com.ep.mmbr.api.testscripts.budget.GetAllBudgets">
-        <test-method status="PASS" signature="testGetAllBudgets()[pri:0, instance:com.ep.mmbr.api.testscripts.budget.GetAllBudgets@45db05b2]" name="testGetAllBudgets" duration-ms="235" started-at="2014-11-17T06:22:05Z" finished-at="2014-11-17T06:22:06Z">
+        <test-method status="PASS" signature="testGetAllBudgets()[pri:0, instance:com.ep.mmbr.api.testscripts.budget.GetAllBudgets@45db05b2]" name="testGetAllBudgets" duration-ms="202" started-at="2014-11-17T06:37:56Z" finished-at="2014-11-17T06:37:56Z">
           <reporter-output>
             <line>
               <![CDATA[<br>Verifying if budgets are available for user]]>
@@ -521,7 +520,7 @@ Base uri: https://mmio-api-dev-env.elasticbeanstalk.com:443/v1]]>
               <![CDATA[<br>Found budgets for user]]>
             </line>
             <line>
-              <![CDATA[<br><br>Received Response body:</b>[{"budgetId":"546411dfe4b089cc7647460d","name":"MovieMagicBudget.mbd","dateCreated":1415844319737,"dateUpdated":1416234124172,"dateLastUploaded":1415844319737},{"budgetId":"546413aae4b089cc7647460e","name":"AAAPIXELS_TORONTO_BUDGET_72_DAYS_03-12-14-2014-09-08-13-43-32-346-07001.mbd","dateCreated":1415844777251,"dateUpdated":1415964347024,"dateLastUploaded":1415844777251},{"budgetId":"546413bee4b089cc7647460f","name":"Budget2-2014-07-22-16-10-19-670-0700.mbd","dateCreated":1415844798992,"dateUpdated":1415844798992,"dateLastUploaded":1415844798992},{"budgetId":"546413dbe4b089cc76474610","name":"StarWars.mbd","dateCreated":1415844826961,"dateUpdated":1415972566314,"dateLastUploaded":1415844826961}]]]>
+              <![CDATA[<br><br>Received Response body:</b>[{"budgetId":"546411dfe4b089cc7647460d","name":"MovieMagicBudget.mbd","dateCreated":1415844319737,"dateUpdated":1416235075009,"dateLastUploaded":1415844319737},{"budgetId":"546413aae4b089cc7647460e","name":"AAAPIXELS_TORONTO_BUDGET_72_DAYS_03-12-14-2014-09-08-13-43-32-346-07001.mbd","dateCreated":1415844777251,"dateUpdated":1415964347024,"dateLastUploaded":1415844777251},{"budgetId":"546413bee4b089cc7647460f","name":"Budget2-2014-07-22-16-10-19-670-0700.mbd","dateCreated":1415844798992,"dateUpdated":1415844798992,"dateLastUploaded":1415844798992},{"budgetId":"546413dbe4b089cc76474610","name":"StarWars.mbd","dateCreated":1415844826961,"dateUpdated":1415972566314,"dateLastUploaded":1415844826961}]]]>
             </line>
             <line>
               <![CDATA[<br><br>Verifying Response code : <br>Actual response code : 200<br>Expected response code : 200]]>
@@ -530,13 +529,64 @@ Base uri: https://mmio-api-dev-env.elasticbeanstalk.com:443/v1]]>
               <![CDATA[testGetAllBudgets]]>
             </line>
             <line>
-              <![CDATA[H5JN42TTG1YNBCLDLONCIM9]]>
+              <![CDATA[24Y24W29X6A8HB2IY17388T]]>
             </line>
           </reporter-output>
         </test-method> <!-- testGetAllBudgets -->
       </class> <!-- com.ep.mmbr.api.testscripts.budget.GetAllBudgets -->
+      <class name="com.ep.mmbr.api.testscripts.budget.GetBudgetByID">
+        <test-method status="PASS" signature="testGetBudgetByID()[pri:0, instance:com.ep.mmbr.api.testscripts.budget.GetBudgetByID@2e530cf2]" name="testGetBudgetByID" duration-ms="4798" started-at="2014-11-17T06:37:51Z" finished-at="2014-11-17T06:37:56Z">
+          <reporter-output>
+            <line>
+              <![CDATA[<br>Uploading budget: MovieMagicBudget.mbd]]>
+            </line>
+            <line>
+              <![CDATA[<br>Sending POST request ]]>
+            </line>
+            <line>
+              <![CDATA[<br>Endpoint : /Budget]]>
+            </line>
+            <line>
+              <![CDATA[<br>Multipart parameter : file : TestData/Budget/MovieMagicBudget.mbd]]>
+            </line>
+            <line>
+              <![CDATA[<br>Budget uploaded successfully]]>
+            </line>
+            <line>
+              <![CDATA[<br>Received budget id  : 546411dfe4b089cc7647460d]]>
+            </line>
+            <line>
+              <![CDATA[<br><br>Sending reqest to get budget by id ]]>
+            </line>
+            <line>
+              <![CDATA[<br>Sending GET request ]]>
+            </line>
+            <line>
+              <![CDATA[<br>Endpoint : /Budget/{budget_id}]]>
+            </line>
+            <line>
+              <![CDATA[<br>Path parameters: </b>budget_id : 546411dfe4b089cc7647460d]]>
+            </line>
+            <line>
+              <![CDATA[<br><br>Received Response body:</b>{"budgetId":"546411dfe4b089cc7647460d","name":"MovieMagicBudget.mbd","dateCreated":1415844319737,"dateUpdated":1416235075009,"dateLastUploaded":1415844319737}]]>
+            </line>
+            <line>
+              <![CDATA[<br><br>Verifying Response code : <br>Actual response code : 200<br>Expected response code : 200]]>
+            </line>
+            <line>
+              <![CDATA[<br>Verifying budget name :<br>Actual budget name : MovieMagicBudget.mbd<br> Expected budget name : MovieMagicBudget.mbd]]>
+            </line>
+            <line>
+              <![CDATA[testGetBudgetByID]]>
+            </line>
+            <line>
+              <![CDATA[DX44Z2087L3F2MWWUVLKWRB]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testGetBudgetByID -->
+      </class> <!-- com.ep.mmbr.api.testscripts.budget.GetBudgetByID -->
       <class name="com.ep.mmbr.api.testscripts.budget.PostGlobalGroup">
-        <test-method status="PASS" signature="testPostGlobalGroups()[pri:0, instance:com.ep.mmbr.api.testscripts.budget.PostGlobalGroup@7a5e1077]" name="testPostGlobalGroups" duration-ms="578" started-at="2014-11-17T06:22:06Z" finished-at="2014-11-17T06:22:07Z">
+        <test-method status="PASS" signature="testPostGlobalGroups()[pri:0, instance:com.ep.mmbr.api.testscripts.budget.PostGlobalGroup@7745c859]" name="testPostGlobalGroups" duration-ms="617" started-at="2014-11-17T06:37:57Z" finished-at="2014-11-17T06:37:58Z">
           <reporter-output>
             <line>
               <![CDATA[<br>Uploading budget: MovieMagicBudget.mbd]]>
@@ -581,66 +631,15 @@ Base uri: https://mmio-api-dev-env.elasticbeanstalk.com:443/v1]]>
               <![CDATA[testPostGlobalGroups]]>
             </line>
             <line>
-              <![CDATA[VFLF2J84BH7EJTII40DJ8ST]]>
+              <![CDATA[ZKB5HNKLQ9CKNS7K4HOQ00V]]>
             </line>
           </reporter-output>
         </test-method> <!-- testPostGlobalGroups -->
       </class> <!-- com.ep.mmbr.api.testscripts.budget.PostGlobalGroup -->
-      <class name="com.ep.mmbr.api.testscripts.budget.GetBudgetByID">
-        <test-method status="PASS" signature="testGetBudgetByID()[pri:0, instance:com.ep.mmbr.api.testscripts.budget.GetBudgetByID@538f1d7e]" name="testGetBudgetByID" duration-ms="5258" started-at="2014-11-17T06:22:00Z" finished-at="2014-11-17T06:22:05Z">
-          <reporter-output>
-            <line>
-              <![CDATA[<br>Uploading budget: MovieMagicBudget.mbd]]>
-            </line>
-            <line>
-              <![CDATA[<br>Sending POST request ]]>
-            </line>
-            <line>
-              <![CDATA[<br>Endpoint : /Budget]]>
-            </line>
-            <line>
-              <![CDATA[<br>Multipart parameter : file : TestData/Budget/MovieMagicBudget.mbd]]>
-            </line>
-            <line>
-              <![CDATA[<br>Budget uploaded successfully]]>
-            </line>
-            <line>
-              <![CDATA[<br>Received budget id  : 546411dfe4b089cc7647460d]]>
-            </line>
-            <line>
-              <![CDATA[<br><br>Sending reqest to get budget by id ]]>
-            </line>
-            <line>
-              <![CDATA[<br>Sending GET request ]]>
-            </line>
-            <line>
-              <![CDATA[<br>Endpoint : /Budget/{budget_id}]]>
-            </line>
-            <line>
-              <![CDATA[<br>Path parameters: </b>budget_id : 546411dfe4b089cc7647460d]]>
-            </line>
-            <line>
-              <![CDATA[<br><br>Received Response body:</b>{"budgetId":"546411dfe4b089cc7647460d","name":"MovieMagicBudget.mbd","dateCreated":1415844319737,"dateUpdated":1416234124172,"dateLastUploaded":1415844319737}]]>
-            </line>
-            <line>
-              <![CDATA[<br><br>Verifying Response code : <br>Actual response code : 200<br>Expected response code : 200]]>
-            </line>
-            <line>
-              <![CDATA[<br>Verifying budget name :<br>Actual budget name : MovieMagicBudget.mbd<br> Expected budget name : MovieMagicBudget.mbd]]>
-            </line>
-            <line>
-              <![CDATA[testGetBudgetByID]]>
-            </line>
-            <line>
-              <![CDATA[5FG3RC13SCIXM059PMI1UKS]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- testGetBudgetByID -->
-      </class> <!-- com.ep.mmbr.api.testscripts.budget.GetBudgetByID -->
     </test> <!-- Budget -->
-    <test name="User" duration-ms="407" started-at="2014-11-17T14:22:08Z" finished-at="2014-11-17T14:22:08Z">
+    <test name="User" duration-ms="485" started-at="2014-11-17T14:37:59Z" finished-at="2014-11-17T14:37:59Z">
       <class name="com.ep.mmbr.api.testscripts.user.GetUserInfoWithInvalidToken">
-        <test-method status="PASS" signature="testUserInfoWithInvalidToken()[pri:0, instance:com.ep.mmbr.api.testscripts.user.GetUserInfoWithInvalidToken@2b313906]" name="testUserInfoWithInvalidToken" duration-ms="204" started-at="2014-11-17T06:22:08Z" finished-at="2014-11-17T06:22:08Z">
+        <test-method status="PASS" signature="testUserInfoWithInvalidToken()[pri:0, instance:com.ep.mmbr.api.testscripts.user.GetUserInfoWithInvalidToken@49de17f4]" name="testUserInfoWithInvalidToken" duration-ms="179" started-at="2014-11-17T06:37:59Z" finished-at="2014-11-17T06:37:59Z">
           <reporter-output>
             <line>
               <![CDATA[Sending get user information with invalid token : /User]]>
@@ -661,13 +660,13 @@ Base uri: https://mmio-api-dev-env.elasticbeanstalk.com:443/v1]]>
               <![CDATA[testUserInfoWithInvalidToken]]>
             </line>
             <line>
-              <![CDATA[8MP32X9BDU41EHX3EZM7SJF]]>
+              <![CDATA[WCOP8GE69ABUXC0JSDE99KO]]>
             </line>
           </reporter-output>
         </test-method> <!-- testUserInfoWithInvalidToken -->
       </class> <!-- com.ep.mmbr.api.testscripts.user.GetUserInfoWithInvalidToken -->
       <class name="com.ep.mmbr.api.testscripts.user.GetUserInformationFromToken">
-        <test-method status="PASS" signature="testUserInformationFromToken()[pri:0, instance:com.ep.mmbr.api.testscripts.user.GetUserInformationFromToken@16b8f8eb]" name="testUserInformationFromToken" duration-ms="203" started-at="2014-11-17T06:22:08Z" finished-at="2014-11-17T06:22:08Z">
+        <test-method status="PASS" signature="testUserInformationFromToken()[pri:0, instance:com.ep.mmbr.api.testscripts.user.GetUserInformationFromToken@60f47bf5]" name="testUserInformationFromToken" duration-ms="305" started-at="2014-11-17T06:37:59Z" finished-at="2014-11-17T06:37:59Z">
           <reporter-output>
             <line>
               <![CDATA[Sending request to get user information from token]]>
@@ -691,18 +690,25 @@ Base uri: https://mmio-api-dev-env.elasticbeanstalk.com:443/v1]]>
               <![CDATA[testUserInformationFromToken]]>
             </line>
             <line>
-              <![CDATA[RKZG9BZ00BYLGPXM3PB15G4]]>
+              <![CDATA[D5PB56458YGTHK5CDWYXDAN]]>
             </line>
           </reporter-output>
         </test-method> <!-- testUserInformationFromToken -->
       </class> <!-- com.ep.mmbr.api.testscripts.user.GetUserInformationFromToken -->
     </test> <!-- User -->
-    <test name="Contracts" duration-ms="954" started-at="2014-11-17T14:22:08Z" finished-at="2014-11-17T14:22:09Z">
+    <test name="Contracts" duration-ms="834" started-at="2014-11-17T14:37:59Z" finished-at="2014-11-17T14:38:00Z">
       <class name="com.ep.mmbr.api.testscripts.contractsrates.GetAContractByInvalidContractID">
-        <test-method status="PASS" signature="testGetAContractByInvalidContractID()[pri:0, instance:com.ep.mmbr.api.testscripts.contractsrates.GetAContractByInvalidContractID@fcfa52]" name="testGetAContractByInvalidContractID" duration-ms="282" started-at="2014-11-17T06:22:09Z" finished-at="2014-11-17T06:22:09Z">
+        <test-method status="PASS" signature="dbConnect()[pri:0, instance:com.ep.mmbr.api.testscripts.contractsrates.GetAContractByInvalidContractID@3ce95a56]" name="dbConnect" is-config="true" duration-ms="969" started-at="2014-11-17T06:37:50Z" finished-at="2014-11-17T06:37:51Z">
           <reporter-output>
             <line>
-              <![CDATA[Sending reqest for get contract by invalid id ]]>
+              <![CDATA[Base uri: https://mmio-api-dev-env.elasticbeanstalk.com:443/v1]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- dbConnect -->
+        <test-method status="PASS" signature="testGetAContractByInvalidContractID()[pri:0, instance:com.ep.mmbr.api.testscripts.contractsrates.GetAContractByInvalidContractID@3ce95a56]" name="testGetAContractByInvalidContractID" duration-ms="220" started-at="2014-11-17T06:38:00Z" finished-at="2014-11-17T06:38:00Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Sending reqest to get contract by invalid id ]]>
             </line>
             <line>
               <![CDATA[<br>Sending GET request ]]>
@@ -723,24 +729,20 @@ Base uri: https://mmio-api-dev-env.elasticbeanstalk.com:443/v1]]>
               <![CDATA[testGetAContractByInvalidContractID]]>
             </line>
             <line>
-              <![CDATA[97168HKT93AQEO7STBRBKSF]]>
+              <![CDATA[UFLNLDMM5TASQO4DIEGX1OT]]>
             </line>
           </reporter-output>
         </test-method> <!-- testGetAContractByInvalidContractID -->
+        <test-method status="PASS" signature="dbDisconnect()[pri:0, instance:com.ep.mmbr.api.testscripts.contractsrates.GetAContractByInvalidContractID@3ce95a56]" name="dbDisconnect" is-config="true" duration-ms="0" started-at="2014-11-17T06:38:00Z" finished-at="2014-11-17T06:38:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- dbDisconnect -->
       </class> <!-- com.ep.mmbr.api.testscripts.contractsrates.GetAContractByInvalidContractID -->
       <class name="com.ep.mmbr.api.testscripts.contractsrates.GetAContractRateByContractID">
-        <test-method status="PASS" signature="dbConnect()[pri:0, instance:com.ep.mmbr.api.testscripts.contractsrates.GetAContractRateByContractID@19632847]" name="dbConnect" is-config="true" duration-ms="1055" started-at="2014-11-17T06:21:59Z" finished-at="2014-11-17T06:22:00Z">
+        <test-method status="PASS" signature="testGetAContractRateByID()[pri:0, instance:com.ep.mmbr.api.testscripts.contractsrates.GetAContractRateByContractID@7c29e357]" name="testGetAContractRateByID" duration-ms="613" started-at="2014-11-17T06:37:59Z" finished-at="2014-11-17T06:38:00Z">
           <reporter-output>
             <line>
-              <![CDATA[
-Base uri: https://mmio-api-dev-env.elasticbeanstalk.com:443/v1]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- dbConnect -->
-        <test-method status="PASS" signature="testGetAContractRateByID()[pri:0, instance:com.ep.mmbr.api.testscripts.contractsrates.GetAContractRateByContractID@19632847]" name="testGetAContractRateByID" duration-ms="672" started-at="2014-11-17T06:22:08Z" finished-at="2014-11-17T06:22:09Z">
-          <reporter-output>
-            <line>
-              <![CDATA[Sending get reqest for get contract by id ]]>
+              <![CDATA[Sending get reqest to get contract by id ]]>
             </line>
             <line>
               <![CDATA[<br>Sending GET request ]]>
@@ -761,14 +763,10 @@ Base uri: https://mmio-api-dev-env.elasticbeanstalk.com:443/v1]]>
               <![CDATA[testGetAContractRateByID]]>
             </line>
             <line>
-              <![CDATA[7N4EE0XZK1JDYAESV8J9KJ9]]>
+              <![CDATA[MJ96E3MH331D865S1YJ1NXJ]]>
             </line>
           </reporter-output>
         </test-method> <!-- testGetAContractRateByID -->
-        <test-method status="PASS" signature="dbDisconnect()[pri:0, instance:com.ep.mmbr.api.testscripts.contractsrates.GetAContractRateByContractID@19632847]" name="dbDisconnect" is-config="true" duration-ms="0" started-at="2014-11-17T06:22:09Z" finished-at="2014-11-17T06:22:09Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- dbDisconnect -->
       </class> <!-- com.ep.mmbr.api.testscripts.contractsrates.GetAContractRateByContractID -->
     </test> <!-- Contracts -->
   </suite> <!-- MMB Refresh API -->

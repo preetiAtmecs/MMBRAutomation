@@ -1,14 +1,13 @@
 package com.ep.mmbr.api.testscripts.budget;
 
-import org.json.JSONException;
 import org.json.simple.JSONObject;
 import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
 
 import com.ep.mmbr.api.testscripts.TestSuiteBase;
-import com.ep.mmbr.api.utilities.TestDataProvider;
 import com.ep.mmbr.api.utilities.RequestHandler;
+import com.ep.mmbr.api.utilities.TestDataProvider;
 import com.jayway.restassured.response.Response;
 
 /**
@@ -24,7 +23,7 @@ public class GetGlobalGroupByID extends TestSuiteBase {
 	 * Send request and verifies response code receives 200
 	 */
 	@Test
-	public void testGetGlobalGroupByID() throws JSONException {
+	public void testGetGlobalGroupByID()  {
 		String salesforceToekn = CONFIG.getProperty("SalesforceToken");
 		RequestHandler requestHandler = new RequestHandler();
 
