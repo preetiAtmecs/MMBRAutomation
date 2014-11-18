@@ -25,23 +25,23 @@ public class PostContracts extends TestSuiteBase {
 	@Test
 	public void testPostContracts()  {
 		
+		String token = CONFIG
+				.getProperty("SalesforceToken");
 		RequestDataBuilder requestDataBuilder = new RequestDataBuilder();
 		
 		JSONObject postContractsRequestData = new TestDataProvider().readFileData(
 				"budget", "postContracts.json");
 
 		
-		String budgetId = requestDataBuilder.uploadBudgetAndGetBudgetID(CONFIG
-				.getProperty("SalesforceToken"));
+		String budgetId = requestDataBuilder.uploadBudgetAndGetBudgetID(token);
 
 		postContractsRequestData =	requestDataBuilder.setParameterValue(postContractsRequestData,"budget_id", budgetId);
 
-		Reporter.log("<br><br>Sending post reqest with new global group ");
+		Reporter.log("<br><br>Sending post request with contracts ");
 		
 				
 		Response postContractsResponse = requestDataBuilder.sendRequestAndGetResponse(
-				postContractsRequestData,
-				CONFIG.getProperty("SalesforceToken"));
+				postContractsRequestData,token);
 
 		Assert.assertTrue(requestDataBuilder.verifyResponseCode(postContractsResponse,
 				postContractsRequestData.get("status").toString()));

@@ -23,7 +23,7 @@ public class GetAllContractsForUser extends TestSuiteBase {
 	 * Send post request and verifies response code receives 200
 	 */
 	@Test
-	public void testPostContracts()  {
+	public void testGetAllContractsForUser()  {
 		String token = CONFIG
 				.getProperty("SalesforceToken");
 		RequestDataBuilder requestDataBuilder = new RequestDataBuilder();
@@ -36,7 +36,7 @@ public class GetAllContractsForUser extends TestSuiteBase {
 
 		postContractsRequestData =	requestDataBuilder.setParameterValue(postContractsRequestData,"budget_id", budgetId);
 
-		Reporter.log("<br><br>Sending post reqest with new global group ");
+		Reporter.log("<br><br>Sending post to add contracts to user budget ");
 		
 				
 		Response postContractsResponse = requestDataBuilder.sendRequestAndGetResponse(
@@ -51,6 +51,7 @@ public class GetAllContractsForUser extends TestSuiteBase {
 		
 		getContractsForUserRequestData =	requestDataBuilder.setParameterValue(getContractsForUserRequestData,"budget_id", budgetId);
 		
+		Reporter.log("<br><br>Sending get request to get  contracts for user ");
 		Response getContractsForUserResponse = requestDataBuilder.sendRequestAndGetResponse(
 				getContractsForUserRequestData,token);
 
