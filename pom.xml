@@ -128,9 +128,9 @@
 			</plugin> 
 		</plugins>
 
-	</build>
+</build>
 	<repositories>
-		<repository>
+			<repository>
 			<id>firefly-release-backup</id>
 			<name>Firefly Release Repository</name>
 			<url>file://///epsw/Java/maven2/repositories/releases</url>
