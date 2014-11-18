@@ -1,0 +1,14 @@
+{
+	"uri": "/Budget/{budget_id}/GlobalGroup/{global_group_id}/Global/{global_id}",
+	"method": "GET",
+	
+	"requestParameters": 
+	{
+		"budget_id": null,
+		"global_group_id":null,
+		"global_id":null
+	},
+
+	
+	"status": "200"
+}

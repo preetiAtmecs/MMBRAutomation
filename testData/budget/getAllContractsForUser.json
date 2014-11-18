@@ -1,0 +1,13 @@
+{
+	"uri": "/Budget/{budget_id}/Contract",
+	
+	"method": "GET",
+	
+	"requestParameters": 
+	{
+		"budget_id": null
+	},
+	
+
+	"status": "200"
+}
