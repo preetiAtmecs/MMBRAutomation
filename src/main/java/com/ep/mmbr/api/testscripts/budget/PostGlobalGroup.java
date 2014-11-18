@@ -6,7 +6,7 @@ import org.testng.Reporter;
 import org.testng.annotations.Test;
 
 import com.ep.mmbr.api.testscripts.TestSuiteBase;
-import com.ep.mmbr.api.utilities.RequestHandler;
+import com.ep.mmbr.api.utilities.RequestDataBuilder;
 import com.ep.mmbr.api.utilities.TestDataProvider;
 import com.jayway.restassured.response.Response;
 
@@ -25,25 +25,25 @@ public class PostGlobalGroup extends TestSuiteBase {
 	@Test
 	public void testPostGlobalGroups()  {
 		
-		RequestHandler requestHandler = new RequestHandler();
+		RequestDataBuilder requestDataBuilder = new RequestDataBuilder();
 		
 		JSONObject postGlobalGroupRequestData = new TestDataProvider().readFileData(
 				"budget", "postGlobalGroup.json");
 
 		
-		String budgetId = requestHandler.uploadBudgetAndGetBudgetID(CONFIG
+		String budgetId = requestDataBuilder.uploadBudgetAndGetBudgetID(CONFIG
 				.getProperty("SalesforceToken"));
 
-		postGlobalGroupRequestData =	requestHandler.setParameterValue(postGlobalGroupRequestData,"budget_id", budgetId);
+		postGlobalGroupRequestData =	requestDataBuilder.setParameterValue(postGlobalGroupRequestData,"budget_id", budgetId);
 
 		Reporter.log("<br><br>Sending post reqest with new global group ");
 		
 				
-		Response postGlobalGroupResponse = requestHandler.sendRequestAndGetResponse(
+		Response postGlobalGroupResponse = requestDataBuilder.sendRequestAndGetResponse(
 				postGlobalGroupRequestData,
 				CONFIG.getProperty("SalesforceToken"));
 
-		Assert.assertTrue(requestHandler.verifyResponseCode(postGlobalGroupResponse,
+		Assert.assertTrue(requestDataBuilder.verifyResponseCode(postGlobalGroupResponse,
 				postGlobalGroupRequestData.get("status").toString()));
 
 	}

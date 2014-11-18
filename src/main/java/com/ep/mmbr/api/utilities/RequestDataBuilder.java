@@ -1,5 +1,9 @@
 package com.ep.mmbr.api.utilities;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 import org.json.simple.JSONObject;
 import org.testng.Assert;
 import org.testng.Reporter;
@@ -16,14 +20,15 @@ import com.jayway.restassured.response.Response;
  * 
  */
 
-public class RequestHandler {
+public class RequestDataBuilder {
 
 	DataProvider dataprovider = DataProvider.getInstance();
 
 	/***
 	 * Function to send request and get response using rest assured client
 	 * 
-	 * @param json  Object and salesforce token
+	 * @param json
+	 *            Object and salesforce token
 	 * @return rest assure response
 	 */
 	public Response sendRequestAndGetResponse(JSONObject requestDataObject,
@@ -103,15 +108,12 @@ public class RequestHandler {
 	public Response uploadBudget(String salesforceToken) {
 
 		TestDataProvider dataProvider = new TestDataProvider();
-		JSONObject getBudgetByIDRequestData = dataProvider.readFileData(
-				"budget", "getBudgetByID.json");
-
-		// Uploading budget to get the budget id
-		Reporter.log("<br>Uploading budget: "
-				+ getBudgetByIDRequestData.get("budgetName"));
-
 		JSONObject postBudgetRequestData = dataProvider.readFileData("budget",
 				"postBudget.json");
+		
+		Reporter.log("<br>Uploading budget: "
+				+ postBudgetRequestData.get("budgetName"));
+
 		Response postBudgetResponse = sendRequestAndGetResponse(
 				postBudgetRequestData, salesforceToken);
 
@@ -122,10 +124,8 @@ public class RequestHandler {
 		return postBudgetResponse;
 
 	}
-	
-	
-	public String uploadBudgetAndGetBudgetID(String salesforceToken)
-	{
+
+	public String uploadBudgetAndGetBudgetID(String salesforceToken) {
 		Response response = uploadBudget(salesforceToken);
 		String budgetId = response.jsonPath().getString("budgetId");
 
@@ -144,13 +144,13 @@ public class RequestHandler {
 
 	public String getGlobalGroupIdFromBudget(String budgetId,
 			String salesforceToekn) {
-		
+
 		JSONObject getAllGlobalGroupsRequestData = new TestDataProvider()
 				.readFileData("budget", "getAllGlobalGroups.json");
 
 		getAllGlobalGroupsRequestData = setParameterValue(
 				getAllGlobalGroupsRequestData, "budget_id", budgetId);
-		
+
 		Reporter.log("<br><br>Verifying  available global groups to get global group id");
 		Response getAllGlobalGroupsResponse = sendRequestAndGetResponse(
 				getAllGlobalGroupsRequestData, salesforceToekn);
@@ -158,9 +158,29 @@ public class RequestHandler {
 		String globalGroupId = getAllGlobalGroupsResponse.jsonPath().getString(
 				"id");
 		globalGroupId = globalGroupId.substring(1, globalGroupId.length() - 1);
-		Reporter.log("<br>Received global group id : "+globalGroupId);
-		
+		Reporter.log("<br>Received global group id : " + globalGroupId);
 
 		return globalGroupId;
+	}
+
+	/**
+	 * Extract first global id from given global group response body
+	 * 
+	 * @param response
+	 * @return
+	 */
+	public String getGlobalId(Response response) {
+		
+		Reporter.log("<br><br>Verifying vailable global in global group");
+		String globalIDRawResult = response.jsonPath().getString("id");
+		String replace = globalIDRawResult.replace("[", "");
+		String replace1 = replace.replace("]", "");
+		List<String> globalIDs = new ArrayList<String>(Arrays.asList(replace1
+				.split(",")));
+		Reporter.log("<br>Found "+globalIDs.size()+"globals in global group");
+		String globalId = globalIDs.get(0);
+		Reporter.log("<br>Get first indexed global id: "+globalId);
+
+		return globalId;
 	}
 }

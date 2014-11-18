@@ -6,7 +6,7 @@
 	{
 		"file": "TestData/Budget/MovieMagicBudget.mbd"
 	},
-	
+	"budgetName":"MovieMagicBudget.mbd",
 	"status": "200",
 	
 }

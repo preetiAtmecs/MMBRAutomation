@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.ep.mmbr.api.testscripts.budget.GetGlobalGroupByID">
+      <class name="com.ep.mmbr.api.testscripts.budget.GetGlobalByBudgetGroupAndGlobalID">
         <methods>
           <include name="dbConnect"/>
-          <include name="testGetGlobalGroupByID"/>
           <include name="dbDisconnect"/>
+          <include name="testGetGlobalByBudgetGroupAndGlobalID"/>
         </methods>
-      </class> <!-- com.ep.mmbr.api.testscripts.budget.GetGlobalGroupByID -->
+      </class> <!-- com.ep.mmbr.api.testscripts.budget.GetGlobalByBudgetGroupAndGlobalID -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

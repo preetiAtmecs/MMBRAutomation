@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 
 import com.ep.mmbr.api.testscripts.TestSuiteBase;
 import com.ep.mmbr.api.utilities.TestDataProvider;
-import com.ep.mmbr.api.utilities.RequestHandler;
+import com.ep.mmbr.api.utilities.RequestDataBuilder;
 import com.jayway.restassured.response.Response;
 
 
@@ -31,7 +31,7 @@ public class GetUserInfoWithInvalidToken extends TestSuiteBase {
 	public void testUserInfoWithInvalidToken() {
 		
 		String invalidsalesforceToken = "djgeuuih24u38702dh28fu28fyh28f84fhcjsj";
-		RequestHandler requestHandler = new RequestHandler();
+		RequestDataBuilder requestDataBuilder = new RequestDataBuilder();
 		JSONObject getUserRequestData = new TestDataProvider().readFileData(
 				"user", "getUserInfoWithInvalidToken.json");
 
@@ -40,10 +40,10 @@ public class GetUserInfoWithInvalidToken extends TestSuiteBase {
 
 		
 		
-		Response getUserResponse = requestHandler.sendRequestAndGetResponse(
+		Response getUserResponse = requestDataBuilder.sendRequestAndGetResponse(
 				getUserRequestData, invalidsalesforceToken);
 
-		Assert.assertTrue(requestHandler.verifyResponseCode(getUserResponse,
+		Assert.assertTrue(requestDataBuilder.verifyResponseCode(getUserResponse,
 				getUserRequestData.get("status").toString()));
 
 		Assert.assertEquals(getUserResponse.asString(),

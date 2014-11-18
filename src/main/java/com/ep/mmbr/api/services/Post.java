@@ -11,7 +11,7 @@ import com.jayway.restassured.specification.RequestSpecification;
 
 /**
  * This class contains rest assured methods to send request and get response for
- * http get method
+ * http post method
  * 
  * @author preethi
  * 

@@ -1,8 +1,17 @@
 {
-	"uri": "/Budget",
-	
-	"filepath":"C:/Users/pg092111/Desktop/AutoTest.mbd",
-	
-
-	"status": "200"
+	"uri":"/Budget/{budget_id}/GlobalGroup/{global_group_id}/Global",
+	"method":"POST",
+	"contentType":"PathParameter",
+	"requestParameters":{
+		"budget_id":null,
+		"global_group_id":null
+	},
+	"body":{
+		"name":"Test A Global",
+		"description":"This is test global",
+		"units":null,
+		"calculation":"=15",
+		"value":15
+	},
+	"status":"201"
 }

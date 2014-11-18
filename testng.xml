@@ -14,7 +14,9 @@
 			<class name="com.ep.mmbr.api.testscripts.budget.getAllGlobalGroups" />
 			<class name="com.ep.mmbr.api.testscripts.budget.PostGlobalGroup" />
 			<class name="com.ep.mmbr.api.testscripts.budget.GetGlobalGroupByID" />
-			<class name="com.ep.mmbr.api.testscripts.budget.GetAllGlobals" />	
+			<class name="com.ep.mmbr.api.testscripts.budget.GetAllGlobals" />
+			<class name="com.ep.mmbr.api.testscripts.budget.PostAGlobal" />
+			<class name="com.ep.mmbr.api.testscripts.budget.GetGlobalByBudgetGroupAndGlobalID" />	
 		</classes>
 	</test>
 	

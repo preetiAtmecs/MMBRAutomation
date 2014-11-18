@@ -48,7 +48,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\pg092111\AppData\Local\Temp\testng-eclipse--1509966536\testng-customsuite.xml</span>
+                    <span>C:\Users\pg092111\AppData\Local\Temp\testng-eclipse--842979001\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -101,7 +101,7 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.ep.mmbr.api.testscripts.budget.GetAllGlobals" hash-for-method="testGetAllGlobals">testGetAllGlobals</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.ep.mmbr.api.testscripts.budget.GetAllContractsForUser" hash-for-method="testPostContracts">testPostContracts</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -119,14 +119,14 @@
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.ep.mmbr.api.testscripts.budget.GetAllGlobals</span>
+              <span class="class-name">com.ep.mmbr.api.testscripts.budget.GetAllContractsForUser</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testGetAllGlobals">
-                  </a> <!-- testGetAllGlobals -->
-                  <span class="method-name">testGetAllGlobals</span>
+                  <a name="testPostContracts">
+                  </a> <!-- testPostContracts -->
+                  <span class="method-name">testPostContracts</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -134,7 +134,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\pg092111\AppData\Local\Temp\testng-eclipse--1509966536\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\pg092111\AppData\Local\Temp\testng-eclipse--842979001\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -143,7 +143,7 @@
 &lt;suite name=&quot;Default suite&quot;&gt;
   &lt;test verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.ep.mmbr.api.testscripts.budget.GetAllGlobals&quot;/&gt;
+      &lt;class name=&quot;com.ep.mmbr.api.testscripts.budget.GetAllContractsForUser&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -185,14 +185,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testGetAllGlobals')
-data.setCell(0, 2, 'com.ep.mmbr.api.testscripts.budget.GetAllGlobals')
-data.setCell(0, 3, 6065);
+data.setCell(0, 1, 'testPostContracts')
+data.setCell(0, 2, 'com.ep.mmbr.api.testscripts.budget.GetAllContractsForUser')
+data.setCell(0, 3, 5209);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 6 seconds</span>
+              <span class="suite-total-time">Total running time: 5 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -204,7 +204,7 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="reporter-method-div">
-              <span class="reporter-method-name">testGetAllGlobals</span>
+              <span class="reporter-method-name">testPostContracts</span>
               <div class="reporter-method-output-div">
                 <span class="reporter-method-output"><br>Uploading budget: MovieMagicBudget.mbd</span>
                 <span class="reporter-method-output"><br>Sending POST request </span>
@@ -212,18 +212,17 @@ return data;
                 <span class="reporter-method-output"><br>Multipart parameter : file : TestData/Budget/MovieMagicBudget.mbd</span>
                 <span class="reporter-method-output"><br>Budget uploaded successfully</span>
                 <span class="reporter-method-output"><br>Received budget id  : 546411dfe4b089cc7647460d</span>
-                <span class="reporter-method-output"><br><br>Verifying  available global groups to get global group id</span>
-                <span class="reporter-method-output"><br>Sending GET request </span>
-                <span class="reporter-method-output"><br>Endpoint : /Budget/{budget_id}/GlobalGroup</span>
+                <span class="reporter-method-output"><br><br>Sending post reqest with new global group </span>
+                <span class="reporter-method-output"><br>Sending POST request </span>
+                <span class="reporter-method-output"><br>Endpoint : /Budget/{budget_id}/Contract</span>
                 <span class="reporter-method-output"><br>Path parameters: </b>budget_id : 546411dfe4b089cc7647460d</span>
-                <span class="reporter-method-output"><br>Received global group id : 71</span>
-                <span class="reporter-method-output"><br><br>Set budget id and global id parametrs to request data : <br>Budgte ID:546411dfe4b089cc7647460d<br>Global group id71</span>
-                <span class="reporter-method-output"><br><br>Sending reqest to get global group by valid budget id and valid global group id</span>
+                <span class="reporter-method-output"><br>Json body : [{"contractId":"4"},{"contractId":"697"}]</span>
+                <span class="reporter-method-output"><br><br>Received Response body:</b></span>
+                <span class="reporter-method-output"><br><br>Verifying Response code : <br>Actual response code : 200<br>Expected response code : 200</span>
                 <span class="reporter-method-output"><br>Sending GET request </span>
-                <span class="reporter-method-output"><br>Endpoint : /Budget/{budget_id}/GlobalGroup/{global_group_id}/Global</span>
-                <span class="reporter-method-output"><br>Path parameters: </b>global_group_id : 71</span>
+                <span class="reporter-method-output"><br>Endpoint : /Budget/{budget_id}/Contract</span>
                 <span class="reporter-method-output"><br>Path parameters: </b>budget_id : 546411dfe4b089cc7647460d</span>
-                <span class="reporter-method-output"><br><br>Received Response body:</b>[{"id":54,"globalGroupId":71,"sequenceOrder":9,"units":"H","name":"DistHrs","description":"Distant Hours (6-Day Week)","calculation":"=88","value":88.0},{"id":62,"globalGroupId":71,"sequenceOrder":22,"units":null,"name":"CAPT","description":"Driver Captain Hourly","calculation":"=15","value":15.0},{"id":42,"globalGroupId":71,"sequenceOrder":4,"units":null,"name":"UPM","description":"UPM Weekly","calculation":"=2500","value":2500.0},{"id":38,"globalGroupId":71,"sequenceOrder":23,"units":null,"name":"TRUCK","description":"Truck Driver Hourly","calculation":"=10","value":10.0},{"id":49,"globalGroupId":71,"sequenceOrder":37,"units":"R","name":"FilmRls","description":"Final Film Length (Reels)","calculation":"=11","value":11.0},{"id":48,"globalGroupId":71,"sequenceOrder":21,"units":"H","name":"DistDrHrs","description":"Distant Driver Hours","calculation":"=97","value":97.0},{"id":33,"globalGroupId":71,"sequenceOrder":8,"units":"H","name":"LocHrs","description":"Local Hours (5-Day week)","calculation":"=70","value":70.0},{"id":25,"globalGroupId":71,"sequenceOrder":18,"units":null,"name":"T6","description":"Dept. Worker Weekly Distant","calculation":"=TECH3*DistHrs","value":660.0},{"id":27,"globalGroupId":71,"sequenceOrder":16,"units":null,"name":"T4","description":"2nd Man Weekly Distant","calculation":"=TECH2*DistHrs","value":1100.0},{"id":26,"globalGroupId":71,"sequenceOrder":17,"units":null,"name":"T5","description":"Dept. Worker Weekly Local","calculation":"=TECH3*LocHrs","value":525.0},{"id":32,"globalGroupId":71,"sequenceOrder":null,"units":"W","name":"S","description":"Shoot Weeks","calculation":"=LocWks+DistWks","value":5.0},{"id":37,"globalGroupId":71,"sequenceOrder":24,"units":null,"name":"CAR","description":"Chauffeur Hourly","calculation":"=7.50","value":7.5},{"id":36,"globalGroupId":71,"sequenceOrder":36,"units":"T","name":"FilmFeet","description":"Final Film Length (Feet)","calculation":"=11000","value":11000.0},{"id":57,"globalGroupId":71,"sequenceOrder":6,"units":null,"name":"AD2","description":"Second AD Weekly","calculation":"=750","value":750.0},{"id":58,"globalGroupId":71,"sequenceOrder":5,"units":null,"name":"AD1","description":"First A.D. Weekly","calculation":"=1250","value":1250.0},{"id":59,"globalGroupId":71,"sequenceOrder":32,"units":null,"name":"FIRE","description":"Fireman Hourly","calculation":"=28.57","value":28.57},{"id":41,"globalGroupId":71,"sequenceOrder":30,"units":null,"name":"D6","description":"Chauffeur Weekly Distant","calculation":"=CAR*DistDrHrs","value":727.5},{"id":43,"globalGroupId":71,"sequenceOrder":29,"units":null,"name":"D5","description":"Chauffeur Weekly Local","calculation":"=CAR*LocDrHrs","value":581.25},{"id":35,"globalGroupId":71,"sequenceOrder":19,"units":null,"name":"SEC","description":"Secretary Weekly","calculation":"=750","value":750.0},{"id":44,"globalGroupId":71,"sequenceOrder":28,"units":null,"name":"D4","description":"Truck Driver Weekly Distant","calculation":"=TRUCKDistDrHrs","value":null},{"id":60,"globalGroupId":71,"sequenceOrder":20,"units":"H","name":"LocDrHrs","description":"Local Driver Hours","calculation":"=77.5","value":77.5},{"id":31,"globalGroupId":71,"sequenceOrder":13,"units":null,"name":"T1","description":"Dept. Head Weekly Local","calculation":"=TECH1*LocHrs","value":1050.0},{"id":29,"globalGroupId":71,"sequenceOrder":15,"units":null,"name":"T3","description":"2nd Man Weekly Local","calculation":"=TECH2*LocHrs","value":875.0},{"id":55,"globalGroupId":71,"sequenceOrder":35,"units":null,"name":"Film","description":"Footage, Camera A","calculation":"=(LocWks*25000)+(DistWks*30000)","value":140000.0},{"id":30,"globalGroupId":71,"sequenceOrder":14,"units":null,"name":"T2","description":"Dept. Head Weekly Distant","calculation":"=TECH1*DistHrs","value":1320.0},{"id":53,"globalGroupId":71,"sequenceOrder":34,"units":null,"name":"F1","description":"Fireman Weekly","calculation":"=FIRE*LocHrs","value":1999.9},{"id":34,"globalGroupId":71,"sequenceOrder":31,"units":null,"name":"POL","description":"Policeman Hourly","calculation":"=28.47","value":28.47},{"id":28,"globalGroupId":71,"sequenceOrder":3,"units":"W","name":"PP","description":"Post Production Weeks","calculation":"=5","value":5.0},{"id":56,"globalGroupId":71,"sequenceOrder":1,"units":"W","name":"LocWks","description":"Local Weeks (5-day)","calculation":"=2","value":2.0},{"id":51,"globalGroupId":71,"sequenceOrder":11,"units":null,"name":"TECH2","description":"Dept. 2nd Man Hourly","calculation":"=12.50","value":12.5},{"id":46,"globalGroupId":71,"sequenceOrder":26,"units":null,"name":"D2","description":"Capt. Weekly Distant","calculation":"=CAPT*DistDrHrs","value":1455.0},{"id":50,"globalGroupId":71,"sequenceOrder":12,"units":null,"name":"TECH3","description":"Dept. Worker Hourly","calculation":"=7.5","value":7.5},{"id":45,"globalGroupId":71,"sequenceOrder":27,"units":null,"name":"D3","description":"Truck Driver Weekly Local","calculation":"=TRUCK*LocDrHrs","value":775.0},{"id":47,"globalGroupId":71,"sequenceOrder":25,"units":null,"name":"D1","description":"Capt. Weekly Local","calculation":"=CAPT*LocDrHrs","value":1162.5},{"id":61,"globalGroupId":71,"sequenceOrder":33,"units":null,"name":"B1","description":"Policeman Weekly","calculation":"=POL*LocHrs","value":1992.8999999999999},{"id":40,"globalGroupId":71,"sequenceOrder":7,"units":null,"name":"PA","description":"Prod. Ass't. Weekly","calculation":"=300","value":300.0},{"id":52,"globalGroupId":71,"sequenceOrder":10,"units":null,"name":"TECH1","description":"Department Head Hourly","calculation":"=15","value":15.0},{"id":39,"globalGroupId":71,"sequenceOrder":2,"units":"W","name":"DistWks","description":"Distant Weeks (6-Day)","calculation":"=3","value":3.0}]</span>
+                <span class="reporter-method-output"><br><br>Received Response body:</b>[{"contractId":"4","name":"399 BLACK BOOK"},{"contractId":"697","name":"LA BASIC VIDEOTAPE AGREEMENT"}]</span>
                 <span class="reporter-method-output"><br><br>Verifying Response code : <br>Actual response code : 200<br>Expected response code : 200</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
@@ -242,18 +241,18 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.ep.mmbr.api.testscripts.budget.GetAllGlobals</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.ep.mmbr.api.testscripts.budget.GetAllContractsForUser</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">dbConnect</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="test-method">
-                <span class="method-name">testGetAllGlobals</span>
-                <span class="method-start">922 ms</span>
+                <span class="method-name">testPostContracts</span>
+                <span class="method-start">906 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-suite after">
                 <span class="method-name">dbDisconnect</span>
-                <span class="method-start">7019 ms</span>
+                <span class="method-start">6146 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

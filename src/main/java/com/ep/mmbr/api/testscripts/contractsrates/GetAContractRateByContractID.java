@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 
 import com.ep.mmbr.api.testscripts.TestSuiteBase;
 import com.ep.mmbr.api.utilities.TestDataProvider;
-import com.ep.mmbr.api.utilities.RequestHandler;
+import com.ep.mmbr.api.utilities.RequestDataBuilder;
 import com.jayway.restassured.response.Response;
 
 /**
@@ -27,7 +27,7 @@ public class GetAContractRateByContractID extends TestSuiteBase {
 	 */
 	@Test
 	public void testGetAContractRateByID() throws JSONException {
-		RequestHandler requestHandler = new RequestHandler();
+		RequestDataBuilder requestDataBuilder = new RequestDataBuilder();
 
 		JSONObject getAContractRateByIDRequestData = new TestDataProvider()
 				.readFileData("contractRates",
@@ -35,11 +35,11 @@ public class GetAContractRateByContractID extends TestSuiteBase {
 
 		Reporter.log("Sending get reqest to get contract by id ");
 
-		Response getAContractRateByIDResponse = requestHandler
+		Response getAContractRateByIDResponse = requestDataBuilder
 				.sendRequestAndGetResponse(getAContractRateByIDRequestData,
 						CONFIG.getProperty("SalesforceToken"));
 
-		Assert.assertTrue(requestHandler.verifyResponseCode(
+		Assert.assertTrue(requestDataBuilder.verifyResponseCode(
 				getAContractRateByIDResponse, getAContractRateByIDRequestData
 						.get("status").toString()));
 	}

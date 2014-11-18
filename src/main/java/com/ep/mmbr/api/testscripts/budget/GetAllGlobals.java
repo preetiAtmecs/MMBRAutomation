@@ -6,7 +6,7 @@ import org.testng.Reporter;
 import org.testng.annotations.Test;
 
 import com.ep.mmbr.api.testscripts.TestSuiteBase;
-import com.ep.mmbr.api.utilities.RequestHandler;
+import com.ep.mmbr.api.utilities.RequestDataBuilder;
 import com.ep.mmbr.api.utilities.TestDataProvider;
 import com.jayway.restassured.response.Response;
 
@@ -25,35 +25,35 @@ public class GetAllGlobals extends TestSuiteBase {
 	@Test
 	public void testGetAllGlobals()  {
 		String salesforceToekn = CONFIG.getProperty("SalesforceToken");
-		RequestHandler requestHandler = new RequestHandler();
+		RequestDataBuilder requestDataBuilder = new RequestDataBuilder();
 
-		JSONObject getGlobalGroupByIDRequestData = new TestDataProvider()
+		JSONObject getGetAllGlobalsRequestData = new TestDataProvider()
 				.readFileData("budget", "GetAllGlobals.json");
 
-		String budgetId = requestHandler
+		String budgetId = requestDataBuilder
 				.uploadBudgetAndGetBudgetID(salesforceToekn);
 		
-		String globalGroupId = requestHandler.getGlobalGroupIdFromBudget(
+		String globalGroupId = requestDataBuilder.getGlobalGroupIdFromBudget(
 				budgetId, salesforceToekn);
 
 		Reporter.log("<br><br>Set budget id and global id parametrs to request data : <br>Budgte ID:"
 				+ budgetId + "<br>Global group id" + globalGroupId);
 		
-		getGlobalGroupByIDRequestData = requestHandler.setParameterValue(
-				getGlobalGroupByIDRequestData, "budget_id", budgetId);
+		getGetAllGlobalsRequestData = requestDataBuilder.setParameterValue(
+				getGetAllGlobalsRequestData, "budget_id", budgetId);
 		
-		getGlobalGroupByIDRequestData = requestHandler
-				.setParameterValue(getGlobalGroupByIDRequestData,
+		getGetAllGlobalsRequestData = requestDataBuilder
+				.setParameterValue(getGetAllGlobalsRequestData,
 						"global_group_id", globalGroupId);
 		
 		
 		Reporter.log("<br><br>Sending reqest to get global group by valid budget id and valid global group id");
-		Response getGlobalGroupByIDResponse = requestHandler
-				.sendRequestAndGetResponse(getGlobalGroupByIDRequestData,
+		Response getAllGlobalsResponse = requestDataBuilder
+				.sendRequestAndGetResponse(getGetAllGlobalsRequestData,
 						CONFIG.getProperty("SalesforceToken"));
 
-		Assert.assertTrue(requestHandler.verifyResponseCode(
-				getGlobalGroupByIDResponse,
-				getGlobalGroupByIDRequestData.get("status").toString()));
+		Assert.assertTrue(requestDataBuilder.verifyResponseCode(
+				getAllGlobalsResponse,
+				getGetAllGlobalsRequestData.get("status").toString()));
 	}
 }

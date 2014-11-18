@@ -1,0 +1,10 @@
+{
+	"uri":"/Budget/{budget_id}/Contract",
+	"method":"POST",
+	"contentType":"PathParameter",
+	"requestParameters":{
+		"budget_id":null,
+			},
+	"body":[{"contractId": "4"}, {"contractId" : "697"}],
+	"status":"200"
+}

@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 
 import com.ep.mmbr.api.testscripts.TestSuiteBase;
 import com.ep.mmbr.api.utilities.TestDataProvider;
-import com.ep.mmbr.api.utilities.RequestHandler;
+import com.ep.mmbr.api.utilities.RequestDataBuilder;
 import com.ep.qa.automation.assertion.AssertionHandler;
 import com.jayway.restassured.response.Response;
 
@@ -30,16 +30,16 @@ public class GetUserInformationFromToken extends TestSuiteBase {
 	 */
 	@Test
 	public void testUserInformationFromToken() throws Exception {
-		RequestHandler requestHandler = new RequestHandler();
+		RequestDataBuilder requestDataBuilder = new RequestDataBuilder();
 
 		JSONObject getUserRequestData = new TestDataProvider().readFileData(
 				"user", "getUserInformationFromToken.json");
 
 		Reporter.log("Sending request to get user information from token");
-		Response getUserResponse = requestHandler.sendRequestAndGetResponse(
+		Response getUserResponse = requestDataBuilder.sendRequestAndGetResponse(
 				getUserRequestData, CONFIG.getProperty("SalesforceToken"));
 
-		Assert.assertTrue(requestHandler.verifyResponseCode(getUserResponse,
+		Assert.assertTrue(requestDataBuilder.verifyResponseCode(getUserResponse,
 				getUserRequestData.get("status").toString()));
 
 		Reporter.log("<br>Verifying user information from response body json object:<br>Expected response body"

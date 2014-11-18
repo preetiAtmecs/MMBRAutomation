@@ -6,7 +6,7 @@ import org.testng.Reporter;
 import org.testng.annotations.Test;
 
 import com.ep.mmbr.api.testscripts.TestSuiteBase;
-import com.ep.mmbr.api.utilities.RequestHandler;
+import com.ep.mmbr.api.utilities.RequestDataBuilder;
 import com.ep.mmbr.api.utilities.TestDataProvider;
 import com.jayway.restassured.response.Response;
 /**
@@ -25,24 +25,24 @@ public class getAllGlobalGroups extends TestSuiteBase {
 	@Test
 	public void testGetAllGlobalGroups()  {
 		
-		RequestHandler requestHandler = new RequestHandler();
+		RequestDataBuilder requestDataBuilder = new RequestDataBuilder();
 		
 		JSONObject getAllGlobalGroupsRequestData = new TestDataProvider().readFileData(
 				"budget", "getAllGlobalGroups.json");
 
 		
-		String budgetId = requestHandler.uploadBudgetAndGetBudgetID(CONFIG
+		String budgetId = requestDataBuilder.uploadBudgetAndGetBudgetID(CONFIG
 				.getProperty("SalesforceToken"));
 
-		requestHandler.setParameterValue(getAllGlobalGroupsRequestData,"budget_id", budgetId);
+		requestDataBuilder.setParameterValue(getAllGlobalGroupsRequestData,"budget_id", budgetId);
 
 		Reporter.log("<br><br>Sending request to get all global group by valid budget id");
 		
-		Response getBudgetByIDResponse = requestHandler.sendRequestAndGetResponse(
+		Response getBudgetByIDResponse = requestDataBuilder.sendRequestAndGetResponse(
 				getAllGlobalGroupsRequestData,
 				CONFIG.getProperty("SalesforceToken"));
 
-		Assert.assertTrue(requestHandler.verifyResponseCode(getBudgetByIDResponse,
+		Assert.assertTrue(requestDataBuilder.verifyResponseCode(getBudgetByIDResponse,
 				getAllGlobalGroupsRequestData.get("status").toString()));
 
 	}

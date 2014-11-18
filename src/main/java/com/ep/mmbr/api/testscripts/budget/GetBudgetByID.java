@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 
 import com.ep.mmbr.api.testscripts.TestSuiteBase;
 import com.ep.mmbr.api.utilities.TestDataProvider;
-import com.ep.mmbr.api.utilities.RequestHandler;
+import com.ep.mmbr.api.utilities.RequestDataBuilder;
 import com.jayway.restassured.response.Response;
 
 /**
@@ -29,7 +29,7 @@ public class GetBudgetByID extends TestSuiteBase {
 	public void testGetBudgetByID() throws JSONException {
 
 		String salceforceToken = CONFIG.getProperty("SalesforceToken");
-		RequestHandler requestHandler = new RequestHandler();
+		RequestDataBuilder requestDataBuilder = new RequestDataBuilder();
 		TestDataProvider dataProvider = new TestDataProvider();
 		
 		JSONObject getBudgetByIDRequestData = dataProvider.readFileData(
@@ -37,18 +37,18 @@ public class GetBudgetByID extends TestSuiteBase {
 
 		// Before sending request for get budget by id , upload budget and get
 		// the budget id
-		String budgetId = requestHandler
+		String budgetId = requestDataBuilder
 				.uploadBudgetAndGetBudgetID(salceforceToken);
 
-		requestHandler.setParameterValue(getBudgetByIDRequestData, "budget_id",
+		requestDataBuilder.setParameterValue(getBudgetByIDRequestData, "budget_id",
 				budgetId);
 
 		Reporter.log("<br><br>Sending reqest to get budget by id ");
-		Response getBudgetByIDResponse = requestHandler
+		Response getBudgetByIDResponse = requestDataBuilder
 				.sendRequestAndGetResponse(getBudgetByIDRequestData,
 						salceforceToken);
 
-		Assert.assertTrue(requestHandler.verifyResponseCode(
+		Assert.assertTrue(requestDataBuilder.verifyResponseCode(
 				getBudgetByIDResponse, getBudgetByIDRequestData.get("status")
 						.toString()));
 

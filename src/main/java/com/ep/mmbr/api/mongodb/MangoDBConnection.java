@@ -6,7 +6,6 @@ import com.mongodb.BasicDBObject;
 import com.mongodb.DB;
 import com.mongodb.DBCollection;
 import com.mongodb.DBCursor;
-import com.mongodb.DBObject;
 import com.mongodb.MongoClient;
 import com.mongodb.WriteResult;
 
@@ -49,7 +48,7 @@ public class MangoDBConnection {
 		System.out.println("\nRecord removed: " + result.toString());
 	}
 
-	public void getResult(DBCollection coll, BasicDBObject query) {
+	/*public void getResult(DBCollection coll, BasicDBObject query) {
 
 		DBCursor cursor = coll.find(query);
 		System.out.println("\n\ncursor :" + cursor.count());
@@ -61,6 +60,6 @@ public class MangoDBConnection {
 			System.out.println("\n obj: " + obj.get("name"));
 			i++;
 		}
-	}
+	}*/
 
 }

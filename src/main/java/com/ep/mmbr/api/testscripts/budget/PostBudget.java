@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 
 import com.ep.mmbr.api.testscripts.TestSuiteBase;
 import com.ep.mmbr.api.utilities.TestDataProvider;
-import com.ep.mmbr.api.utilities.RequestHandler;
+import com.ep.mmbr.api.utilities.RequestDataBuilder;
 import com.jayway.restassured.response.Response;
 
 /**
@@ -24,16 +24,16 @@ public class PostBudget extends TestSuiteBase {
 	 */
 	@Test
 	public void testPostBudget() throws JSONException {
-		RequestHandler requestHandler = new RequestHandler();
+		RequestDataBuilder requestDataBuilder = new RequestDataBuilder();
 		
 		JSONObject postBudgetRequestData = new TestDataProvider().readFileData("budget",
 				"postBudget.json");
 
 		Reporter.log("Sending request to post budget ");
 			
-		Response postBudgetResponse = requestHandler.uploadBudget(CONFIG.getProperty("SalesforceToken"));
+		Response postBudgetResponse = requestDataBuilder.uploadBudget(CONFIG.getProperty("SalesforceToken"));
 
-		Assert.assertTrue(requestHandler.verifyResponseCode(postBudgetResponse,postBudgetRequestData.get("status").toString()));
+		Assert.assertTrue(requestDataBuilder.verifyResponseCode(postBudgetResponse,postBudgetRequestData.get("status").toString()));
 		
 	}
 

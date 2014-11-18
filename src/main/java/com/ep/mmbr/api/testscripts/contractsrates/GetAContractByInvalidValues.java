@@ -6,7 +6,7 @@ import org.testng.Reporter;
 import org.testng.annotations.Test;
 
 import com.ep.mmbr.api.testscripts.TestSuiteBase;
-import com.ep.mmbr.api.utilities.RequestHandler;
+import com.ep.mmbr.api.utilities.RequestDataBuilder;
 import com.ep.mmbr.api.utilities.TestDataProvider;
 import com.jayway.restassured.response.Response;
 
@@ -27,7 +27,7 @@ public class GetAContractByInvalidValues extends TestSuiteBase {
 	@Test
 	public void testGetAContractByInvalidContractID()  {
 
-		RequestHandler requestHandler = new RequestHandler();
+		RequestDataBuilder requestDataBuilder = new RequestDataBuilder();
 
 		JSONObject getAContractRateByIDRequestData = new TestDataProvider()
 				.readFileData("contractRates",
@@ -35,11 +35,11 @@ public class GetAContractByInvalidValues extends TestSuiteBase {
 
 		Reporter.log("Sending reqest to get contract by invalid id ");
 
-		Response getAContractRateByIDResponse = requestHandler
+		Response getAContractRateByIDResponse = requestDataBuilder
 				.sendRequestAndGetResponse(getAContractRateByIDRequestData,
 						CONFIG.getProperty("SalesforceToken"));
 
-		Assert.assertTrue(requestHandler.verifyResponseCode(
+		Assert.assertTrue(requestDataBuilder.verifyResponseCode(
 				getAContractRateByIDResponse, getAContractRateByIDRequestData
 						.get("status").toString()));
 	}

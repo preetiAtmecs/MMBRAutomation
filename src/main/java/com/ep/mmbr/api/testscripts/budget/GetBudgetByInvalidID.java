@@ -6,7 +6,7 @@ import org.testng.Reporter;
 import org.testng.annotations.Test;
 
 import com.ep.mmbr.api.testscripts.TestSuiteBase;
-import com.ep.mmbr.api.utilities.RequestHandler;
+import com.ep.mmbr.api.utilities.RequestDataBuilder;
 import com.ep.mmbr.api.utilities.TestDataProvider;
 import com.jayway.restassured.response.Response;
 /**
@@ -23,17 +23,17 @@ public class GetBudgetByInvalidID extends TestSuiteBase {
 	 */
 	@Test
 	public void testGetBudgetByInvalidID()  {
-		RequestHandler requestHandler = new RequestHandler();
+		RequestDataBuilder requestDataBuilder = new RequestDataBuilder();
 
 		JSONObject getBudgetByInvalidIDRequestData = new TestDataProvider().readFileData(
 				"budget", "getBudgetByInvalidID.json");
 		
 		Reporter.log("<br>Sending get reqest for get budget by invalid bidget id ");
 		
-		Response getBudgetByIDResponse = requestHandler.sendRequestAndGetResponse(getBudgetByInvalidIDRequestData,
+		Response getBudgetByIDResponse = requestDataBuilder.sendRequestAndGetResponse(getBudgetByInvalidIDRequestData,
 				CONFIG.getProperty("SalesforceToken"));
 		
-		Assert.assertTrue(requestHandler.verifyResponseCode(getBudgetByIDResponse,getBudgetByInvalidIDRequestData.get("status").toString()));
+		Assert.assertTrue(requestDataBuilder.verifyResponseCode(getBudgetByIDResponse,getBudgetByInvalidIDRequestData.get("status").toString()));
 		
 	}
 
