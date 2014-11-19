@@ -16,6 +16,7 @@
 			<class name="com.ep.mmbr.api.testscripts.budget.GetGlobalGroupByID" />
 			<class name="com.ep.mmbr.api.testscripts.budget.GetAllGlobals" />
 			<class name="com.ep.mmbr.api.testscripts.budget.PostAGlobal" />
+			<class name="com.ep.mmbr.api.testscripts.budget.DeleteAGlobal" />
 			<class name="com.ep.mmbr.api.testscripts.budget.GetGlobalByBudgetGroupAndGlobalID" />	
 			<class name="com.ep.mmbr.api.testscripts.budget.PostContracts" />
 			<class name="com.ep.mmbr.api.testscripts.budget.GetAllContractsForUser" />

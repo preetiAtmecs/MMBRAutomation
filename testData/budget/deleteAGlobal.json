@@ -1,8 +1,14 @@
 {
-	"uri": "/Budget",
+	"uri": "/Budget/{budget_id}/GlobalGroup/{global_group_id}/Global/{global_id}",
+	"method": "DELETE",
 	
-	"filepath":"C:/Users/pg092111/Desktop/AutoTest.mbd",
-	
+	"requestParameters": 
+	{
+		"budget_id": null,
+		"global_group_id":null,
+		"global_id":null
+	},
 
-	"status": "200"
+	
+	"status": "204"
 }
