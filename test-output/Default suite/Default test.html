@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Nov 18 06:14:21 PST 2014</td>
+<td>Started on:</td><td>Wed Nov 19 07:15:19 PST 2014</td>
 </tr>
-<tr><td>Total time:</td><td>5 seconds (5240 ms)</td>
+<tr><td>Total time:</td><td>5 seconds (5362 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,11 +75,11 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.ep.mmbr.api.testscripts.budget.GetAllContractsForUser.testPostContracts()'><b>testPostContracts</b><br>Test class: com.ep.mmbr.api.testscripts.budget.GetAllContractsForUser<br/>
-<a href="#Output-1868012080" onClick='toggleBox("Output-1868012080", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.ep.mmbr.api.testscripts.budget.PutGlobalGroup.testPostGlobalGroups()'><b>testPostGlobalGroups</b><br>Test class: com.ep.mmbr.api.testscripts.budget.PutGlobalGroup<br/>
+<a href="#Output-674653555" onClick='toggleBox("Output-674653555", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1868012080" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1868012080">
+<a href="#Output-674653555" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-674653555">
 <br>Uploading budget: MovieMagicBudget.mbd<br/>
 <br>Sending POST request <br/>
 <br>Endpoint : /Budget<br/>
@@ -87,22 +87,30 @@ function toggleAllBoxes() {
 <br>Budget uploaded successfully<br/>
 <br>Received budget id  : 546411dfe4b089cc7647460d<br/>
 <br><br>Sending post reqest with new global group <br/>
+<br><br>Sending request to post new global group<br/>
 <br>Sending POST request <br/>
-<br>Endpoint : /Budget/{budget_id}/Contract<br/>
+<br>Endpoint : /Budget/{budget_id}/GlobalGroup<br/>
 <br>Path parameters: </b>budget_id : 546411dfe4b089cc7647460d<br/>
-<br>Json body : [{"contractId":"4"},{"contractId":"697"}]<br/>
+<br>Json body : {"description":"This is a test group","name":"Auto Test Group"}<br/>
 <br><br>Received Response body:</b><br/>
-<br><br>Verifying Response code : <br>Actual response code : 200<br>Expected response code : 200<br/>
+<br><br>Verifying Response code : <br>Actual response code : 201<br>Expected response code : 201<br/>
+<br><br>Sending request to get all global groups by  budget id<br/>
 <br>Sending GET request <br/>
-<br>Endpoint : /Budget/{budget_id}/Contract<br/>
+<br>Endpoint : /Budget/{budget_id}/GlobalGroup<br/>
 <br>Path parameters: </b>budget_id : 546411dfe4b089cc7647460d<br/>
-<br><br>Received Response body:</b>[{"contractId":"4","name":"399 BLACK BOOK"},{"contractId":"697","name":"LA BASIC VIDEOTAPE AGREEMENT"}]<br/>
-<br><br>Verifying Response code : <br>Actual response code : 200<br>Expected response code : 200<br/>
+<br>Document found with name :Auto Test Group<br/>
+<br><br>Sending pust reqest to rename the global group <br/>
+<br>Sending PUT request <br/>
+<br>Endpoint : /Budget/{budget_id}/GlobalGroup<br/>
+<br>Path parameters: </b>budget_id : 546411dfe4b089cc7647460d<br/>
+<br>Json body : {"id":"86","description":"This is a test group","name":"Modified Auto Test Group"}<br/>
+<br><br>Received Response body:</b><br/>
+<br><br>Verifying Response code : <br>Actual response code : 204<br>Expected response code : 204<br/>
 </div>
 </td>
 <td></td>
 <td>5</td>
-<td>com.ep.mmbr.api.testscripts.budget.GetAllContractsForUser@1055e55f</td></tr>
+<td>com.ep.mmbr.api.testscripts.budget.PutGlobalGroup@48067064</td></tr>
 </table><p>
 </body>
 </html>

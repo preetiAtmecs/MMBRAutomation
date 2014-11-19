@@ -14,10 +14,13 @@ import com.jayway.restassured.response.Response;
 public interface Service {
 
 	/**
-	 * Method to sent and get response of rest based http method like Get ,Post etc
-	 * @param obj
-	 * @param token
-	 * @return
+	 * This method send  request end point with authorization bearer and returns the
+	 * result response
+	 * 
+	 * @param Request test data object (To send request and response from restassured)
+	 * @param token(Authorization bearer /salesforce token)
+	 * 
+	 * @return rest assured result response object 
 	 */
 	public Response sendRequestAndgetResponse(JSONObject obj, String token);
 

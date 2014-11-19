@@ -10,7 +10,7 @@ import com.jayway.restassured.response.Response;
 import com.jayway.restassured.specification.RequestSpecification;
 
 /**
- * This class contains rest assured methods to send request and get response for
+ * This class contains rest assured methods to send put request and get response for
  * http put method
  * 
  * @author preethi
@@ -18,6 +18,17 @@ import com.jayway.restassured.specification.RequestSpecification;
  */
 public class Put implements Service {
 
+	
+	
+	/**
+	 * This method send put request end point along with path parameters and returns the
+	 * response
+	 * 
+	 * @param Request test data object (To send request and response from restassured)
+	 * @param token(Authorization bearer /salesforce token)
+	 * 
+	 * @return rest assured result response object 
+	 */
 	@Override
 	public Response sendRequestAndgetResponse(JSONObject obj, String token) {
 		Response response = null;

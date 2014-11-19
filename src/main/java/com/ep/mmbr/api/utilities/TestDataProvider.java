@@ -8,9 +8,8 @@ import org.testng.Reporter;
 import com.ep.qa.automation.entities.DataProvider;
 
 /**
- * This is the handles to provide request data for all the test cases for mm.io
+ * This class provide request data for all the test cases for mm.io
  * build.
- * 
  * @author preethi
  * 
  */
@@ -19,12 +18,11 @@ public class TestDataProvider {
 	DataProvider dataprovider = DataProvider.getInstance();
 
 	/***
-	 * Function to get read the file from testData folder and return jsonObject
+	 * Function to read the file from testData folder and return content in jsonObject
 	 * 
-	 * @param folderName   (example: budget or user or contract)
-	 * @param fileName             (example: xyz.json)
-	 * @return
-	 * @throws Exception
+	 * @param Test data folderName   (example: budget or user or contract)
+	 * @param test data json file Name    (example: xyz.json)
+	 * @return jsonObject of request test data content
 	 */
 	public JSONObject readFileData(String folderName, String fileName) {
 		JSONObject requestDataObject = null;

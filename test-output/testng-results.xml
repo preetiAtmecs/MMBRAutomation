@@ -26,52 +26,76 @@
       <![CDATA[<br><br>Sending post reqest with new global group ]]>
     </line>
     <line>
+      <![CDATA[<br><br>Sending request to post new global group]]>
+    </line>
+    <line>
       <![CDATA[<br>Sending POST request ]]>
     </line>
     <line>
-      <![CDATA[<br>Endpoint : /Budget/{budget_id}/Contract]]>
+      <![CDATA[<br>Endpoint : /Budget/{budget_id}/GlobalGroup]]>
     </line>
     <line>
       <![CDATA[<br>Path parameters: </b>budget_id : 546411dfe4b089cc7647460d]]>
     </line>
     <line>
-      <![CDATA[<br>Json body : [{"contractId":"4"},{"contractId":"697"}]]]>
+      <![CDATA[<br>Json body : {"description":"This is a test group","name":"Auto Test Group"}]]>
     </line>
     <line>
       <![CDATA[<br><br>Received Response body:</b>]]>
     </line>
     <line>
-      <![CDATA[<br><br>Verifying Response code : <br>Actual response code : 200<br>Expected response code : 200]]>
+      <![CDATA[<br><br>Verifying Response code : <br>Actual response code : 201<br>Expected response code : 201]]>
+    </line>
+    <line>
+      <![CDATA[<br><br>Sending request to get all global groups by  budget id]]>
     </line>
     <line>
       <![CDATA[<br>Sending GET request ]]>
     </line>
     <line>
-      <![CDATA[<br>Endpoint : /Budget/{budget_id}/Contract]]>
+      <![CDATA[<br>Endpoint : /Budget/{budget_id}/GlobalGroup]]>
     </line>
     <line>
       <![CDATA[<br>Path parameters: </b>budget_id : 546411dfe4b089cc7647460d]]>
     </line>
     <line>
-      <![CDATA[<br><br>Received Response body:</b>[{"contractId":"4","name":"399 BLACK BOOK"},{"contractId":"697","name":"LA BASIC VIDEOTAPE AGREEMENT"}]]]>
+      <![CDATA[<br>Document found with name :Auto Test Group]]>
     </line>
     <line>
-      <![CDATA[<br><br>Verifying Response code : <br>Actual response code : 200<br>Expected response code : 200]]>
+      <![CDATA[<br><br>Sending pust reqest to rename the global group ]]>
+    </line>
+    <line>
+      <![CDATA[<br>Sending PUT request ]]>
+    </line>
+    <line>
+      <![CDATA[<br>Endpoint : /Budget/{budget_id}/GlobalGroup]]>
+    </line>
+    <line>
+      <![CDATA[<br>Path parameters: </b>budget_id : 546411dfe4b089cc7647460d]]>
+    </line>
+    <line>
+      <![CDATA[<br>Json body : {"id":"86","description":"This is a test group","name":"Modified Auto Test Group"}]]>
+    </line>
+    <line>
+      <![CDATA[<br><br>Received Response body:</b>]]>
+    </line>
+    <line>
+      <![CDATA[<br><br>Verifying Response code : <br>Actual response code : 204<br>Expected response code : 204]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="5240" started-at="2014-11-18T14:14:21Z" finished-at="2014-11-18T14:14:26Z">
+  <suite name="Default suite" duration-ms="5362" started-at="2014-11-19T15:15:19Z" finished-at="2014-11-19T15:15:24Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="5240" started-at="2014-11-18T14:14:21Z" finished-at="2014-11-18T14:14:26Z">
-      <class name="com.ep.mmbr.api.testscripts.budget.GetAllContractsForUser">
-        <test-method status="PASS" signature="dbConnect()[pri:0, instance:com.ep.mmbr.api.testscripts.budget.GetAllContractsForUser@1055e55f]" name="dbConnect" is-config="true" duration-ms="890" started-at="2014-11-18T06:14:20Z" finished-at="2014-11-18T06:14:21Z">
+    <test name="Default test" duration-ms="5362" started-at="2014-11-19T15:15:19Z" finished-at="2014-11-19T15:15:24Z">
+      <class name="com.ep.mmbr.api.testscripts.budget.PutGlobalGroup">
+        <test-method status="PASS" signature="dbConnect()[pri:0, instance:com.ep.mmbr.api.testscripts.budget.PutGlobalGroup@48067064]" name="dbConnect" is-config="true" duration-ms="1438" started-at="2014-11-19T07:15:18Z" finished-at="2014-11-19T07:15:19Z">
           <reporter-output>
             <line>
               <![CDATA[Base uri: https://mmio-api-dev-env.elasticbeanstalk.com:443/v1]]>
             </line>
           </reporter-output>
         </test-method> <!-- dbConnect -->
-        <test-method status="PASS" signature="testPostContracts()[pri:0, instance:com.ep.mmbr.api.testscripts.budget.GetAllContractsForUser@1055e55f]" name="testPostContracts" duration-ms="5209" started-at="2014-11-18T06:14:21Z" finished-at="2014-11-18T06:14:26Z">
+        <test-method status="PASS" signature="testPostGlobalGroups()[pri:0, instance:com.ep.mmbr.api.testscripts.budget.PutGlobalGroup@48067064]" name="testPostGlobalGroups" duration-ms="5346" started-at="2014-11-19T07:15:19Z" finished-at="2014-11-19T07:15:24Z">
           <reporter-output>
             <line>
               <![CDATA[<br>Uploading budget: MovieMagicBudget.mbd]]>
@@ -95,45 +119,69 @@
               <![CDATA[<br><br>Sending post reqest with new global group ]]>
             </line>
             <line>
+              <![CDATA[<br><br>Sending request to post new global group]]>
+            </line>
+            <line>
               <![CDATA[<br>Sending POST request ]]>
             </line>
             <line>
-              <![CDATA[<br>Endpoint : /Budget/{budget_id}/Contract]]>
+              <![CDATA[<br>Endpoint : /Budget/{budget_id}/GlobalGroup]]>
             </line>
             <line>
               <![CDATA[<br>Path parameters: </b>budget_id : 546411dfe4b089cc7647460d]]>
             </line>
             <line>
-              <![CDATA[<br>Json body : [{"contractId":"4"},{"contractId":"697"}]]]>
+              <![CDATA[<br>Json body : {"description":"This is a test group","name":"Auto Test Group"}]]>
             </line>
             <line>
               <![CDATA[<br><br>Received Response body:</b>]]>
             </line>
             <line>
-              <![CDATA[<br><br>Verifying Response code : <br>Actual response code : 200<br>Expected response code : 200]]>
+              <![CDATA[<br><br>Verifying Response code : <br>Actual response code : 201<br>Expected response code : 201]]>
+            </line>
+            <line>
+              <![CDATA[<br><br>Sending request to get all global groups by  budget id]]>
             </line>
             <line>
               <![CDATA[<br>Sending GET request ]]>
             </line>
             <line>
-              <![CDATA[<br>Endpoint : /Budget/{budget_id}/Contract]]>
+              <![CDATA[<br>Endpoint : /Budget/{budget_id}/GlobalGroup]]>
             </line>
             <line>
               <![CDATA[<br>Path parameters: </b>budget_id : 546411dfe4b089cc7647460d]]>
             </line>
             <line>
-              <![CDATA[<br><br>Received Response body:</b>[{"contractId":"4","name":"399 BLACK BOOK"},{"contractId":"697","name":"LA BASIC VIDEOTAPE AGREEMENT"}]]]>
+              <![CDATA[<br>Document found with name :Auto Test Group]]>
             </line>
             <line>
-              <![CDATA[<br><br>Verifying Response code : <br>Actual response code : 200<br>Expected response code : 200]]>
+              <![CDATA[<br><br>Sending pust reqest to rename the global group ]]>
+            </line>
+            <line>
+              <![CDATA[<br>Sending PUT request ]]>
+            </line>
+            <line>
+              <![CDATA[<br>Endpoint : /Budget/{budget_id}/GlobalGroup]]>
+            </line>
+            <line>
+              <![CDATA[<br>Path parameters: </b>budget_id : 546411dfe4b089cc7647460d]]>
+            </line>
+            <line>
+              <![CDATA[<br>Json body : {"id":"86","description":"This is a test group","name":"Modified Auto Test Group"}]]>
+            </line>
+            <line>
+              <![CDATA[<br><br>Received Response body:</b>]]>
+            </line>
+            <line>
+              <![CDATA[<br><br>Verifying Response code : <br>Actual response code : 204<br>Expected response code : 204]]>
             </line>
           </reporter-output>
-        </test-method> <!-- testPostContracts -->
-        <test-method status="PASS" signature="dbDisconnect()[pri:0, instance:com.ep.mmbr.api.testscripts.budget.GetAllContractsForUser@1055e55f]" name="dbDisconnect" is-config="true" duration-ms="0" started-at="2014-11-18T06:14:26Z" finished-at="2014-11-18T06:14:26Z">
+        </test-method> <!-- testPostGlobalGroups -->
+        <test-method status="PASS" signature="dbDisconnect()[pri:0, instance:com.ep.mmbr.api.testscripts.budget.PutGlobalGroup@48067064]" name="dbDisconnect" is-config="true" duration-ms="0" started-at="2014-11-19T07:15:25Z" finished-at="2014-11-19T07:15:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- dbDisconnect -->
-      </class> <!-- com.ep.mmbr.api.testscripts.budget.GetAllContractsForUser -->
+      </class> <!-- com.ep.mmbr.api.testscripts.budget.PutGlobalGroup -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

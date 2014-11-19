@@ -36,17 +36,16 @@ public class Get implements Service {
 	 * This method send get request with path parameters and returns the
 	 * response
 	 * 
-	 * @param token
-	 *            (salesforce token)
-	 * @param uri
-	 * @param parameters
-	 *            (pathparameters)
+	 * @param token(Authorization bearer /salesforce token)
+	 * @param uri (End point uri to send request )
+	 * @param pathparameters
+	 * @return rest assured response object 
 	 */
 	public Response sendRequestWithParameters(String token, String uri,
-			Object parameters) {
+			Object pathParameters) {
 
 		RequestSpecification requestSpec = new RequestSpecificationBuilder()
-				.getRequestSpecification("PathParameter", parameters);
+				.getRequestSpecification("PathParameter", pathParameters);
 
 		Response response = given().header("authorization", token).with()
 				.spec(requestSpec).when().get(uri);
@@ -57,9 +56,9 @@ public class Get implements Service {
 	 * This method send get request with out parameters and returns the response
 	 * result
 	 * 
-	 * @param token
-	 * @param uri
-	 * @return
+	 * @param token(Authorization bearer /salesforce token)
+	 * @param uri (End point uri to send request )
+	 * @return rest assured response object 
 	 */
 	public Response sendRequest(String token, String uri) {
 		Response response = given().header("authorization", token).when().get(uri);

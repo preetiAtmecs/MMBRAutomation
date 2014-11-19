@@ -35,7 +35,7 @@ public class PostContracts extends TestSuiteBase {
 		
 		String budgetId = requestDataBuilder.uploadBudgetAndGetBudgetID(token);
 
-		postContractsRequestData =	requestDataBuilder.setParameterValue(postContractsRequestData,"budget_id", budgetId);
+		postContractsRequestData =	requestDataBuilder.setValueInRequestData(postContractsRequestData,"requestParameters","budget_id", budgetId);
 
 		Reporter.log("<br><br>Sending post request with contracts ");
 		

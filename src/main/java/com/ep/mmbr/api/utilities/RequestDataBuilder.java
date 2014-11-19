@@ -1,10 +1,13 @@
 package com.ep.mmbr.api.utilities;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 
+import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 import org.testng.Assert;
 import org.testng.Reporter;
 
@@ -26,9 +29,8 @@ public class RequestDataBuilder {
 
 	/***
 	 * Function to send request and get response using rest assured client
-	 * 
-	 * @param json
-	 *            Object and salesforce token
+	 * @param Request test data object (To send request and response from restassured)
+	 * @param salesforce token (Authorization bearer)
 	 * @return rest assure response
 	 */
 	public Response sendRequestAndGetResponse(JSONObject requestDataObject,
@@ -48,41 +50,41 @@ public class RequestDataBuilder {
 	}
 
 	/**
-	 * Function to set dynamic values in requestParametrs of the request data
+	 * Function to set dynamic values in requestParametrs or body section of the request data
 	 * 
-	 * @param requestDataObject
-	 * @param parameterKey
-	 * @param expectedValue
-	 * @return
+	 * @param requestDataObject (json request Data Object containing requestParametrs or body section)
+	 * @param locationName (requestParametrs or body section where the key is available) 
+	 * @param parameterKey (key name to set the value) 
+	 * @param expectedValue (expected value to set)
+	 * @return requestDataObject (Same json request data object with modified values)
 	 */
 	@SuppressWarnings("unchecked")
-	public JSONObject setParameterValue(JSONObject requestDataObject,
-			String parameterKey, String expectedValue) {
+	public JSONObject setValueInRequestData(JSONObject requestDataObject,
+			String locationName, String parameterKey, String expectedValue) {
 
 		JSONObject requestBody = (JSONObject) requestDataObject
-				.get("requestParameters");
+				.get(locationName);
 
 		requestBody.put(parameterKey, expectedValue);
 
-		requestDataObject.put("requestParameters", requestBody);
+		requestDataObject.put(locationName, requestBody);
 
 		return requestDataObject;
 	}
 
 	/**
-	 * Verifies response code and returns true or false
+	 * Verifies actual response code with expected response code and returns true or false boolean value
 	 * 
-	 * @param requestDataObject
-	 * @param parameterKey
-	 * @param expectedValue
-	 * @return
+	 * @param responseBody to get the response code 
+	 * @param expecte response code 
+	 * @return true or false
 	 */
-	public boolean verifyResponseCode(Response response,
+	public boolean verifyResponseCode(Response responseBody,
 			String expecteStatusCode) {
 		Reporter.log("<br><br>Received Response body:</b>"
-				+ response.asString());
+				+ responseBody.asString());
 
-		int actualResponseCode = response.getStatusCode();
+		int actualResponseCode = responseBody.getStatusCode();
 		int expectedResponseCode = Integer.parseInt(expecteStatusCode);
 
 		Reporter.log("<br><br>Verifying Response code : <br>"
@@ -100,17 +102,15 @@ public class RequestDataBuilder {
 	/**
 	 * Method to upload budget file and returns budget id on success
 	 * 
-	 * @param requestDataObject
-	 * @param parameterKey
-	 * @param expectedValue
-	 * @return
+	 * @param salesforce token (Authorization bearer)
+	 * @return rest assure result response 
 	 */
 	public Response uploadBudget(String salesforceToken) {
 
 		TestDataProvider dataProvider = new TestDataProvider();
 		JSONObject postBudgetRequestData = dataProvider.readFileData("budget",
 				"postBudget.json");
-		
+
 		Reporter.log("<br>Uploading budget: "
 				+ postBudgetRequestData.get("budgetName"));
 
@@ -125,6 +125,12 @@ public class RequestDataBuilder {
 
 	}
 
+	/**
+	 * Method to call upload budget method and returns budget id from the budget response
+	 * 
+	 * @param salesforce token (Authorization bearer)
+	 * @return budget id
+	 */
 	public String uploadBudgetAndGetBudgetID(String salesforceToken) {
 		Response response = uploadBudget(salesforceToken);
 		String budgetId = response.jsonPath().getString("budgetId");
@@ -135,11 +141,9 @@ public class RequestDataBuilder {
 
 	/**
 	 * Method to get global group id from the budget given
-	 * 
-	 * @param requestDataObject
-	 * @param parameterKey
-	 * @param expectedValue
-	 * @return
+	 * @param budget id (T find o get global group id from available groups in given budget)
+	 * @param salesforce token (Authorization bearer)
+	 * @return global group id
 	 */
 
 	public String getGlobalGroupIdFromBudget(String budgetId,
@@ -148,8 +152,9 @@ public class RequestDataBuilder {
 		JSONObject getAllGlobalGroupsRequestData = new TestDataProvider()
 				.readFileData("budget", "getAllGlobalGroups.json");
 
-		getAllGlobalGroupsRequestData = setParameterValue(
-				getAllGlobalGroupsRequestData, "budget_id", budgetId);
+		getAllGlobalGroupsRequestData = setValueInRequestData(
+				getAllGlobalGroupsRequestData, "requestParameters",
+				"budget_id", budgetId);
 
 		Reporter.log("<br><br>Verifying  available global groups to get global group id");
 		Response getAllGlobalGroupsResponse = sendRequestAndGetResponse(
@@ -166,21 +171,66 @@ public class RequestDataBuilder {
 	/**
 	 * Extract first global id from given global group response body
 	 * 
-	 * @param response
-	 * @return
+	 * @param responseBody to get the available globals in global group 
+	 * @return first found global id
 	 */
-	public String getGlobalId(Response response) {
-		
+	public String getGlobalId(Response responseBody) {
+
 		Reporter.log("<br><br>Verifying vailable global in global group");
-		String globalIDRawResult = response.jsonPath().getString("id");
-		String replace = globalIDRawResult.replace("[", "");
-		String replace1 = replace.replace("]", "");
-		List<String> globalIDs = new ArrayList<String>(Arrays.asList(replace1
-				.split(",")));
-		Reporter.log("<br>Found "+globalIDs.size()+"globals in global group");
-		String globalId = globalIDs.get(0);
-		Reporter.log("<br>Get first indexed global id: "+globalId);
+
+		List<String> globalIDs = responseBody.jsonPath().getList("id");
+		Reporter.log("<br>Found " + globalIDs.size()
+				+ "globals in global group");
+		String globalId = String.valueOf(globalIDs.get(0));
+		Reporter.log("<br>Get first indexed global id: " + globalId);
 
 		return globalId;
+	}
+
+	
+	/**
+	 * Get specific document from response body which contains the expected key name and value
+	 * @param responseBody to find the expected document with given key value 
+	 * @return provides json body where expected key and value is avalable
+	 */
+	public JSONObject getDocumnetFromResponse(Response response, String keyName,
+			String valueName)  {
+
+		JSONObject responseDetails = null;
+		JSONParser p = new JSONParser();
+		JSONArray responseJsonBody = new JSONArray();
+
+		try {
+			responseJsonBody = (JSONArray) p.parse(response.jsonPath().prettify());
+		} catch (ParseException e) {
+			Reporter.log("<brFailed to parse response body to json array");
+					}
+
+		for (int document = 0; document < responseJsonBody.size(); document++) {
+			JSONObject documentDetails = (JSONObject) responseJsonBody
+					.get(document);
+
+			List<Map.Entry<String, String>> documents = new ArrayList<Map.Entry<String, String>>(
+					documentDetails.entrySet());
+
+			for (Map.Entry<String, String> eachDocument : documents) {
+
+				String key = eachDocument.getKey();
+
+				Object value = eachDocument.getValue();
+
+				if (key.equals(keyName) && value.toString().equals(valueName)) {
+					Reporter.log("<br>Document found with " + key + " :"
+							+ value);
+					responseDetails = documentDetails;
+					break;
+				}
+			}
+			if (responseDetails != null) {
+				break;
+			}
+		}
+		
+		return responseDetails;
 	}
 }

@@ -17,15 +17,24 @@ import org.testng.annotations.BeforeSuite;
 import com.ep.mmbr.api.mongodb.MangoDBConnection;
 import com.ep.mmbr.api.utilities.MMBRConstants;
 import com.jayway.restassured.RestAssured;
-
+/**
+ * This is the super class for all test java classes available to configure build environment 
+ * @author pg092111
+ */
 public class TestSuiteBase {
 
 	public static Properties CONFIG = null;
 	public static boolean isInitalized = false;
 	protected static MangoDBConnection dbConnection = new MangoDBConnection();
 
+	
+	/**
+	 * Method to call suite level before executing any test script
+	 * initialize configuration properties , set base url of mm.io project 
+	 * and create a connection to mongoDB
+	 */
 	@BeforeSuite
-	public void dbConnect() throws Exception {
+	public void configure() throws Exception {
 		
 		initialize();
 		
@@ -42,6 +51,9 @@ public class TestSuiteBase {
 
 	}
 
+	/**
+	 * Initialize configuration properties at suite level 
+	 */
 	public void initialize() throws Exception {
 		
 		if (!isInitalized) {

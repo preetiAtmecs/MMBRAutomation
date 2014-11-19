@@ -34,7 +34,7 @@ public class GetAllContractsForUser extends TestSuiteBase {
 		
 		String budgetId = requestDataBuilder.uploadBudgetAndGetBudgetID(token);
 
-		postContractsRequestData =	requestDataBuilder.setParameterValue(postContractsRequestData,"budget_id", budgetId);
+		postContractsRequestData =	requestDataBuilder.setValueInRequestData(postContractsRequestData,"requestParameters","budget_id", budgetId);
 
 		Reporter.log("<br><br>Sending post to add contracts to user budget ");
 		
@@ -49,7 +49,7 @@ public class GetAllContractsForUser extends TestSuiteBase {
 		JSONObject getContractsForUserRequestData = new TestDataProvider().readFileData(
 				"budget", "getAllContractsForUser.json");
 		
-		getContractsForUserRequestData =	requestDataBuilder.setParameterValue(getContractsForUserRequestData,"budget_id", budgetId);
+		getContractsForUserRequestData =	requestDataBuilder.setValueInRequestData(getContractsForUserRequestData,"requestParameters","budget_id", budgetId);
 		
 		Reporter.log("<br><br>Sending get request to get  contracts for user ");
 		Response getContractsForUserResponse = requestDataBuilder.sendRequestAndGetResponse(

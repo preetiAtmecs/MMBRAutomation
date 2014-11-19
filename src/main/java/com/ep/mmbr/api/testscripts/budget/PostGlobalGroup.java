@@ -34,7 +34,7 @@ public class PostGlobalGroup extends TestSuiteBase {
 		String budgetId = requestDataBuilder.uploadBudgetAndGetBudgetID(CONFIG
 				.getProperty("SalesforceToken"));
 
-		postGlobalGroupRequestData =	requestDataBuilder.setParameterValue(postGlobalGroupRequestData,"budget_id", budgetId);
+		postGlobalGroupRequestData =	requestDataBuilder.setValueInRequestData(postGlobalGroupRequestData,"requestParameters","budget_id", budgetId);
 
 		Reporter.log("<br><br>Sending post reqest with new global group ");
 		

@@ -48,7 +48,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\pg092111\AppData\Local\Temp\testng-eclipse--842979001\testng-customsuite.xml</span>
+                    <span>C:\Users\pg092111\AppData\Local\Temp\testng-eclipse-722034448\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -101,7 +101,7 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.ep.mmbr.api.testscripts.budget.GetAllContractsForUser" hash-for-method="testPostContracts">testPostContracts</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.ep.mmbr.api.testscripts.budget.PutGlobalGroup" hash-for-method="testPostGlobalGroups">testPostGlobalGroups</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -119,14 +119,14 @@
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.ep.mmbr.api.testscripts.budget.GetAllContractsForUser</span>
+              <span class="class-name">com.ep.mmbr.api.testscripts.budget.PutGlobalGroup</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testPostContracts">
-                  </a> <!-- testPostContracts -->
-                  <span class="method-name">testPostContracts</span>
+                  <a name="testPostGlobalGroups">
+                  </a> <!-- testPostGlobalGroups -->
+                  <span class="method-name">testPostGlobalGroups</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -134,7 +134,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\pg092111\AppData\Local\Temp\testng-eclipse--842979001\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\pg092111\AppData\Local\Temp\testng-eclipse-722034448\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -143,7 +143,7 @@
 &lt;suite name=&quot;Default suite&quot;&gt;
   &lt;test verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.ep.mmbr.api.testscripts.budget.GetAllContractsForUser&quot;/&gt;
+      &lt;class name=&quot;com.ep.mmbr.api.testscripts.budget.PutGlobalGroup&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -185,9 +185,9 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testPostContracts')
-data.setCell(0, 2, 'com.ep.mmbr.api.testscripts.budget.GetAllContractsForUser')
-data.setCell(0, 3, 5209);
+data.setCell(0, 1, 'testPostGlobalGroups')
+data.setCell(0, 2, 'com.ep.mmbr.api.testscripts.budget.PutGlobalGroup')
+data.setCell(0, 3, 5346);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
@@ -204,7 +204,7 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="reporter-method-div">
-              <span class="reporter-method-name">testPostContracts</span>
+              <span class="reporter-method-name">testPostGlobalGroups</span>
               <div class="reporter-method-output-div">
                 <span class="reporter-method-output"><br>Uploading budget: MovieMagicBudget.mbd</span>
                 <span class="reporter-method-output"><br>Sending POST request </span>
@@ -213,17 +213,25 @@ return data;
                 <span class="reporter-method-output"><br>Budget uploaded successfully</span>
                 <span class="reporter-method-output"><br>Received budget id  : 546411dfe4b089cc7647460d</span>
                 <span class="reporter-method-output"><br><br>Sending post reqest with new global group </span>
+                <span class="reporter-method-output"><br><br>Sending request to post new global group</span>
                 <span class="reporter-method-output"><br>Sending POST request </span>
-                <span class="reporter-method-output"><br>Endpoint : /Budget/{budget_id}/Contract</span>
+                <span class="reporter-method-output"><br>Endpoint : /Budget/{budget_id}/GlobalGroup</span>
                 <span class="reporter-method-output"><br>Path parameters: </b>budget_id : 546411dfe4b089cc7647460d</span>
-                <span class="reporter-method-output"><br>Json body : [{"contractId":"4"},{"contractId":"697"}]</span>
+                <span class="reporter-method-output"><br>Json body : {"description":"This is a test group","name":"Auto Test Group"}</span>
                 <span class="reporter-method-output"><br><br>Received Response body:</b></span>
-                <span class="reporter-method-output"><br><br>Verifying Response code : <br>Actual response code : 200<br>Expected response code : 200</span>
+                <span class="reporter-method-output"><br><br>Verifying Response code : <br>Actual response code : 201<br>Expected response code : 201</span>
+                <span class="reporter-method-output"><br><br>Sending request to get all global groups by  budget id</span>
                 <span class="reporter-method-output"><br>Sending GET request </span>
-                <span class="reporter-method-output"><br>Endpoint : /Budget/{budget_id}/Contract</span>
+                <span class="reporter-method-output"><br>Endpoint : /Budget/{budget_id}/GlobalGroup</span>
                 <span class="reporter-method-output"><br>Path parameters: </b>budget_id : 546411dfe4b089cc7647460d</span>
-                <span class="reporter-method-output"><br><br>Received Response body:</b>[{"contractId":"4","name":"399 BLACK BOOK"},{"contractId":"697","name":"LA BASIC VIDEOTAPE AGREEMENT"}]</span>
-                <span class="reporter-method-output"><br><br>Verifying Response code : <br>Actual response code : 200<br>Expected response code : 200</span>
+                <span class="reporter-method-output"><br>Document found with name :Auto Test Group</span>
+                <span class="reporter-method-output"><br><br>Sending pust reqest to rename the global group </span>
+                <span class="reporter-method-output"><br>Sending PUT request </span>
+                <span class="reporter-method-output"><br>Endpoint : /Budget/{budget_id}/GlobalGroup</span>
+                <span class="reporter-method-output"><br>Path parameters: </b>budget_id : 546411dfe4b089cc7647460d</span>
+                <span class="reporter-method-output"><br>Json body : {"id":"86","description":"This is a test group","name":"Modified Auto Test Group"}</span>
+                <span class="reporter-method-output"><br><br>Received Response body:</b></span>
+                <span class="reporter-method-output"><br><br>Verifying Response code : <br>Actual response code : 204<br>Expected response code : 204</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -241,18 +249,18 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.ep.mmbr.api.testscripts.budget.GetAllContractsForUser</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.ep.mmbr.api.testscripts.budget.PutGlobalGroup</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">dbConnect</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="test-method">
-                <span class="method-name">testPostContracts</span>
-                <span class="method-start">906 ms</span>
+                <span class="method-name">testPostGlobalGroups</span>
+                <span class="method-start">1438 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-suite after">
                 <span class="method-name">dbDisconnect</span>
-                <span class="method-start">6146 ms</span>
+                <span class="method-start">6831 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

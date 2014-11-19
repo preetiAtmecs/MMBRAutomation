@@ -6,15 +6,23 @@
 <tr><td><br>Budget uploaded successfully</td></tr>
 <tr><td><br>Received budget id  : 546411dfe4b089cc7647460d</td></tr>
 <tr><td><br><br>Sending post reqest with new global group </td></tr>
+<tr><td><br><br>Sending request to post new global group</td></tr>
 <tr><td><br>Sending POST request </td></tr>
-<tr><td><br>Endpoint : /Budget/{budget_id}/Contract</td></tr>
+<tr><td><br>Endpoint : /Budget/{budget_id}/GlobalGroup</td></tr>
 <tr><td><br>Path parameters: </b>budget_id : 546411dfe4b089cc7647460d</td></tr>
-<tr><td><br>Json body : [{"contractId":"4"},{"contractId":"697"}]</td></tr>
+<tr><td><br>Json body : {"description":"This is a test group","name":"Auto Test Group"}</td></tr>
 <tr><td><br><br>Received Response body:</b></td></tr>
-<tr><td><br><br>Verifying Response code : <br>Actual response code : 200<br>Expected response code : 200</td></tr>
+<tr><td><br><br>Verifying Response code : <br>Actual response code : 201<br>Expected response code : 201</td></tr>
+<tr><td><br><br>Sending request to get all global groups by  budget id</td></tr>
 <tr><td><br>Sending GET request </td></tr>
-<tr><td><br>Endpoint : /Budget/{budget_id}/Contract</td></tr>
+<tr><td><br>Endpoint : /Budget/{budget_id}/GlobalGroup</td></tr>
 <tr><td><br>Path parameters: </b>budget_id : 546411dfe4b089cc7647460d</td></tr>
-<tr><td><br><br>Received Response body:</b>[{"contractId":"4","name":"399 BLACK BOOK"},{"contractId":"697","name":"LA BASIC VIDEOTAPE AGREEMENT"}]</td></tr>
-<tr><td><br><br>Verifying Response code : <br>Actual response code : 200<br>Expected response code : 200</td></tr>
+<tr><td><br>Document found with name :Auto Test Group</td></tr>
+<tr><td><br><br>Sending pust reqest to rename the global group </td></tr>
+<tr><td><br>Sending PUT request </td></tr>
+<tr><td><br>Endpoint : /Budget/{budget_id}/GlobalGroup</td></tr>
+<tr><td><br>Path parameters: </b>budget_id : 546411dfe4b089cc7647460d</td></tr>
+<tr><td><br>Json body : {"id":"86","description":"This is a test group","name":"Modified Auto Test Group"}</td></tr>
+<tr><td><br><br>Received Response body:</b></td></tr>
+<tr><td><br><br>Verifying Response code : <br>Actual response code : 204<br>Expected response code : 204</td></tr>
 </table>

@@ -34,7 +34,7 @@ public class getAllGlobalGroups extends TestSuiteBase {
 		String budgetId = requestDataBuilder.uploadBudgetAndGetBudgetID(CONFIG
 				.getProperty("SalesforceToken"));
 
-		requestDataBuilder.setParameterValue(getAllGlobalGroupsRequestData,"budget_id", budgetId);
+		requestDataBuilder.setValueInRequestData(getAllGlobalGroupsRequestData,"requestParameters","budget_id", budgetId);
 
 		Reporter.log("<br><br>Sending request to get all global group by valid budget id");
 		

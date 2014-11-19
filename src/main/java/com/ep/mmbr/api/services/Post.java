@@ -10,7 +10,7 @@ import com.jayway.restassured.response.Response;
 import com.jayway.restassured.specification.RequestSpecification;
 
 /**
- * This class contains rest assured methods to send request and get response for
+ * This class contains rest assured methods to send post request and get result response for
  * http post method
  * 
  * @author preethi
@@ -18,6 +18,7 @@ import com.jayway.restassured.specification.RequestSpecification;
  */
 public class Post implements Service {
 
+	
 	@Override
 	public Response sendRequestAndgetResponse(JSONObject obj, String token) {
 		Response response = null;
@@ -40,6 +41,7 @@ public class Post implements Service {
 		return response;
 	}
 
+	
 	/**
 	 * This method send post request with body and returns response result
 	 * @param uri

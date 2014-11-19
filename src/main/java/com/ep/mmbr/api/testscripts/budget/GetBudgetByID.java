@@ -40,7 +40,7 @@ public class GetBudgetByID extends TestSuiteBase {
 		String budgetId = requestDataBuilder
 				.uploadBudgetAndGetBudgetID(salceforceToken);
 
-		requestDataBuilder.setParameterValue(getBudgetByIDRequestData, "budget_id",
+		requestDataBuilder.setValueInRequestData(getBudgetByIDRequestData,"requestParameters", "budget_id",
 				budgetId);
 
 		Reporter.log("<br><br>Sending reqest to get budget by id ");

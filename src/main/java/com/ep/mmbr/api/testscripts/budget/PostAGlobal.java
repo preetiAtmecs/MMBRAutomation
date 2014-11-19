@@ -40,11 +40,11 @@ public class PostAGlobal extends TestSuiteBase {
 		Reporter.log("<br><br>Set budget id and global id parametrs to request data : <br>Budgte ID:"
 				+ budgetId + "<br>Global group id" + globalGroupId);
 		
-		postAGlobalRequestData = requestDataBuilder.setParameterValue(
-				postAGlobalRequestData, "budget_id", budgetId);
+		postAGlobalRequestData = requestDataBuilder.setValueInRequestData(
+				postAGlobalRequestData,"requestParameters", "budget_id", budgetId);
 		
 		postAGlobalRequestData = requestDataBuilder
-				.setParameterValue(postAGlobalRequestData,
+				.setValueInRequestData(postAGlobalRequestData,"requestParameters",
 						"global_group_id", globalGroupId);
 
 		Reporter.log("<br><br>Sending post reqest with new global values");

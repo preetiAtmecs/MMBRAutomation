@@ -4,8 +4,8 @@ public class ServiceFactory {
 
 	/**
 	 * Factory method to provide instance of the service
-	 * @param service
-	 * @return
+	 * @param service name (GET,PUT,DELETE,POST)
+	 * @return specific service method  instance
 	 */
 	public Service getService(String service) {
 

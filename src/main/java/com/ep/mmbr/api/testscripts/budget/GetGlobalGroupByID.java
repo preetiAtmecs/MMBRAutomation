@@ -40,11 +40,11 @@ public class GetGlobalGroupByID extends TestSuiteBase {
 		Reporter.log("<br><br>Set budget id and global id parametrs to request data : <br>Budgte ID:"
 				+ budgetId + "<br>Global group id" + globalGroupId);
 		
-		getGlobalGroupByIDRequestData = requestDataBuilder.setParameterValue(
-				getGlobalGroupByIDRequestData, "budget_id", budgetId);
+		getGlobalGroupByIDRequestData = requestDataBuilder.setValueInRequestData(
+				getGlobalGroupByIDRequestData,"requestParameters", "budget_id", budgetId);
 		
 		getGlobalGroupByIDRequestData = requestDataBuilder
-				.setParameterValue(getGlobalGroupByIDRequestData,
+				.setValueInRequestData(getGlobalGroupByIDRequestData,"requestParameters",
 						"global_group_id", globalGroupId);
 		
 		

@@ -37,15 +37,18 @@ public class GetGlobalByBudgetGroupAndGlobalID extends TestSuiteBase {
 		JSONObject getGlobalRequestData = new TestDataProvider().readFileData(
 				"budget", "getGlobalByBudgetGroupAndGlobalID.json");
 
-		getGlobalRequestData = requestDataBuilder.setParameterValue(
-				getGlobalRequestData, "budget_id", budgetId);
+		getGlobalRequestData = requestDataBuilder.setValueInRequestData(
+				getGlobalRequestData, "requestParameters", "budget_id",
+				budgetId);
 
-		getGlobalRequestData = requestDataBuilder.setParameterValue(
-				getGlobalRequestData, "global_group_id", globalGroupId);
+		getGlobalRequestData = requestDataBuilder.setValueInRequestData(
+				getGlobalRequestData, "requestParameters", "global_group_id",
+				globalGroupId);
 
-		getGlobalRequestData = requestDataBuilder.setParameterValue(
-				getGlobalRequestData, "global_id", globalId);
-		
+		getGlobalRequestData = requestDataBuilder.setValueInRequestData(
+				getGlobalRequestData, "requestParameters", "global_id",
+				globalId);
+
 		Reporter.log("<br><br>Sending request to get global information by budget id,global group id and global id");
 		Response getGlobalByGlobalIdResponse = requestDataBuilder
 				.sendRequestAndGetResponse(getGlobalRequestData,
@@ -70,11 +73,13 @@ public class GetGlobalByBudgetGroupAndGlobalID extends TestSuiteBase {
 		Reporter.log("<br><br>Set budget id and global id parametrs to request data : <br>Budgte ID:"
 				+ budgetId + "<br>Global group id" + globalGroupId);
 
-		getGetAllGlobalsRequestData = requestDataBuilder.setParameterValue(
-				getGetAllGlobalsRequestData, "budget_id", budgetId);
+		getGetAllGlobalsRequestData = requestDataBuilder.setValueInRequestData(
+				getGetAllGlobalsRequestData, "requestParameters", "budget_id",
+				budgetId);
 
-		getGetAllGlobalsRequestData = requestDataBuilder.setParameterValue(
-				getGetAllGlobalsRequestData, "global_group_id", globalGroupId);
+		getGetAllGlobalsRequestData = requestDataBuilder.setValueInRequestData(
+				getGetAllGlobalsRequestData, "requestParameters",
+				"global_group_id", globalGroupId);
 
 		Reporter.log("<br><br>Sending reqest to get all globals by budget id and  global group id");
 		Response getAllGlobalsResponse = requestDataBuilder
