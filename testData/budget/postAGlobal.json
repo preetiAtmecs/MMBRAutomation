@@ -7,11 +7,16 @@
 		"global_group_id":null
 	},
 	"body":{
-		"name":"Test A Global",
+		"id":0,
+		"name":"TestAGlobal",
 		"description":"This is test global",
-		"units":null,
-		"calculation":"=15",
-		"value":15
-	},
+		"units":"",
+		"calculation":"15",
+		"value":0,
+		"globalGroupId":"",
+		"sequenceOrder":"",
+		"inUseCountLine":0,
+		"inUseCountGlobal":0
+	}
 	"status":"201"
 }
